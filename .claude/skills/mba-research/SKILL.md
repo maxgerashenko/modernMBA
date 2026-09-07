@@ -41,12 +41,16 @@ Produces one memo per business type researched, in a fixed visual and analytical
 
 4. **Publish as a Claude Artifact** (HTML, using the template CSS verbatim). Give it a distinctive `<title>`, a favicon emoji, and a one-sentence `description`.
 
-5. **Create the Notion entry.** The Notion Modern MBA hub page is `Modern MBA` (id `3d4ba21e-32d4-804a-bb07-fb3912f005ad`, under `Courses`). For a new business type, use `notion-create-pages` to create **one new sub-page under it**, named for the business type. Content is a condensed summary, not the full memo:
-   - the recommendation (one bold sentence)
-   - the KPI grid numbers
-   - the top 2-3 risks
-   - a link to the published Artifact for the full memo
-   Keep this short — Notion is the index the user reads from; the Artifact is where the depth lives.
+5. **Create the Notion entry.** The Notion Modern MBA hub page is `Modern MBA` (id `3d4ba21e-32d4-804a-bb07-fb3912f005ad`, under `Courses`). For a new business type, use `notion-create-pages` to create **one new sub-page under it**, named for the business type. Content is a condensed memo, built around the same five ★ tables as the Artifact — not just KPI numbers, and not the full 11-section memo:
+   - subject line + the one-bold-sentence recommendation
+   - ★ Executive summary table (KPI numbers)
+   - ★ Market definition & capacity table
+   - ★ Value chain & margin pool table
+   - ★ Unit economics tables (advantage isolation + deal P&L)
+   - ★ Sensitivity analysis table (+ adverse case in one line)
+   - top 2-3 risks (short list, not the full risk register)
+   - links to the full Artifact and the GitHub Markdown file for everything else (Five Forces, geography-specific factors, annual operating model, full risk register, recommendation detail)
+   Notion is where the user reads the numbers day to day; the Artifact and GitHub file are where the full depth and prose live.
 
 6. **Save the full memo to GitHub as Markdown.** Create `research/<slug>/README.md` (slug = the business type, e.g. `research/food-truck-austin/README.md`) with the entire memo converted faithfully to Markdown — every section, every exhibit table, every verdict callout (as blockquotes), the footer's analytical-basis note and frameworks-applied line. No CSS/HTML, just the data and text, so it stays diffable and greppable. Include links back to the Artifact and the Notion page at the top. This is the durable, complete backup; Notion holds the short summary, the Artifact holds the styled version, GitHub holds all the data.
 
