@@ -8,31 +8,35 @@ An MBA-style teardown of a Florida GC who finds the clients, signs the contracts
 
 **SUBJECT:** FL-licensed general contractor who sources, contracts, and supervises a crew of immigrant trade specialists directly
 **MARKET:** Miami-Dade/Broward "Little Moscow" corridor (Sunny Isles Beach)
-**BASE CASE:** 14 active specialists, paid 75% of contract value per job, each also paying a $600/mo roster fee, 40% carrying a company-financed work van
+**BASE CASE:** 14 active specialists, paid 75% of contract value per job with no monthly fee, GC furnishes tools and finances vans, GC absorbs the cost of redoing bad work
 
-> **Revision — a correction to how this business actually runs:** An earlier pass through this analysis assumed the operator collected a flat access fee while specialists ran their own client relationships — the classic "license capping" pattern. The operator corrected that: he finds the clients, pays for the leads, signs the contracts, controls the crew, and carries the risk. That's the legally correct way to structure a qualifying agreement, and it resolves the capping exposure the first draft flagged as existential. It also opens a different one, and this version of the memo is built around it.
+> **Revision — two corrections to how this business actually runs:**
+>
+> First pass: assumed the operator collected a flat access fee while specialists ran their own client relationships — classic "license capping." Corrected to: he finds the clients, signs the contracts, controls the crew, and carries the risk — the legally correct way to run a qualifying agreement, and better economics.
+>
+> Second pass, this version: the $600/month fee is removed entirely. Specialists are paid strictly per job — no salary, no monthly charge. The GC also buys leads, finances vans, buys tools, and absorbs the cost of redoing defective work. Removing the fee closes one specific legal exposure. It does not close the broader one, and that's most of what changed below.
 
 ---
 
 ## Section 00 — Executive summary
 
-**The analytical question:** Now that the operator genuinely runs the business — finds the clients, holds the contracts, controls the crew — what does that structure actually cost and expose him to?
+**The analytical question:** Now that the operator genuinely runs the business and there's no fee anywhere in it, what does that structure actually cost and expose him to?
 
 | KPI | Value | Note |
 |---|---|---|
-| Revenue | $1.68M | 14 specialists, incl. fees & van book |
-| Economic profit, as structured | $256,010 | genuine control, ICs + $600 fee |
-| If reclassified as employees | **($66,631)** | same control, no fee, real payroll |
-| Misclassification gap | **$322,641** | the incentive to keep it as-is |
-| Capacity | 14 | specialists — genuine oversight is slower than a signature |
+| Revenue | $1.58M | 14 specialists, job margin & van book |
+| Economic profit, as structured | $69,799 | no fee — thin, after tools & rework |
+| If reclassified as employees | **($152,042)** | same facts, real payroll |
+| Reclassification gap | **$221,841** | smaller than before — still decisive |
+| Capacity | 14 | specialists — unchanged; the fee was never the constraint |
 
-> **Recommendation:** The corrected structure is legally sounder on licensing and financially stronger than the first draft — but the same control that fixes the licensing risk is the textbook test for employee status, and a mandatory $600/month fee charged to someone who looks like your employee is its own violation. Narrow the control to the work, not the worker, before scaling.
+> **Recommendation:** Removing the $600 fee closes one specific violation and leaves the larger one standing. The classification risk was never really about the fee — it was always about control, tools, and who bears the risk of bad work. All three are still here, and arguably clearer without a fee for the analysis to hide behind.
 >
-> Genuine control resolves what the earlier version of this memo flagged as existential: a qualifying agent who actually finds the clients, signs the contracts, assigns the work, and answers for the outcome is not "capping" a license — that is what Florida law requires a GC-of-record to do. It also produces a better business than the license-rental version: capturing the full contractor margin on every job, plus a roster fee on top, earns considerably more than collecting a flat access fee ever could.
+> Dropping the fee was the right instinct, and it does real work: there is no longer a mandatory payment extracted from someone who looks like an employee, which was the sharpest, most litigated exposure in the earlier draft. Specialists are now paid strictly for output, on a per-job basis — no salary, nothing resembling a wage deduction.
 >
-> But regulators don't test employment status by asking whether a business is well run. They ask who controls how, when, and under what conditions the work gets done — and "he controls the constructors" is close to a direct answer to that question. Run the same 14-person crew as W-2 employees instead of fee-paying independent contractors — same control, same jobs, just paid and taxed the way the control test says they should be — and the year swings from a quarter-million-dollar profit to a loss.
+> But strip the fee away and look at what's left: the GC controls the work, furnishes the tools, finances the vehicle, buys the leads, and absorbs the cost when the work has to be redone. Under the federal economic-realities test, those are close to the canonical employee markers — a worker who doesn't own their tools, doesn't carry their own vehicle, and doesn't bear the financial risk of their own mistakes has very little "opportunity for profit or loss" of their own, which is one of the tests' most heavily weighted factors. A disclosed monthly fee, ironically, was the one piece of this structure that looked like something a genuine independent business pays — a desk fee, a franchise fee. It's gone now, and everything that's left still points the same direction.
 >
-> That $322,641 gap (Section 08) is not overhead avoided through efficiency. It's the difference between what the business pays today and what it would pay if a court or the Department of Labor looked at the facts and called these specialists what the facts suggest they are.
+> The economics also got thinner, not just the legal picture. Absorbing tools and rework costs without fee revenue to offset them cuts economic profit from the fee-based version's $256,010 to $69,799 — the 25% contractor markup this business runs on doesn't fully price everything the GC is now standing behind. Section 08 quantifies both problems together.
 
 ---
 
@@ -52,15 +56,15 @@ Unlike a flip or a car flip, the constraint here isn't capital and it isn't dema
 | SAM — addressable | Without an independent FL license or an established lead account | ~3,500 |
 | **SOM** | **Capacity-bound: owner's genuine full-job supervision hours ÷ hours/specialist** | **14** |
 
-*Share of the addressable segment: 0.4%. Lower than a permit-only umbrella could support (an earlier pass found 25) — running the whole job, not just the permit, costs real time.*
+*Share of the addressable segment: 0.4%.*
 
 Capacity math, stated explicitly:
-- Genuine oversight per job — client-facing quality control, not just paperwork: **~2 hours/job**, plus **~2 more hours** on the ~57% of jobs that also require a permit (inspection coordination, code sign-off) — at a loaded Florida GC rate of **$75/hour**.
+- Genuine oversight per job — client-facing quality control, not just paperwork: **~2 hours/job**, plus **~2 more hours** on the ~57% of jobs that also require a permit — at a loaded Florida GC rate of **$75/hour**.
 - At ~2.8 jobs/month per specialist, that's **~8.8 hours/month** (~105.6 hours/year) of genuine supervision per specialist.
 - Owner's real supervisory bandwidth, after sales, admin, and lead-routing: **~1,440 hours/year**.
-- 1,440 hours ÷ 105.6 hours/specialist/year = **14 specialists** — roughly half the ceiling a lighter-touch, permit-only model could support.
+- 1,440 hours ÷ 105.6 hours/specialist/year = **14 specialists**.
 
-That trade — fewer specialists, but real control of every job instead of a signature on the permitted ones — is exactly what this correction is about. It's also, per Section 08, worth considerably more per specialist.
+Removing the fee didn't touch this constraint — the ceiling was always about the owner's hours, never about what specialists paid.
 
 ---
 
@@ -72,15 +76,13 @@ That trade — fewer specialists, but real control of every job instead of a sig
 
 | Force | Rating | Evidence |
 |---|---|---|
-| Supplier power (Thumbtack & lead platforms) | **High** | Dynamic per-lead pricing set by the platform, no rate lock, leads frequently shared across competing pros, and no published price sheet — the only real price is whatever shows up in the account that day. |
-| Buyer power (the specialists) | Medium | Lower than a fee-only umbrella would produce, because the GC — not the specialist — owns the client relationship, the contract, and the reviews. A specialist who leaves starts over with zero client history. Good for retention; also the reason they look more like employees (Section 04). |
-| Threat of entry | Medium | Replicating a license and a Thumbtack account is easy. Replicating a genuinely managed bilingual crew — one where the GC actually runs every job — is a bigger, slower lift than the earlier fee-collection version of this model. |
-| Threat of substitutes | Medium | A specialist could go fully informal — cash jobs sourced from the community directly — but they'd be starting from zero client relationships, since the GC held every contract. Cheaper for the specialist, but a much harder switch than in the fee-only version. |
-| Rivalry | **Low** | Currently underserved: this is a narrow, bilingual, trust-gated niche with few operators running it deliberately. That will not last once the model is visible. |
+| Supplier power (Thumbtack & lead platforms) | **High** | Dynamic per-lead pricing set by the platform, no rate lock, no published price sheet. |
+| Buyer power (the specialists) | Medium | Lower than a fee-only umbrella would produce — the GC owns the client relationship, contract, and reviews. A specialist who leaves starts over with zero client history. |
+| Threat of entry | Medium | Replicating a license and a Thumbtack account is easy. Replicating a genuinely managed bilingual crew is a bigger, slower lift. |
+| Threat of substitutes | Medium | A specialist could go fully informal, but they'd be starting from zero client relationships, since the GC held every contract. |
+| Rivalry | **Low** | Currently underserved: a narrow, bilingual, trust-gated niche with few operators running it deliberately. |
 
-*Two forces unfavorable, two moderate, one favorable — a meaningfully better structural picture than the flip or vehicle memos, because the core barrier is a license plus a language-and-trust bridge, not capital.*
-
-That's the good news, and it's real. The catch is that the same control which makes this structurally attractive — the GC genuinely running every job, not just signing the permit — is the exact fact pattern wage-and-hour regulators look for when deciding whether someone is really an independent contractor. Sections 04 and 08 quantify what happens when the analysis takes that seriously.
+*Two forces unfavorable, two moderate, one favorable. The catch is that the same control which makes this structurally attractive — the GC genuinely running every job — is the exact fact pattern wage-and-hour regulators look for when deciding whether someone is really an independent contractor. Sections 04 and 08 quantify that.*
 
 ---
 
@@ -92,14 +94,14 @@ That's the good news, and it's real. The catch is that the same control which ma
 
 | Participant | Take | Capital / risk at stake | Quality |
 |---|---:|---|---|
-| Thumbtack (lead platform) | $129 | None. Paid per lead whether or not the job closes; the GC buys the lead, not the specialist. | Excellent |
+| Thumbtack (lead platform) | $129 | None. Paid per lead whether or not the job closes. | Excellent |
 | County / municipality (permit, ~57% of jobs) | $86 | None. | — |
-| Specialist (labor + materials, 75% of contract) | $2,400 | Materials float, tools, the truck, and comeback/warranty exposure on their own workmanship — but now paid a contractually fixed share, by a company that holds the client relationship and the liability. | Mixed |
-| **GC (job-level net, before the separate roster fee)** | **$585** | **All of it, for real this time.** Full contract performance and warranty risk on every job — plus new exposure: the more of this he controls personally, the more his crew looks like his employees. | Mixed |
+| Specialist (labor + materials, 75% of contract) | $2,400 | Materials float and comeback exposure on their own workmanship — but tools are furnished by the GC and the van, if any, is GC-financed. | Mixed |
+| **GC (job-level net)** | **$585** | **All of it, for real this time.** Full contract performance and warranty risk on every job, tools furnished, the van financed, and new exposure: the more of this he controls and absorbs personally, the more his crew looks like his employees. | Mixed |
 
-*Thumbtack cost per closed job is the $45 average lead price divided by an assumed 35% close rate; permit cost is blended across the ~57% of jobs that require one. The GC also collects a separate $600/month roster fee per specialist (≈$214/job-equivalent) not shown in this per-job breakdown — see Exhibit 6.*
+*Thumbtack cost per closed job is the $45 average lead price divided by an assumed 35% close rate; permit cost is blended across the ~57% of jobs that require one. Not shown: the GC also furnishes tools and absorbs rework costs on defective work, both real costs against the $585 shown here — see Exhibit 6.*
 
-> **The line that should stop you:** This structure correctly makes the GC the party who takes real business risk on every job, which is exactly what Florida licensing law wants from a qualifying agent. But nothing in this table prices the risk that comes with taking that much control over how, when, and under whose direction the work gets done. Section 08 runs the number nobody priced into the $600 fee.
+> **The line that should stop you:** This structure correctly makes the GC the party who takes real business risk on every job, which is exactly what Florida licensing law wants from a qualifying agent. But nothing in this table prices the risk that comes with taking that much control, furnishing the tools, and absorbing every callback. Section 08 runs the number nobody's priced yet.
 
 ---
 
@@ -111,51 +113,47 @@ That's the good news, and it's real. The catch is that the same control which ma
 
 | Factor | Effect | Mechanism |
 |---|---|---|
-| Worker classification — IC vs. employee | **Existential** | Federal (FLSA/IRS) and Florida tests turn heavily on *behavioral control*: who decides how, when, and under whose direction the work happens. A GC who assigns jobs, sets the schedule to hit client deadlines, and checks quality on every job is describing an employer, not a client of independent contractors — regardless of what the paperwork calls the relationship. |
-| FLSA "kickback" / improper deduction doctrine | **Existential** | An employer cannot require payments from a worker that reduce their effective pay below minimum wage, or charge for something primarily for the employer's own benefit, as a condition of working. A flat $600/month fee charged to someone who is functionally an employee is close to the textbook fact pattern the DOL uses to find a violation. |
-| Ch. 489 qualifying agreement — "capping" | Low, if documented | Genuine control of the kind now described resolves the core capping exposure the license-only version of this model carried — a qualifying agent who actually runs the job is doing what Ch. 489 requires. The residual risk is evidentiary: without a written record of site visits and sign-offs, "genuine" supervision is hard to prove after the fact. |
-| Florida workers' comp — construction threshold | Moderate–High | Construction is one of the few Florida industries where the workers'-comp requirement kicks in at a single employee, not four. If classification tips toward employee, comp coverage isn't optional or gradual — it's immediate, for the whole crew. |
-| Retail installment & usury law | High | Seller-financed vehicle sales fall under Florida's motor vehicle retail installment framework. The van markup modeled in Section 08 implies an effective APR near 22% — in range to breach the state's civil usury ceiling and to approach criminal usury territory at the higher end. Exact current thresholds should be confirmed with counsel. |
-| Truth in Lending Act (federal) | Moderate | Consumer vehicle financing triggers federal disclosure requirements — APR, finance charge, and payment schedule. An undocumented "+$400/month" side fee is close to the textbook example of an undisclosed finance charge TILA exists to catch. |
-| Community concentration (Sunny Isles / tri-county corridor) | Moderate | The bilingual trust network that makes recruiting cheap is the same network that would carry word of an exploitative fee structure just as fast. |
+| Worker classification — behavioral control | **Existential** | Federal (FLSA/IRS) and Florida tests turn heavily on who decides how, when, and under whose direction the work happens. A GC who assigns jobs, sets the schedule, and checks quality on every job is describing an employer — regardless of whether any fee changes hands. |
+| Worker classification — financial dependence | **Existential** | The economic-realities test also asks whether the worker has a genuine opportunity for profit or loss through their own management or investment. A specialist who doesn't own the tools, doesn't independently finance the vehicle, and isn't on the hook when the work has to be redone carries almost none of the financial risk a real independent business carries — with or without a fee. Removing the fee took away the clearest violation; it didn't touch this one, and it may have made it more visible by removing the one factor that looked like something a genuine IC pays. |
+| Ch. 489 qualifying agreement — "capping" | Low, if documented | Genuine control resolves the core capping exposure the license-only version carried. The residual risk is evidentiary — keep a written supervision log. |
+| Florida workers' comp — construction threshold | Moderate–High | Construction triggers FL's 1-employee comp threshold, not the general 4-employee one. |
+| Retail installment & usury law | High | The van markup implies an effective APR near 22% — in range to breach Florida's civil usury ceiling. Confirm current thresholds with counsel. |
+| Truth in Lending Act (federal) | Moderate | Consumer vehicle financing triggers federal disclosure requirements. |
+| Community concentration (Sunny Isles / tri-county corridor) | Moderate | The bilingual trust network that makes recruiting cheap is the same network that would carry word of a dispute just as fast. |
 
 ---
 
 ## Section 05 — Unit economics
 
-**The analytical question:** What does one specialist earn the GC per month, and what is the "advantage" actually worth?
+**The analytical question:** What does one specialist earn the GC per month, and what does it now cost?
 
 ### The advantage, isolated
-
-Before the P&L: the edge here isn't a cost saving, it's binary market access.
 
 **Exhibit 5 — Independent path vs. under the umbrella**
 
 | Requirement | Independent path | Under the umbrella |
 |---|---|---|
-| FL contractor license | English-only state exam; 4 years documented experience or equivalent; net-worth/bond qualification most new arrivals cannot yet meet | Not required — works under the operator's license |
+| FL contractor license | English-only state exam; 4 years documented experience; net-worth/bond qualification most new arrivals cannot yet meet | Not required — works under the operator's license |
 | Liability insurance & bond | ~$4,500/yr for a new entity with no track record | Bundled into the GC's blanket policy |
-| Thumbtack account & reviews | 6–12 months of near-zero lead flow while a new, review-less account is deprioritized by the algorithm | Immediate access to an established account's lead flow |
-| **Time to market** | **Years, or never, without a US credit and employment history** | **Immediate — a job, plus $600/month, on day one** |
+| Thumbtack account & reviews | 6–12 months of near-zero lead flow for a new account | Immediate access to an established account's lead flow |
+| **Time to market** | **Years, or never, without a US credit and employment history** | **Immediate — a job on day one, no fee, tools and a van provided** |
 
-*This is why the advantage is more durable than the flip memo's labor edge or the vehicle memo's diagnostic edge: it isn't a discount a competitor can match with more effort. It's the only door currently open to this specific population.*
-
-**Exhibit 6 — Per-specialist monthly economics to the GC**
+**Exhibit 6 — Per-specialist monthly economics to the GC — no fee**
 
 | Line | Amount | Note |
 |---|---:|---|
-| Job margin | $2,240 | 2.8 jobs/mo × $800 (25% GC markup on a $3,200 avg. contract) |
-| Roster / dispatch fee | $600 | Flat, per active specialist |
-| **Revenue** | **$2,840** | |
-| Thumbtack lead spend | ($360) | 8 leads/mo × $45 average — the GC buys these, not the specialist |
-| Permit costs, paid direct | ($240) | 1.6 permits/mo × $150 county fee — the GC's own cost now, not a pass-through fee |
-| Owner supervision time | ($660) | 8.8 hrs/mo × $75/hr loaded — running the whole job, not just the permit |
-| **Direct costs** | **($1,260)** | |
-| **Net contribution / specialist / month** | **$1,580** | 56% margin, before company overhead — this is correct GC economics, not a fee-collection number |
+| Job margin (revenue) | $2,240 | 2.8 jobs/mo × $800 (25% GC markup on a $3,200 avg. contract) — the only revenue line now |
+| Thumbtack lead spend | ($360) | 8 leads/mo × $45 average |
+| Permit costs, paid direct | ($240) | 1.6 permits/mo × $150 county fee |
+| Tools furnished | ($150) | Consumables and replacement — the GC owns and supplies them |
+| Rework / warranty reserve | ($360) | ~4% of contract value, reserved against redoing defective work |
+| Owner supervision time | ($660) | 8.8 hrs/mo × $75/hr loaded |
+| **Direct costs** | **($1,770)** | |
+| **Net contribution / specialist / month** | **$470** | 21% margin, before company overhead — thin, once everything the GC absorbs is priced |
 
-*The specialist is paid $2,400/job (75% of the $3,200 contract, the flip side of the $800 GC margin above) — see Exhibit 3. Van financing is excluded deliberately; it's examined in Section 08.*
+*The specialist is paid $2,400/job (75% of the $3,200 contract). Van financing is excluded deliberately; it's examined in Section 08.*
 
-> **What the advantage actually buys:** Running the full job instead of just renting the license roughly quadruples the per-specialist margin — $1,580/month against the license-only version's $440 — because the GC now captures the actual contractor's markup on every job, not just an access fee. That's the reward for taking on real control. Section 08 prices what taking on that much control costs if the relationship is, in substance, employment.
+> **What the advantage actually buys — and what it now costs:** Compare this to the fee-based version: $470/month per specialist against $1,580 with the roster fee in place — a 70% drop. None of that gap is the fee alone; roughly a third of it is the new tool and rework costs the fee used to help cover. A 25% markup was comfortable when it only had to fund leads, permits, and supervision. Funding tools and warranty exposure on top of that leaves very little room, and Section 08 shows what happens if the classification question goes the wrong way as well.
 
 ---
 
@@ -163,26 +161,27 @@ Before the P&L: the edge here isn't a cost saving, it's binary market access.
 
 **The analytical question:** What does a full year earn, run as the operator actually runs it?
 
-**Exhibit 7 — Annual P&L, 14 specialists**
+**Exhibit 7 — Annual P&L, 14 specialists — no fee**
 
 | Line | Annual | Per specialist |
 |---|---:|---:|
 | Contract revenue from clients | $1,505,280 | $107,520 |
-| Roster / dispatch fees | $100,800 | $7,200 |
 | Van financing, gross | $78,154 | — |
-| **Revenue** | **$1,684,234** | |
+| **Revenue** | **$1,583,434** | |
 | Paid to specialists — labor & materials | ($1,128,960) | ($80,640) |
 | Thumbtack lead spend | ($60,480) | ($4,320) |
 | Permits, paid direct | ($40,320) | ($2,880) |
+| Tools furnished | ($25,200) | ($1,800) |
+| Rework / warranty reserve | ($60,211) | ($4,301) |
 | Van book — capital cost & credit losses | ($17,584) | — |
-| **Gross margin** | **$436,890** | |
+| **Gross margin** | **$250,679** | |
 | Insurance, admin, compliance legal | ($70,000) | |
 | Owner supervision labor | ($110,880) | ($7,920) |
-| **Economic profit** | **$256,010** | **$18,286** |
+| **Economic profit** | **$69,799** | **$4,986** |
 
-*Owner supervision: 14 specialists × 8.8 hrs/mo × 12 × $75/hr loaded. Overhead is bumped from the license-only version to reflect full contract-performance and warranty liability on every job, not just permit liability.*
+*Owner supervision: 14 specialists × 8.8 hrs/mo × 12 × $75/hr loaded. Rework reserve: ~4% of contract revenue. No roster fee anywhere in this P&L.*
 
-$256,010 is a real, well-earned number — this is what a genuinely run GC-and-crew business is worth. Section 08 asks the question this P&L doesn't: what does the same crew cost if it's priced the way the control test says it should be?
+$69,799 is thin for the amount the GC is now standing behind — leads, permits, tools, warranty, and 1,478 hours a year of genuine supervision, on a 25% markup. It's also a real, defensible number, earned without charging a worker anything to work. Section 08 asks the question this P&L doesn't: what does the same crew cost if it's priced the way the classification test says it should be?
 
 ---
 
@@ -190,20 +189,18 @@ $256,010 is a real, well-earned number — this is what a genuinely run GC-and-c
 
 **The analytical question:** How does economic profit move with scale and utilization, as currently structured?
 
-Two variables matter most: **active specialists** and **jobs per specialist per month**. Both scale job-margin revenue, but jobs also scale the supervision hours that justify the specialists' independent-contractor status.
-
 **Exhibit 8 — Economic profit, as structured, by specialists and jobs/specialist/month**
 
 | Specialists | 2.2/mo | 2.5/mo | 2.8/mo — base | 3.2/mo |
 |---|---:|---:|---:|---:|
-| 10 | $137,777 | $150,393 | $163,008 | $179,828 |
-| 12 | $179,332 | $194,471 | $209,610 | $229,794 |
-| **14 (base)** | $220,888 | $238,550 | **$256,211** | $279,759 |
-| 18 (needs 2nd qualifier) | $303,999 | $326,707 | $349,414 | $379,690 |
+| 10 | $17,843 | $23,922 | $30,000 | $38,106 |
+| 12 | $35,411 | $42,706 | $50,000 | $59,727 |
+| **14 (base)** | $52,980 | $61,490 | **$70,001** | $81,348 |
+| 18 (needs 2nd qualifier) | $88,117 | $99,059 | $110,001 | $124,590 |
 
-*Every cell prices genuine full-job supervision and holds the IC-plus-fee structure fixed. The 18-specialist row requires a second licensed qualifying agent, since 14 is this owner's genuine-supervision ceiling. None of these cells reflect the reclassification scenario in Section 08 — that's a discrete, all-at-once event, not a point on this grid.*
+*Every cell prices genuine full-job supervision, tools, and rework reserve, with no fee anywhere. Every cell is positive, but the bottom-left quadrant is thin enough that it's one bad month from not being.*
 
-The grid looks steady — and it's hiding the same kind of variable the earlier draft's did: not one that moves continuously, but one that flips.
+The grid no longer looks as steady as the fee-based version did. Removing $100,800 of fee revenue and adding real tool and rework costs took most of the cushion out of the low-volume, low-headcount corner — and that's before anything goes wrong.
 
 ### The scenario the grid does not show
 
@@ -211,14 +208,14 @@ The grid looks steady — and it's hiding the same kind of variable the earlier 
 
 | Event | Impact | Comment |
 |---|---:|---|
-| Base case profit, as structured | $256,010 | |
-| Back pay + FLSA liquidated damages | ($57,600) | One specialist's wage complaint expands, as these often do, to a 4-specialist sample in the audit |
+| Base case profit, as structured | $69,799 | |
+| Back pay + FLSA liquidated damages, unpaid overtime | ($48,000) | One specialist's complaint expands to a 4-specialist sample in the audit |
 | Legal defense & DOL/FL DEO response costs | ($40,000) | |
-| 3 months of reduced output, review pending | ($26,544) | ~40% capacity pullback across all 14 specialists while classification is sorted out |
-| 3 specialists leave | ($56,880) | Word travels fast in a small community |
-| **Adverse case profit** | **$74,986** | Down 71% — and this is the contained version |
+| 3 months of reduced output, review pending | ($7,896) | ~40% capacity pullback across all 14 specialists |
+| 3 specialists leave | ($16,920) | Word travels fast in a small community |
+| **Adverse case profit** | **($43,017)** | A loss — the thin base case has no room left to absorb it |
 
-*None of these four events requires anything beyond one specialist asking the Department of Labor a reasonable question. The uncontained version — a full-workforce reclassification finding — isn't a worse cell on this table; it's the scenario in Section 08, and it's larger than this entire adverse case.*
+*The dollar impact of this scenario is smaller than the fee-based version's (no fee to claw back), but it now flips the year negative, because there's so much less baseline margin to absorb it against.*
 
 ---
 
@@ -226,24 +223,23 @@ The grid looks steady — and it's hiding the same kind of variable the earlier 
 
 **The analytical question:** What does this crew cost if it's paid and taxed the way the control test says it should be?
 
-Run the identical 14-specialist, 2.8-jobs-a-month business two ways. Column one is what's on the books today: specialists as independent contractors, paid 75% of contract value per job, each also paying a $600/month roster fee. Column two changes nothing about how the business actually runs — same jobs, same control, same schedule — and pays them the way a genuine employer would have to: payroll tax is owed, workers' comp is mandatory, and the $600 fee disappears, because charging an employee for the right to work is not legal regardless of what it's called.
+Run the identical 14-specialist, 2.8-jobs-a-month business two ways. Column one is what's on the books today: specialists as independent contractors, paid 75% of contract value per job, no fee, tools and van furnished by the GC. Column two changes nothing about how the business actually runs — same jobs, same control, same tools, same schedule — and pays them the way a genuine employer would have to: payroll tax is owed, and workers' comp is mandatory. There's no fee to remove this time, since there wasn't one to begin with — the entire gap between the columns is now payroll tax and insurance, nothing else.
 
 **Exhibit 10 — As structured vs. reclassified, same 14 specialists**
 
-| Line | As structured (IC + $600 fee) | Reclassified (employee) |
+| Line | As structured (IC, no fee) | Reclassified (employee) |
 |---|---:|---:|
-| Economic profit, before this adjustment | $256,010 | $256,010 |
-| Roster / dispatch fees | included | ($100,800) — cannot be charged to an employee |
+| Economic profit, before this adjustment | $69,799 | $69,799 |
 | Employer payroll tax (FICA, 7.65%) | — | ($86,366) on $1,128,960 of labor payments |
 | Workers' comp premium | — | ($135,475) — ~12% of payroll, construction-rated |
-| **Net adjustment** | — | **($322,641)** |
-| **Economic profit** | **$256,010** | **($66,631)** |
+| **Net adjustment** | — | **($221,841)** |
+| **Economic profit** | **$69,799** | **($152,042)** |
 
-*Same jobs, same control, same crew. The only thing that changes between columns is how the relationship is classified — and that alone is worth $322,641 a year, which is exactly why classification questions like this one get contested rather than conceded.*
+*Same jobs, same control, same tools, same van, same crew. The only thing that changes between columns is how the relationship is classified — and that alone is worth $221,841 a year. Smaller than the fee-based version's gap, but decisive against a base case this thin, and there's no fee left to point to as evidence the specialists are running their own business.*
 
-> **The number that explains the temptation:** $322,641 is not a compliance cost avoided through efficiency — it's the entire margin of the business, twice over. That gap is precisely why construction is one of the most actively targeted industries for misclassification enforcement in Florida and federally: the incentive to call a controlled, full-time crew "independent contractors" is enormous, and it scales with exactly the kind of genuine, hands-on management that also makes the licensing side of this business legal. Fixing one regulatory problem walked the business directly into the other one's blast radius.
+> **The number that explains why removing the fee wasn't enough:** $221,841 is over three times the profit the business earns today. That's still a large enough incentive to make misclassification tempting — but the more important point is what's left to justify the "independent contractor" label once the fee is gone: nothing financial. The specialist doesn't own the tools. They don't independently finance or own the van. They don't carry the risk of a bad job — the GC's rework reserve does. They're paid per job, but under full direction on what job, when, and to what standard. Every remaining fact points toward employee, and none of them cost the GC anything to remove — which is exactly why they're still there.
 
-The van financing carries a smaller, separate exposure worth noting briefly: 6 of the 14 specialists carry a company-financed ProMaster at $1,163/month against a $763/month market benchmark (5.9% APR, 72 mo) — an effective rate near 22%, which risks Florida's civil usury ceiling and undocumented federal TILA disclosures. Priced against realistic default risk, the van book nets roughly $60,570/year on $270,000+ of capital tied up in vehicles — a real, separate lending business that shouldn't be settled by the same $600 invoice that's already carrying the classification question above.
+The van financing carries a smaller, separate exposure worth noting briefly: 6 of the 14 specialists carry a company-financed ProMaster at $1,163/month against a $763/month market benchmark (5.9% APR, 72 mo) — an effective rate near 22%, which risks Florida's civil usury ceiling and undocumented federal TILA disclosures. Priced against realistic default risk, the van book nets roughly $60,570/year on $270,000+ of capital tied up in vehicles — a real, separate lending business, and one more fact (the GC financing and controlling the crew's vehicles) that leans toward employee, not away from it.
 
 ---
 
@@ -255,12 +251,12 @@ The van financing carries a smaller, separate exposure worth noting briefly: 6 o
 
 | Risk | Likelihood | Impact | Mitigation |
 |---|---|---|---|
-| Worker misclassification & the $600 fee | High | Severe | Formal classification review with FL employment counsel before adding another specialist. Either narrow control to licensing-relevant matters and restore genuine contractor autonomy elsewhere, or reclassify to W-2 and drop the fee. |
+| Worker misclassification — control, tools, and risk-bearing | High | Severe | Formal classification review with FL employment counsel. The fee is gone; the remaining exposure is structural — either let specialists own or independently finance their own tools and vehicle and take on some of their own quality risk, or reclassify to W-2 and price accordingly. |
+| Thin margin has no slack for an ordinary bad event | High | High | Exhibit 9's contained adverse case already turns the year negative. Either raise the contractor markup above 25% to reflect everything now being absorbed, or build a cash reserve sized to at least one adverse-case event. |
 | Ch. 489 capping (residual) | Medium | Severe | Genuine control resolves this in substance, but only documentation proves it after the fact. Keep a written supervision log per job. |
-| Usury / undisclosed finance charge on vans | High | High | Route van financing through a licensed retail installment seller or bank rather than private paper; if kept in-house, obtain the applicable FL consumer finance license, cap the effective APR under the civil usury ceiling, issue TILA-compliant disclosures. |
-| Florida workers' comp requirement | Medium | High | Construction triggers FL's 1-employee comp threshold, not the general 4-employee one. Resolve alongside the classification review. |
-| Vehicle credit / repossession risk | Medium | Moderate | Real ability-to-pay underwriting despite thin credit files, GPS/starter-interrupt devices, clear repossession terms, required insurance on every financed van. |
-| Reputational contagion in a small community | Medium | High | Disclose the fee structure plainly to every specialist, apply it consistently, and treat this as a repeat-trust market, not a one-shot one. |
+| Usury / undisclosed finance charge on vans | High | High | Route van financing through a licensed retail installment seller or bank; if kept in-house, obtain the applicable FL consumer finance license, cap the effective APR under the civil usury ceiling, issue TILA-compliant disclosures. |
+| Florida workers' comp requirement | Medium | High | Construction triggers FL's 1-employee comp threshold. Resolve alongside the classification review. |
+| Vehicle credit / repossession risk | Medium | Moderate | Real ability-to-pay underwriting, GPS/starter-interrupt devices, clear repossession terms, required insurance. |
 | Single qualifying-agent concentration | High | Severe | Bring on a second licensed qualifying agent before adding specialists past the current 14-person ceiling; document supervision processes. |
 
 ---
@@ -270,36 +266,36 @@ The van financing carries a smaller, separate exposure worth noting briefly: 6 o
 **The analytical question:** Given all of it, what should this operator do?
 
 Four findings converge:
-1. **Genuine control fixes the licensing problem and improves the economics** (Sections 01, 05–06) — running the full job instead of renting the license nearly quadruples per-specialist margin and resolves the capping exposure the earlier draft flagged as existential.
-2. **That same control is the legal test for employee status** (Section 04) — and a mandatory fee charged to someone who is functionally an employee is its own violation, independent of whether the licensing side is clean.
-3. **The gap between the current structure and a properly reclassified one is $322,641/year** (Section 08) — large enough to explain why this pattern is common in the industry despite the risk, and large enough that naive reclassification would turn a profit into a loss.
-4. **Capacity tops out at 14 specialists per qualifying agent** (Section 01) under genuine full-job supervision — a smaller, more artisanal ceiling than a lighter-touch model, raised only by a second licensed partner.
+1. **Removing the fee closed the sharpest violation, not the underlying one** (Sections 04, 08) — there's no more wage deduction to litigate, but control, tool-furnishing, van-furnishing, and risk-absorption still add up to a strong employee classification under the economic-realities test.
+2. **The economics got thinner, not just the risk profile** (Sections 05–07) — economic profit fell from $256,010 with the fee to $69,799 without it, and the contained adverse case now flips the year negative.
+3. **The reclassification gap shrank but is still decisive** (Section 08) — $221,841/year, over three times the current profit, and none of it is explained by a fee anymore.
+4. **Capacity is still 14 specialists per qualifying agent** (Section 01) — removing the fee didn't touch the supervision-hours constraint, because the fee was never what limited capacity.
 
-> **Recommended structure:** Keep the control that makes the licensing legitimate; narrow it to the work instead of the worker, so the independent-contractor status the $600 fee depends on actually holds.
+> **Recommended structure:** The fee was never the load-bearing risk. Fix the parts that actually are: let specialists carry some of their own tools and risk, and preserve genuine schedule autonomy — not just remove the invoice line.
 >
-> Concretely: keep GC-level control over what a qualifying agent is supposed to control — permits, code compliance, final quality sign-off, client-facing contract terms — and deliberately restore contractor autonomy everywhere else: let specialists set their own schedule within a job's completion window, allow them to decline jobs or take outside work, pay per invoiced job rather than anything resembling a shift, and leave tools and materials sourcing with them. Reframe the $600/month explicitly as a disclosed roster/dispatch fee charged to a genuine independent contractor — the same structure real-estate brokerages use for agent desk fees — not as a condition attached to hours worked. Get a formal classification opinion from Florida employment counsel before adding the 15th specialist; it is now the single highest-value piece of diligence available, ahead of the vehicle-financing cleanup below.
+> Concretely: keep GC-level control over what a qualifying agent is supposed to control — permits, code compliance, final quality sign-off, client-facing contract terms. Everywhere else, restore real independent-contractor facts: let specialists own or independently finance their primary hand tools (the GC can still help source them without owning and furnishing them outright), let them decline jobs or take outside work, let them set their schedule within a job's completion window, and consider requiring specialists to carry their own liability coverage for defective work instead of the GC absorbing 100% of the rework cost. Every one of those shifts a fact back toward "independent business" — the fee never did that work, even when it existed. Get a formal classification opinion from Florida employment counsel before adding the 15th specialist.
 
-> **What actually creates the misclassification exposure:** Not malice — the same instincts that make a good GC. Assigning jobs to hit client deadlines, checking quality on-site, setting the schedule so the crew shows up when the client expects them: every one of those, done routinely enough, is exactly the fact pattern regulators use to find an employment relationship. The fix is not to supervise less — undersupervising is what created the capping exposure in the first draft. It's to supervise the *work* (permits, code, final quality) without supervising the *worker* (hours, schedule, exclusivity) — a narrower, more deliberate kind of control than "control the constructors" implies.
+> **What removing the fee didn't fix:** Not malice — the same instincts that make a good GC, plus a business practice (furnishing tools, financing the van, absorbing every callback) that looks generous to the crew and reads as "employer" to a regulator. The classification tests don't ask whether money changed hands between the GC and the worker; they ask who bears the risk and who owns the means of production. Right now the answer to both is the GC, on every axis. Dropping the fee removed the one fact that might have looked like an independent contractor paying for something — a desk fee, a franchise fee — and left every other fact exactly where it was.
 
 ### Consider a small W-2 core, IC overflow
 
-Not every specialist needs the same classification. The longest-tenured, most schedule-controlled members of the crew are the hardest to defend as ICs and the best candidates to formalize as W-2 employees — accepting the payroll tax and workers'-comp cost in exchange for closing the exposure where it's largest. Newer or occasional specialists, genuinely working other jobs and setting their own hours, can more credibly stay independent contractors paying the roster fee. A blended model costs more than the current all-IC structure but far less than full reclassification, and it's a more honest match to how differently these relationships actually function in practice.
+Not every specialist needs the same classification. The longest-tenured, most schedule-controlled members of the crew are the hardest to defend as ICs and the best candidates to formalize as W-2 employees — accepting the payroll tax and workers'-comp cost in exchange for closing the exposure where it's largest. Newer or occasional specialists, genuinely owning their own tools and working other jobs, can more credibly stay independent contractors. A blended model costs more than the current structure but far less than full reclassification.
 
 ### What would change this recommendation
 - **A formal FL employment-counsel opinion on classification** under the specific facts here — the single highest-value piece of diligence before scaling further.
+- **Specialists genuinely owning their own tools and carrying their own liability coverage** — the two changes that would do more for classification defense than removing the fee did.
 - **A licensed consumer-finance partner for the vans**, removing the usury and TILA exposure without giving up the financing revenue.
 - **A second licensed qualifying agent**, the only way to grow past 14 specialists without eroding genuine full-job supervision.
-- **Case law or DOL guidance specific to construction gig-labor arrangements**, an actively developing area that could move the classification line in either direction.
 
 ### Metrics to run it on
-- **Specialist outside-work rate** — the share genuinely working other clients or declining jobs; the strongest evidence of real IC status.
-- **Supervision hours logged per job** — scoped to permits, code, and quality sign-off specifically, not schedule or hours worked.
+- **Specialist tool and vehicle ownership rate** — the share genuinely providing their own equipment; the strongest remaining lever on classification risk.
+- **Contractor markup vs. all-in cost per job** — the 25% markup is currently thin against leads, permits, tools, supervision, and rework combined.
+- **Rework rate as a % of jobs** — the input the 4% warranty reserve assumes; if it's running higher, the real margin is worse than Exhibit 7 shows.
 - **Effective APR on financed vehicles** — must stay demonstrably under the civil usury ceiling with full disclosure.
 - **Active specialists as a share of the 14-person capacity ceiling** — approaching 100% is a signal to add a qualifying agent, not more specialists.
-- **Van default rate** — underwriting discipline, tracked separately from the crew's numbers.
 
 ---
 
-**ANALYTICAL BASIS** — Figures are directional estimates for a Florida GC running a directly-contracted crew of immigrant trade specialists, built for structural analysis rather than as an audited forecast. Lead costs, close rates, contract splits, permit incidence, supervision hours, and vehicle credit-loss assumptions vary by trade, county, and specialist; Exhibit 8 exists because these inputs should be re-derived against actual account data before being relied on. Legal and regulatory items — worker classification under FLSA/IRS tests, Ch. 489 qualifying-agreement standards, Florida workers'-comp thresholds, and vehicle usury/TILA thresholds — are summarized at a level suitable for underwriting judgment and are not legal advice; confirm current statutory thresholds, case law, and enforcement posture with Florida employment and licensing counsel before relying on them.
+**ANALYTICAL BASIS** — Figures are directional estimates for a Florida GC running a directly-contracted crew of immigrant trade specialists, built for structural analysis rather than as an audited forecast. Lead costs, close rates, contract splits, permit incidence, supervision hours, tool and rework costs, and vehicle credit-loss assumptions vary by trade, county, and specialist. Legal and regulatory items — worker classification under FLSA/IRS economic-realities tests, Ch. 489 qualifying-agreement standards, Florida workers'-comp thresholds, and vehicle usury/TILA thresholds — are summarized at a level suitable for underwriting judgment and are not legal advice; confirm current statutory thresholds, case law, and enforcement posture with Florida employment and licensing counsel before relying on them.
 
-**FRAMEWORKS APPLIED** — Market funnel (TAM/SAM/SOM) capacity-bound by genuine-supervision hours · Porter's Five Forces · Value chain and margin-pool analysis · State/federal regulatory structural analysis · Bottom-up unit economics with isolated advantage decomposition · Two-scenario as-structured-vs-reclassified comparison · Two-variable sensitivity · Adverse-case scenario · Cross-risk capital comparison (licensing vs. wage-and-hour vs. lending) · Risk register · Economic profit adjustment for owner supervision labor.
+**FRAMEWORKS APPLIED** — Market funnel (TAM/SAM/SOM) capacity-bound by genuine-supervision hours · Porter's Five Forces · Value chain and margin-pool analysis · State/federal regulatory structural analysis · Bottom-up unit economics with isolated advantage decomposition · Two-scenario as-structured-vs-reclassified comparison · Two-variable sensitivity · Adverse-case scenario · Cross-risk capital comparison (licensing vs. wage-and-hour vs. lending) · Risk register · Economic profit adjustment for owner supervision, tool, and warranty costs.
