@@ -1,0 +1,675 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<title>Three At-Bats a Year</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+
+<style>
+:root{
+  --ground:#F4F3EF;
+  --surface:#FFFFFF;
+  --surface-2:#EBEAE4;
+  --ink:#171C21;
+  --ink-2:#3B454E;
+  --muted:#6C7580;
+  --rule:#D7D6CE;
+  --rule-strong:#B4B4AB;
+  --accent:#2D5170;
+  --accent-soft:#DEE7EE;
+  --warm:#8F4331;
+  --warm-soft:#F1E1DA;
+  --good:#33654A;
+  --good-soft:#DDEAE1;
+  --shadow:0 1px 2px rgba(23,28,33,.06),0 8px 24px -12px rgba(23,28,33,.16);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1216;
+    --surface:#161C21;
+    --surface-2:#1D242A;
+    --ink:#E5E8EA;
+    --ink-2:#BAC1C7;
+    --muted:#8B959D;
+    --rule:#272F36;
+    --rule-strong:#3A444C;
+    --accent:#77AED4;
+    --accent-soft:#182B3A;
+    --warm:#D4855F;
+    --warm-soft:#2D1E18;
+    --good:#71BE93;
+    --good-soft:#152620;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1216;
+  --surface:#161C21;
+  --surface-2:#1D242A;
+  --ink:#E5E8EA;
+  --ink-2:#BAC1C7;
+  --muted:#8B959D;
+  --rule:#272F36;
+  --rule-strong:#3A444C;
+  --accent:#77AED4;
+  --accent-soft:#182B3A;
+  --warm:#D4855F;
+  --warm-soft:#2D1E18;
+  --good:#71BE93;
+  --good-soft:#152620;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  margin:0;
+  padding:0 0 6rem;
+}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+
+.doc{
+  display:grid;
+  grid-template-columns:
+    [full-start] minmax(1.15rem,1fr)
+    [wide-start] minmax(0,170px)
+    [text-start] minmax(0,69ch)
+    [text-end] minmax(0,170px)
+    [wide-end] minmax(1.15rem,1fr)
+    [full-end];
+  row-gap:0;
+}
+.doc>*{grid-column:text}
+.doc>.wide{grid-column:wide}
+
+.masthead{border-bottom:2px solid var(--ink);padding:3.5rem 0 1.1rem;margin-bottom:2.2rem}
+.stamp{
+  font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:700;font-size:.68rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
+  display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-bottom:1.5rem;
+}
+.stamp span:not(:first-child){color:var(--muted)}
+h1{
+  font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:700;
+  font-size:clamp(2.1rem,5.4vw,3.15rem);line-height:1.02;letter-spacing:-.015em;
+  margin:0 0 .55rem;text-wrap:balance;
+}
+.dek{font-size:1.1rem;color:var(--ink-2);margin:0;max-width:58ch}
+.byline{
+  font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--muted);
+  letter-spacing:.02em;margin-top:1.4rem;padding-top:.9rem;border-top:1px solid var(--rule);
+}
+
+section{margin-top:3.4rem}
+.snum{
+  font-family:"IBM Plex Mono",monospace;font-size:.7rem;font-weight:600;letter-spacing:.14em;
+  color:var(--accent);text-transform:uppercase;display:block;margin-bottom:.45rem;
+}
+h2{
+  font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:700;font-size:1.72rem;
+  line-height:1.14;letter-spacing:-.01em;margin:0 0 .3rem;text-wrap:balance;
+  padding-bottom:.55rem;border-bottom:1px solid var(--rule-strong);
+}
+h3{
+  font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:600;font-size:1.06rem;
+  letter-spacing:.01em;margin:2rem 0 .35rem;color:var(--ink);
+}
+.q{
+  font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:500;font-size:.94rem;
+  color:var(--muted);margin:.8rem 0 1.5rem;padding-left:.85rem;border-left:2px solid var(--accent);
+}
+.q b{color:var(--accent);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;display:block;margin-bottom:.15rem}
+p{margin:0 0 1.05rem}
+ul,ol{margin:0 0 1.05rem;padding-left:1.25rem}
+li{margin-bottom:.42rem}
+li::marker{color:var(--muted)}
+strong{font-weight:600}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+.exhibit{margin:2rem 0 2.4rem}
+.exhead{
+  display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;
+  font-family:"IBM Plex Sans Condensed",sans-serif;
+  border-bottom:2px solid var(--ink);padding-bottom:.4rem;margin-bottom:0;
+}
+.exhead .lbl{
+  font-family:"IBM Plex Mono",monospace;font-size:.68rem;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--surface);background:var(--accent);
+  padding:.18rem .48rem;border-radius:2px;
+}
+.exhead .ttl{font-weight:600;font-size:1rem;letter-spacing:.01em}
+.exscroll{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-top:none;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:.87rem;min-width:520px}
+caption{caption-side:bottom;text-align:left;font-size:.78rem;color:var(--muted);padding:.7rem .95rem;font-style:italic;line-height:1.5}
+th{
+  font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:600;font-size:.73rem;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--muted);text-align:left;
+  padding:.7rem .95rem;border-bottom:1px solid var(--rule-strong);white-space:nowrap;vertical-align:bottom;
+}
+td{padding:.62rem .95rem;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.45}
+tbody tr:last-child td{border-bottom:none}
+.n{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.sub td{color:var(--ink-2)}
+tr.tot td{font-weight:600;border-top:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);background:var(--surface-2)}
+tr.grand td{font-weight:600;background:var(--accent-soft);border-top:2px solid var(--accent);border-bottom:none;color:var(--ink)}
+td.item{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:.9rem}
+.neg{color:var(--warm)}
+
+.pill{
+  display:inline-block;font-family:"IBM Plex Sans Condensed",sans-serif;font-size:.68rem;
+  font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.14rem .45rem;
+  border-radius:2px;white-space:nowrap;
+}
+.p-bad{background:var(--warm-soft);color:var(--warm)}
+.p-mid{background:var(--surface-2);color:var(--ink-2)}
+.p-good{background:var(--good-soft);color:var(--good)}
+
+.verdict{
+  background:var(--surface);border:1px solid var(--rule-strong);border-left:4px solid var(--accent);
+  padding:1.5rem 1.6rem;margin:1.6rem 0 2rem;box-shadow:var(--shadow);
+}
+.verdict h3{margin-top:0;font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
+.verdict p:last-child{margin-bottom:0}
+.verdict.warn{border-left-color:var(--warm)}
+.verdict.warn h3{color:var(--warm)}
+
+.kpi{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1px;
+  background:var(--rule);border:1px solid var(--rule);margin:1.6rem 0 2rem;
+}
+.kpi div{background:var(--surface);padding:.95rem 1rem}
+.kpi .k{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.kpi .v{font-family:"IBM Plex Mono",monospace;font-size:1.42rem;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.kpi .v.bad{color:var(--warm)}
+.kpi .s{font-size:.78rem;color:var(--muted);margin-top:.25rem;line-height:1.4}
+
+.heat td.n{font-weight:500}
+.h1c{background:var(--warm-soft);color:var(--warm)}
+.h2c{background:var(--surface-2)}
+.h3c{background:var(--good-soft);color:var(--good)}
+.h4c{background:var(--good-soft);color:var(--good);font-weight:600}
+
+.method{background:var(--surface-2);border:1px solid var(--rule);padding:1.4rem 1.6rem;margin:2rem 0}
+.method h3{margin-top:0;font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.method p:last-child{margin-bottom:0}
+
+figure{margin:0}
+svg.chart{display:block;width:100%;height:auto;background:var(--surface)}
+.chart .axis{stroke:var(--rule-strong);stroke-width:1}
+.chart .grid{stroke:var(--rule);stroke-width:1;stroke-dasharray:2 4}
+.chart .lab{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:12.5px;font-weight:600;fill:var(--ink)}
+.chart .val{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;fill:var(--ink)}
+.chart .sub{font-family:"IBM Plex Mono",monospace;font-size:10.5px;fill:var(--muted)}
+.chart .ax{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:11px;font-weight:600;fill:var(--muted);letter-spacing:.07em;text-transform:uppercase}
+.chart .bar{fill:var(--muted);opacity:.55}
+.chart .bar-me{fill:var(--accent)}
+
+footer{
+  margin-top:4rem;padding-top:1.2rem;border-top:2px solid var(--ink);
+  font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--muted);line-height:1.65;
+}
+
+@media (max-width:640px){
+  body{font-size:16px}
+  .doc{grid-template-columns:[full-start wide-start text-start] minmax(0,1fr) [text-end wide-end full-end];padding:0 1.1rem}
+  .masthead{padding-top:2.4rem}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<article class="doc">
+
+<header class="masthead">
+  <div class="stamp">
+    <span>Underwriting Memo</span>
+    <span>Residential Fix-and-Flip</span>
+    <span>Florida</span>
+  </div>
+  <h1>Three At-Bats a Year</h1>
+  <p class="dek">An MBA-style teardown of a skilled tradesman entering house flipping in Florida — and why the same labor advantage that works in a high-velocity business fails in a low-velocity one.</p>
+  <div class="byline">SUBJECT: skilled construction worker, self-performing rehab · MARKET: Tampa Bay / Central FL workforce housing, $340K ARV band · BASE CASE: 3 deals/yr, hard-money financed · COMPANION TO: the used-vehicle memo</div>
+</header>
+
+<div class="method">
+  <h3>Same method, different answer</h3>
+  <p>This memo runs the identical framework applied to the car-flipping analysis — market funnel, Five Forces, value chain, unit economics, sensitivity, risk register, recommendation. The frameworks are the same on purpose. <strong>The conclusions are not,</strong> and the reason they diverge is the single most useful thing in this document.</p>
+</div>
+
+<section>
+  <span class="snum">Section 00</span>
+  <h2>Executive summary</h2>
+  <p class="q"><b>The analytical question</b>Should a skilled tradesman deploy capital and labor into flipping houses in Florida, and if so, how?</p>
+
+  <div class="kpi">
+    <div><div class="k">Revenue</div><div class="v">$1.02M</div><div class="s">3 deals at $340K ARV</div></div>
+    <div><div class="k">Profit / deal</div><div class="v">$42,646</div><div class="s">12.5% of ARV — a good deal</div></div>
+    <div><div class="k">Cash-on-cash</div><div class="v">54%</div><div class="s">before owner compensation</div></div>
+    <div><div class="k">Economic profit</div><div class="v bad">($9,062)</div><div class="s">after charging owner at market</div></div>
+    <div><div class="k">At-bats / year</div><div class="v">3</div><div class="s">vs. 180 in the vehicle memo</div></div>
+  </div>
+
+  <div class="verdict warn">
+    <h3>Recommendation</h3>
+    <p><strong>Do not flip full-time. Contract for other flippers, and take one or two opportunistic deals a year funded from those profits.</strong></p>
+    <p>Every individual deal in this model works. The base case earns $42,646 on roughly $70,000 of cash in seven months — a 54% cash-on-cash return that would look outstanding in almost any other context. That number is exactly how this business is sold, and it is not a lie.</p>
+    <p>It is, however, incomplete in two ways. First, it is pre-compensation: charge the owner's 1,260 self-performed hours and his general-contracting time at Florida market rates and the annual economic profit is <strong>negative $9,062</strong>. The tradesman is working a full year, carrying six-figure leverage, and ending up marginally worse off than taking a wage.</p>
+    <p style="margin-bottom:0">Second, and more seriously: <strong>three deals a year is not a portfolio, it is three coin flips.</strong> One deal that goes wrong — a failed four-point inspection, a substantial-improvement trigger, four months of permit delay — erases the entire year. In the vehicle business, 180 annual transactions let the law of large numbers do its work and one bad unit costs three units of profit. Here, one bad deal costs the year, and there is no volume to average it against. That variance is undiversifiable at this scale, and it is not compensated.</p>
+  </div>
+</section>
+
+<section>
+  <span class="snum">Section 01</span>
+  <h2>Market definition and capacity</h2>
+  <p class="q"><b>The analytical question</b>How large is the opportunity, and what actually limits participation?</p>
+
+  <p>As in any owner-operator business, sizing must be bounded by the real constraint. In vehicles that constraint was lot stalls. Here it is <strong>working capital and hold period</strong> — and the ratio between them is brutal.</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 1</span><span class="ttl">Market funnel, TAM to SOM</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Layer</th><th>Definition</th><th class="n">Units / yr</th><th class="n">Value</th></tr></thead>
+        <tbody>
+          <tr><td class="item">TAM</td><td>US existing-home sales, all channels</td><td class="n">~4.1M</td><td class="n">~$1.7T</td></tr>
+          <tr><td class="item">SAM — state</td><td>Florida existing-home sales</td><td class="n">~340K</td><td class="n">~$140B</td></tr>
+          <tr><td class="item">SAM — segment</td><td>FL homes resold within 12 months (flips)</td><td class="n">~24K</td><td class="n">~$8B</td></tr>
+          <tr><td class="item">SAM — local</td><td>Flips inside one metro, $250–420K ARV band</td><td class="n">~2,900</td><td class="n">~$950M</td></tr>
+          <tr class="grand"><td class="item">SOM</td><td>Capacity-bound: 2 concurrent deals at a 7-month cycle</td><td class="n">3</td><td class="n">$1.02M</td></tr>
+        </tbody>
+        <caption>Share of the local flip segment: 0.10%. Note the collapse at the last row — capital and cycle time, not demand, set the ceiling.</caption>
+      </table>
+    </div>
+  </div>
+
+  <p>The capacity math is worth stating explicitly, because it is where this business diverges structurally from every high-velocity trade:</p>
+
+  <ul>
+    <li>Peak cash committed per deal: <strong>~$70,000</strong> (down payment, points, closing costs, carry, and floated material draws).</li>
+    <li>Working capital available to a tradesman entering the business: <strong>~$140,000</strong>, supporting two concurrent deals.</li>
+    <li>Full cycle — contract to close of resale: <strong>7 months</strong>.</li>
+    <li>Annual throughput: <strong>3 deals</strong>, allowing for the reality that a qualifying deal is not always available when capital comes free.</li>
+  </ul>
+
+  <p>Three. That number governs the rest of the memo.</p>
+</section>
+
+<section>
+  <span class="snum">Section 02</span>
+  <h2>Industry structure — Five Forces</h2>
+  <p class="q"><b>The analytical question</b>What return does the average participant earn, and why?</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 2</span><span class="ttl">Force assessment</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Force</th><th>Rating</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Supplier power<br><span class="sub">sellers of distressed stock</span></td><td><span class="pill p-bad">High</span></td><td>Genuinely distressed inventory is scarce. Foreclosure volume sits near historic lows, and the operator bids against institutional single-family buyers, wholesalers with marketing budgets, and cash buyers who can close in seven days. There is no auction lane where a disciplined buyer gets a structural discount.</td></tr>
+          <tr><td class="item">Buyer power</td><td><span class="pill p-bad">High</span></td><td>Worse than in vehicles, and for a specific reason: <strong>the purchase price is public record in Florida and appears on Zillow.</strong> Your buyer can see you paid $162,000 six months ago. Days-on-market is public too. The information asymmetry runs entirely against the seller, and inspection-period renegotiation is near-universal.</td></tr>
+          <tr><td class="item">Threat of entry</td><td><span class="pill p-bad">High</span></td><td>Effectively no barrier beyond capital, and capital is the easiest input to rent. Entry is strongly pro-cyclical — new entrants arrive in volume exactly at market peaks, which is precisely when acquisition discipline matters most.</td></tr>
+          <tr><td class="item">Substitutes</td><td><span class="pill p-bad">High</span></td><td>Underrated in Florida. Production builders compete directly against your flip with new inventory, warranties, and — decisively — <em>rate buydowns</em> a private seller cannot match. A builder financing a buyer at 4.99% beats your renovated 1978 ranch at market rate.</td></tr>
+          <tr><td class="item">Rivalry</td><td><span class="pill p-bad">Intense</span></td><td>Concentrated entirely at acquisition. Ten bidders on the one house worth buying; none on the ninety that are not.</td></tr>
+        </tbody>
+        <caption>Five of five forces unfavorable — a worse structural picture than the used-vehicle industry, which had four.</caption>
+      </table>
+    </div>
+  </div>
+
+  <p><strong>The implication is the same and it is worth repeating.</strong> When structure is this poor, average returns are poor by construction. Any excess return must come from a firm-specific advantage. There is exactly one candidate here: the operator is a skilled builder. Section 05 measures it precisely — and finds it is <em>larger</em> in proportional terms than the mechanic's advantage was. Section 06 explains why that still isn't enough.</p>
+</section>
+
+<section>
+  <span class="snum">Section 03</span>
+  <h2>Value chain and margin pool</h2>
+  <p class="q"><b>The analytical question</b>Of everything extracted from a single transaction, who takes what — and who takes risk for it?</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 3</span><span class="ttl">Value extracted per $340K flip</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Participant</th><th class="n">Take</th><th>Capital at risk</th><th>Quality</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Wholesaler<br><span class="sub">if the deal is sourced from one</span></td><td class="n">$8–12K</td><td>None — assigns the contract, never takes title. Paid at closing regardless of what happens afterward.</td><td><span class="pill p-good">Best</span></td></tr>
+          <tr><td class="item">Hard money lender</td><td class="n">$19,814</td><td>First lien at ~65% of ARV. Points earned on day one. Effective ~20% annualized, secured, with the operator's equity absorbing the first loss.</td><td><span class="pill p-good">Excellent</span></td></tr>
+          <tr><td class="item">Real estate brokerage<br><span class="sub">both sides</span></td><td class="n">$17,000</td><td>None. Paid on gross price, indifferent to whether the flip was profitable.</td><td><span class="pill p-good">Excellent</span></td></tr>
+          <tr><td class="item">Subcontractors<br><span class="sub">roof, HVAC, electrical, plumbing</span></td><td class="n">~$18,000<br><span class="sub">margin on $49K billed</span></td><td>None. Paid on draw, 30-day terms, lien rights if not.</td><td><span class="pill p-good">Excellent</span></td></tr>
+          <tr><td class="item">Government<br><span class="sub">doc stamps, permits, tax</span></td><td class="n">~$6,500</td><td>None.</td><td>—</td></tr>
+          <tr><td class="item">Title, insurance, utilities</td><td class="n">~$5,000</td><td>None.</td><td>—</td></tr>
+          <tr class="grand"><td class="item">The flipper</td><td class="n">$42,646</td><td><strong>All of it.</strong> Construction, market, permitting, storm, and liquidity risk, for seven months, at roughly 4:1 leverage.</td><td><span class="pill p-bad">Worst</span></td></tr>
+        </tbody>
+        <caption>Roughly $75,000 of third-party value extraction against the flipper's $42,646 — and every dollar of it is contractually senior to his own.</caption>
+      </table>
+    </div>
+  </div>
+
+  <p>The pattern is identical to the vehicle chain, and more extreme. <strong>The participants who never take title do best.</strong> The wholesaler is the purest expression: he found the deal, assigned the contract, collected $10,000, and was never exposed to a single day of carry or a single unforeseen repair.</p>
+
+  <div class="verdict">
+    <h3>The line that should stop you</h3>
+    <p style="margin-bottom:0">Sale costs on this deal total <span class="mono">$25,840</span> — commissions, doc stamps, title, and post-inspection concessions. The equity actually created by the renovation is <span class="mono">$68,486</span>. <strong>The act of selling destroys 38% of the value the work created.</strong> That is the strongest single financial argument against flipping as a business model, and it is addressed in Section 10.</p>
+  </div>
+</section>
+
+<section>
+  <span class="snum">Section 04</span>
+  <h2>Florida-specific structure</h2>
+  <p class="q"><b>The analytical question</b>What does this state do to the model that a generic analysis would miss?</p>
+
+  <p>Florida is not a neutral venue for this business. Several state-specific mechanics move the numbers more than anything in the national literature, and two of them can void a deal outright.</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 4</span><span class="ttl">State-specific factors and their transmission</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Factor</th><th>Effect</th><th>Mechanism</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Homeowners insurance cost</td><td><span class="pill p-bad">Suppresses ARV</span></td><td>Florida premiums run several times the national average, and the carrier market has thinned to the point that the state-backed insurer of last resort carries an enormous book. Insurance is a line in the buyer's monthly payment. A $400/month premium differential removes roughly $60,000 of purchasing power from a payment-constrained buyer — straight out of your exit price.</td></tr>
+          <tr><td class="item">Roof age and insurability</td><td><span class="pill p-bad">Mandatory cost</span></td><td>Carriers decline or non-renew older roofs. An uninsurable house is unfinanceable, and an unfinanceable house is unsellable to anyone but a cash investor at a discount. <strong>Assume a full roof on any pre-2012 acquisition</strong> — $18–35K that is not optional and not value-add.</td></tr>
+          <tr><td class="item">Four-point inspection failures</td><td><span class="pill p-bad">Scope risk</span></td><td>Insurers require a four-point on older homes: roof, electrical, plumbing, HVAC. The classic Florida killers are cast-iron drain lines in mid-century stock, polybutylene supply (1978–95), Federal Pacific and Zinsco panels, and aluminum branch wiring. A repipe alone is $12–30K, discovered <em>after</em> you own it unless you scope the sewer before contract.</td></tr>
+          <tr><td class="item">Substantial-improvement rule</td><td><span class="pill p-bad">Deal killer</span></td><td>In a Special Flood Hazard Area, improvements costing 50% or more of the structure's pre-improvement value trigger a requirement to bring the <em>entire</em> structure into current flood compliance — which can mean elevating the house. This turns a $77K renovation into an unfinishable project. Pull the flood zone and elevation certificate before you go hard on a deposit.</td></tr>
+          <tr><td class="item">Condo milestone &amp; reserve law</td><td><span class="pill p-bad">Avoid</span></td><td>Post-Surfside legislation mandates milestone structural inspections on older buildings and fully funded structural integrity reserve studies. Special assessments running into five and six figures per unit have followed, and they can land between your contract and your closing. <strong>Older condos are currently uninvestable for a flipper</strong> — the liability is unbounded and outside your control.</td></tr>
+          <tr><td class="item">Property tax reset</td><td><span class="pill p-mid">Caps your ARV</span></td><td>The prior owner's assessment was capped; your buyer's resets to the sale price. Their tax bill can be double the seller's on the identical house. Combined with insurance, the buyer's carrying cost is far worse than the neighborhood's comparable sales imply — which is why so many flips sit at a price the comps supposedly support.</td></tr>
+          <tr><td class="item">Hurricane season</td><td><span class="pill p-bad">Sequencing constraint</span></td><td>June through November. Builder's-risk policies commonly exclude or heavily surcharge named-storm damage, and a house with an open roof in September is effectively uninsured. Sequence structural and roof work into December–May and be dried in before June 1.</td></tr>
+          <tr><td class="item">Post-storm labor market</td><td><span class="pill p-mid">Cost spike</span></td><td>A landfall anywhere in the region drains subcontractor availability and lifts trade pricing sharply for months. Your schedule and your budget move together, in the wrong direction.</td></tr>
+          <tr><td class="item">Owner-builder exemption</td><td><span class="pill p-bad">Legal trap</span></td><td>Florida's owner-builder exemption is written for an owner improving a property for their <em>own</em> occupancy, and is not available where the improvement is made for sale within a short window. A flipper self-performing licensed work under that exemption is on unsound footing. <strong>Get properly licensed</strong> — for a working tradesman this is an achievable, one-time cost that removes an existential risk.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="snum">Section 05</span>
+  <h2>Unit economics</h2>
+  <p class="q"><b>The analytical question</b>What does one deal earn, built bottom-up with the owner's labor made visible?</p>
+
+  <h3>The advantage, isolated</h3>
+  <p>Before the P&amp;L, quantify the edge — because it is the entire reason this operator would attempt the business at all.</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 5</span><span class="ttl">Rehab cost: turnkey GC vs. owner-builder</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Scope</th><th class="n">Investor pays a GC</th><th class="n">Owner-builder cost</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Licensed subs — roof, HVAC, electrical, plumbing</td><td class="n">$49,000</td><td class="n">$49,000</td><td>No advantage. Must be subbed either way.</td></tr>
+          <tr><td class="item">Materials — all other scope</td><td class="n">$23,000</td><td class="n">$23,000</td><td>Minor trade-account discount, treated as zero</td></tr>
+          <tr><td class="item">Permits, dumpsters, equipment</td><td class="n">$5,500</td><td class="n">$5,500</td><td></td></tr>
+          <tr><td class="item">Self-performed labor<br><span class="sub">demo, framing, drywall, tile, trim, cabinets, paint, flooring, punch</span></td><td class="n">$17,300</td><td class="n">$0</td><td><strong>Owner's hands</strong> — ~420 hours</td></tr>
+          <tr><td class="item">General contractor markup</td><td class="n">$17,200</td><td class="n">$0</td><td><strong>Owner's license and management</strong></td></tr>
+          <tr class="grand"><td class="item">Total rehab</td><td class="n">$112,000</td><td class="n">$77,500</td><td>Advantage: <strong>$34,500</strong></td></tr>
+        </tbody>
+        <caption>The edge splits into two genuinely different halves — $17,300 of donated labor, and $17,200 of avoided GC markup that is not labor at all. The second half is a real, structural advantage; the first half is a wage the operator declines to pay himself.</caption>
+      </table>
+    </div>
+  </div>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 6</span><span class="ttl">Deal P&amp;L, base case</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Line</th><th class="n">Amount</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Resale price (ARV)</td><td class="n">$340,000</td><td>Supported by comps within 0.5 miles, 90 days</td></tr>
+          <tr class="sub"><td class="item">Purchase price</td><td class="n">$162,000</td><td>47.6% of ARV — see maximum-allowable-offer note below</td></tr>
+          <tr class="sub"><td class="item">Acquisition closing costs</td><td class="n">$4,800</td><td>Title, survey, inspections, intangible tax</td></tr>
+          <tr class="sub"><td class="item">Rehab — owner-builder</td><td class="n">$77,500</td><td><strong>Owner labor not charged here</strong></td></tr>
+          <tr class="sub"><td class="item">Loan points — 2.5 on $215,200</td><td class="n">$5,380</td><td>Earned by the lender on day one</td></tr>
+          <tr class="sub"><td class="item">Loan interest — 11.5%, 7 months</td><td class="n">$14,434</td><td></td></tr>
+          <tr class="sub"><td class="item">Carry — tax, insurance, utilities, lawn</td><td class="n">$7,400</td><td>$1,060/mo; FL insurance is the largest component</td></tr>
+          <tr class="sub"><td class="item">Sale costs</td><td class="n">$25,840</td><td>Commissions, doc stamps, title, concessions</td></tr>
+          <tr class="tot"><td class="item">Total cost</td><td class="n">$297,354</td><td></td></tr>
+          <tr class="grand"><td class="item">Net profit</td><td class="n">$42,646</td><td>12.5% of ARV — a genuinely good deal</td></tr>
+          <tr><td class="item"><em>Memo: peak cash committed</em></td><td class="n">$70,000</td><td>Cash-on-cash 61% over 7 months</td></tr>
+          <tr><td class="item"><em>Memo: imputed owner labor</em></td><td class="n neg">($27,300)</td><td>420 hrs at $65 loaded, plus project management</td></tr>
+        </tbody>
+        <caption>Total hold: 7 months — two weeks to close, four months of rehab, six weeks to contract, five weeks to the buyer's closing.</caption>
+      </table>
+    </div>
+  </div>
+
+  <h3>The purchase price is the whole game</h3>
+  <p>Run the standard maximum-allowable-offer discipline against this deal. At 70% of ARV less <em>retail</em> rehab, an investor using a general contractor can pay <span class="mono">$126,000</span>. The same formula using the owner-builder's true rehab cost supports <span class="mono">$160,500</span> — within $1,500 of the base case.</p>
+
+  <div class="verdict">
+    <h3>What the advantage actually buys</h3>
+    <p style="margin-bottom:0">The tradesman's $34,500 edge does not show up as extra profit. It shows up as <strong>the ability to pay $34,500 more than a GC-dependent investor for the identical house and still hit the same margin.</strong> In a market with ten bidders on every viable deal, that is not surplus — it is the price of admission. The edge is spent at the auction, not banked at the closing. This is the single most important sentence in the memo, and it is the mechanism by which a real competitive advantage produces no excess return.</p>
+  </div>
+</section>
+
+<section>
+  <span class="snum">Section 06</span>
+  <h2>Annual operating model</h2>
+  <p class="q"><b>The analytical question</b>What does a full year earn once fixed costs and a market wage are charged?</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 7</span><span class="ttl">Annual P&amp;L, 3 deals</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Line</th><th class="n">Annual</th><th class="n">Per deal</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Revenue</td><td class="n">$1,020,000</td><td class="n">$340,000</td></tr>
+          <tr><td class="item">Total deal costs</td><td class="n">$892,062</td><td class="n">$297,354</td></tr>
+          <tr class="tot"><td class="item">Deal-level profit</td><td class="n">$127,938</td><td class="n">$42,646</td></tr>
+          <tr class="sub"><td class="item">Truck, tools, fuel</td><td class="n">$14,000</td><td class="n">$4,667</td></tr>
+          <tr class="sub"><td class="item">Licensing, GL insurance, bond</td><td class="n">$9,000</td><td class="n">$3,000</td></tr>
+          <tr class="sub"><td class="item">Deal sourcing &amp; marketing</td><td class="n">$18,000</td><td class="n">$6,000</td></tr>
+          <tr class="sub"><td class="item">Accounting, legal, software</td><td class="n">$7,000</td><td class="n">$2,333</td></tr>
+          <tr class="sub"><td class="item">Admin, phone, misc</td><td class="n">$4,000</td><td class="n">$1,333</td></tr>
+          <tr class="tot"><td class="item">Business overhead</td><td class="n">$52,000</td><td class="n">$17,333</td></tr>
+          <tr class="tot"><td class="item">Profit before owner compensation</td><td class="n">$75,938</td><td class="n">$25,313</td></tr>
+          <tr class="sub"><td class="item">Owner compensation at market<br><span class="sub">working GC, 1,260 self-performed hrs + management</span></td><td class="n neg">($85,000)</td><td class="n neg">($28,333)</td></tr>
+          <tr class="grand"><td class="item">Economic profit</td><td class="n neg">($9,062)</td><td class="n neg">($3,021)</td></tr>
+        </tbody>
+        <caption>Deal sourcing at $18,000 covers direct mail, listing-alert tooling, and the wholesaler assignment fees embedded in acquisition. A tradesman without a sourcing channel spends more, not less.</caption>
+      </table>
+    </div>
+  </div>
+
+  <p>Read the last three rows carefully, because the gap between them is where most people in this business live without realizing it.</p>
+
+  <p><strong>Profit before owner compensation is $75,938</strong> on roughly $140,000 of deployed cash — 54%. This is the number that appears in every seminar, every YouTube case study, and every conversation at a real-estate meetup. It is arithmetically correct.</p>
+
+  <p><strong>Economic profit is negative $9,062.</strong> The difference is that the operator spent 1,260 hours swinging a hammer and several hundred more sourcing, permitting, managing, and selling — and never charged the business for any of it. Priced at what a Florida working general contractor commands, that time is worth more than the business generated.</p>
+
+  <div class="verdict warn">
+    <h3>The comparison that settles it</h3>
+    <p style="margin-bottom:0">The same tradesman, working the same hours as a licensed contractor for other people's projects, earns a comparable income with <strong>no capital at risk, no leverage, no market exposure, no permitting risk, no hurricane exposure, and payment in thirty days rather than seven months.</strong> The flip business asks him to accept all of that risk in exchange for a return that is, on these numbers, slightly negative.</p>
+  </div>
+</section>
+
+<section>
+  <span class="snum">Section 07</span>
+  <h2>Sensitivity analysis</h2>
+  <p class="q"><b>The analytical question</b>How much room is there before a good deal becomes a bad one?</p>
+
+  <p>Two variables dominate: <strong>realized resale price</strong> and <strong>hold period</strong>. Carry runs $3,122 a month — $2,062 of interest and $1,060 of taxes, insurance and utilities — and it does not pause for permit review, subcontractor no-shows, or hurricane season.</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 8</span><span class="ttl">Net profit by hold period and realized price</span></div>
+    <div class="exscroll">
+      <table class="heat">
+        <thead>
+          <tr><th>Hold period</th><th class="n">$310,000</th><th class="n">$325,000</th><th class="n">$340,000</th><th class="n">$355,000</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="item">5 months</td><td class="n h2c">$21,150</td><td class="n h3c">$35,010</td><td class="n h4c">$48,870</td><td class="n h4c">$62,730</td></tr>
+          <tr><td class="item">7 months <span class="pill p-mid">base</span></td><td class="n h1c">$14,906</td><td class="n h2c">$28,766</td><td class="n h3c">$42,626</td><td class="n h4c">$56,486</td></tr>
+          <tr><td class="item">9 months</td><td class="n h1c">$8,662</td><td class="n h2c">$22,522</td><td class="n h3c">$36,382</td><td class="n h3c">$50,242</td></tr>
+          <tr><td class="item">12 months</td><td class="n h1c">($704)</td><td class="n h1c">$13,156</td><td class="n h2c">$27,016</td><td class="n h3c">$40,876</td></tr>
+        </tbody>
+        <caption>Purchase, closing, rehab and points held at $249,680. Carry at $3,122/month. Sale costs at 7.6% of realized price. Owner labor charged at zero throughout — these are pre-compensation figures.</caption>
+      </table>
+    </div>
+  </div>
+
+  <p>The grid looks reassuring. Almost every cell is positive, and the range from best to worst is about $63,000. Compare that to the vehicle memo's grid, where a bad quadrant meant a thinner year, and note what is different here: <strong>these are not annual outcomes. Each cell is one of three shots.</strong> Landing in the bottom-left corner once means that deal contributed nothing against $17,333 of overhead and seven months of the operator's life.</p>
+
+  <h3>The scenario the grid does not show</h3>
+  <p>Exhibit 8 varies price and time. It holds rehab cost fixed, and that is the assumption most likely to break. A realistic adverse deal:</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 9</span><span class="ttl">Adverse case — nothing exotic</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Event</th><th class="n">Impact</th><th>Comment</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Base case profit</td><td class="n">$42,646</td><td></td></tr>
+          <tr class="sub"><td class="item">Cast-iron drain lines found after demo</td><td class="n neg">($14,000)</td><td>Common in mid-century Florida stock; invisible without a sewer scope</td></tr>
+          <tr class="sub"><td class="item">Two months added — permit review + sub availability</td><td class="n neg">($6,244)</td><td>Carry does not stop</td></tr>
+          <tr class="sub"><td class="item">Sells at $322,000 after 70 days on market</td><td class="n neg">($16,632)</td><td>Net of lower sale costs</td></tr>
+          <tr class="sub"><td class="item">Post-inspection concession</td><td class="n neg">($4,500)</td><td>Near-universal in this price band</td></tr>
+          <tr class="grand"><td class="item">Adverse case profit</td><td class="n">$1,270</td><td>Nine months of work and $70K at risk, for nothing</td></tr>
+        </tbody>
+        <caption>None of these four events is unusual. Any two together take a good deal to break-even; all four take the year with it.</caption>
+      </table>
+    </div>
+  </div>
+
+  <p>And the tail is worse than the adverse case. A substantial-improvement trigger in a flood zone, an unpermitted addition requiring after-the-fact approval, or a named storm during an open-roof phase produces a genuine loss of $35,000–60,000 — more than a full year of economic output.</p>
+</section>
+
+<section>
+  <span class="snum">Section 08</span>
+  <h2>Why the same edge fails here</h2>
+  <p class="q"><b>The analytical question</b>The mechanic's labor advantage produced a viable business. Why doesn't the builder's?</p>
+
+  <p>Both operators have the identical structural story: a poor industry, one firm-specific advantage, and that advantage is their own trade. The mechanic's memo concluded the business worked at an industry-normal return. This one concludes it does not. The difference is not skill, effort, or market — it is <strong>velocity</strong>.</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 10</span><span class="ttl">Same operator archetype, two businesses</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Dimension</th><th>Mechanic / used cars</th><th>Builder / houses</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Transactions per year</td><td class="n">180</td><td class="n">3</td></tr>
+          <tr><td class="item">Capital per transaction</td><td class="n">$10,000</td><td class="n">$162,000</td></tr>
+          <tr><td class="item">Hold period</td><td class="n">35 days</td><td class="n">7 months</td></tr>
+          <tr><td class="item">Labor edge, % of revenue</td><td class="n">6.7%</td><td class="n">10.1%</td></tr>
+          <tr><td class="item">Cost of one failed transaction</td><td>~3 units of profit</td><td><strong>The entire year</strong></td></tr>
+          <tr><td class="item">Can skill rescue a bad purchase?</td><td>Partly — recon capability recovers a mispriced unit</td><td><strong>No.</strong> Price discipline at acquisition is the whole result</td></tr>
+          <tr><td class="item">Purchase price visible to buyer</td><td>No</td><td><strong>Yes — public record</strong></td></tr>
+          <tr><td class="item">Transaction cost on exit</td><td class="n">~2%</td><td class="n">~7.6%</td></tr>
+          <tr class="grand"><td class="item">Economic profit after market labor</td><td class="n">+$128,220</td><td class="n neg">($9,062)</td></tr>
+        </tbody>
+        <caption>The builder's proportional advantage is <em>larger</em>. The business is still worse.</caption>
+      </table>
+    </div>
+  </div>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 11</span><span class="ttl">Where the created value goes on exit</span></div>
+    <div class="exscroll" style="padding:.5rem">
+      <figure>
+        <svg class="chart" viewBox="0 0 800 300" role="img" aria-label="Bar chart comparing equity created of $68,486 against sale costs of $25,840 and net profit retained of $42,646.">
+          <line class="grid" x1="215" y1="40" x2="215" y2="255"></line>
+          <line class="axis" x1="215" y1="270" x2="770" y2="270"></line>
+
+          <text class="lab" x="200" y="76" text-anchor="end">Equity created</text>
+          <text class="sub" x="200" y="92" text-anchor="end">by the renovation</text>
+          <rect class="bar-me" x="215" y="55" width="540" height="42"></rect>
+          <text class="val" x="745" y="82" text-anchor="end" fill="#fff">$68,486</text>
+
+          <text class="lab" x="200" y="146" text-anchor="end">Consumed at closing</text>
+          <text class="sub" x="200" y="162" text-anchor="end">commissions, stamps, title, concessions</text>
+          <rect class="bar" x="215" y="125" width="204" height="42"></rect>
+          <text class="val" x="431" y="152" text-anchor="start">$25,840 — 38%</text>
+
+          <text class="lab" x="200" y="216" text-anchor="end">Retained by the flipper</text>
+          <text class="sub" x="200" y="232" text-anchor="end">before charging his own labor</text>
+          <rect class="bar-me" x="215" y="195" width="336" height="42"></rect>
+          <text class="val" x="563" y="222" text-anchor="start">$42,646 — 62%</text>
+
+          <text class="ax" x="215" y="292">Value created vs. value retained, per deal</text>
+        </svg>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="snum">Section 09</span>
+  <h2>Risk register</h2>
+  <p class="q"><b>The analytical question</b>What can take the year, how likely is it, and what specifically prevents it?</p>
+
+  <div class="exhibit wide">
+    <div class="exhead"><span class="lbl">Exhibit 12</span><span class="ttl">Ranked exposures</span></div>
+    <div class="exscroll">
+      <table>
+        <thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead>
+        <tbody>
+          <tr><td class="item">Deal concentration</td><td><span class="pill p-bad">Certain</span></td><td>Severe</td><td><strong>Structural, not mitigable at this scale.</strong> Three annual outcomes cannot be averaged. The only real mitigations are more deals — which requires capital the operator does not have — or fewer deals with no income dependency, which is the recommendation.</td></tr>
+          <tr><td class="item">Substantial-improvement trigger</td><td><span class="pill p-good">Low</span></td><td>Catastrophic</td><td>Flood zone determination and elevation certificate <em>before</em> the deposit goes hard. Avoid Special Flood Hazard Areas entirely until experienced.</td></tr>
+          <tr><td class="item">Four-point / hidden scope</td><td><span class="pill p-bad">High</span></td><td>High</td><td>Sewer scope, panel identification, and supply-line material confirmed during inspection period. A $600 scope prevents a $14,000 surprise. Carry a $15,000 contingency inside the budget, not outside it.</td></tr>
+          <tr><td class="item">Permitting delay</td><td><span class="pill p-bad">High</span></td><td>High</td><td>Every month costs $3,122. Pull permits in parallel with closing where the jurisdiction allows; budget two months of slack; resolve prior unpermitted work before contract, not after.</td></tr>
+          <tr><td class="item">Roof insurability</td><td><span class="pill p-bad">High</span></td><td>Moderate</td><td>Assume a full roof on pre-2012 stock. Document wind mitigation properly — it lowers the buyer's premium, which raises what they can pay.</td></tr>
+          <tr><td class="item">Market or rate move during hold</td><td><span class="pill p-mid">Medium</span></td><td>High</td><td>You are long a single house at 4:1 leverage for seven months. Shorten the hold; price to sell on day one rather than testing the market for six weeks.</td></tr>
+          <tr><td class="item">Named storm during renovation</td><td><span class="pill p-mid">Medium</span></td><td>Severe</td><td>Builder's risk with explicit named-storm coverage. Sequence roof and structural work December–May; dry in before June 1.</td></tr>
+          <tr><td class="item">Licensing exposure</td><td><span class="pill p-mid">Medium</span></td><td>Severe</td><td>Do not rely on the owner-builder exemption for work on a property intended for near-term sale. Get licensed. It is the cheapest risk elimination available.</td></tr>
+          <tr><td class="item">Post-sale liability</td><td><span class="pill p-mid">Medium</span></td><td>Moderate</td><td>Florida requires disclosure of known material defects; permitted, inspected work is the defense. Hold title in an entity, carry completed-operations coverage, keep the permit file.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="snum">Section 10</span>
+  <h2>Recommendation</h2>
+  <p class="q"><b>The analytical question</b>Given all of it, what should this operator do?</p>
+
+  <p>Four findings converge:</p>
+  <ol>
+    <li><strong>Five of five forces are unfavorable</strong> (Section 02) — excess return must be firm-specific.</li>
+    <li><strong>The firm-specific advantage is real and proportionally large</strong> — $34,500, or 10% of ARV (Section 05) — <strong>but it is spent winning the acquisition, not kept as margin.</strong></li>
+    <li><strong>Three at-bats a year cannot absorb variance</strong> (Sections 07–08). One ordinary bad deal takes the year.</li>
+    <li><strong>Selling destroys 38% of the equity the work creates</strong> (Section 03, Exhibit 11).</li>
+  </ol>
+
+  <div class="verdict">
+    <h3>Recommended structure</h3>
+    <p><strong>Contract as the primary business. Flip one to two deals a year, opportunistically, funded from contracting profit rather than from a lender.</strong></p>
+    <p>The same skills, sold as contracting services to other investors and homeowners, produce comparable annual income with no capital at risk, no leverage, no seven-month market exposure, and receivables that settle in thirty days. On the analysis above, that is not a consolation prize — it is the higher-return use of the asset once risk is priced.</p>
+    <p style="margin-bottom:0">Then flip <em>selectively</em>. One or two a year, chosen for maximum edge: heavy-rehab properties that other bidders cannot scope because they cannot price the work. Cast-iron repipes, structural repair, fire and storm damage, deferred-maintenance disasters. These are exactly the deals where the tradesman's information advantage is widest and the bidder pool is thinnest.</p>
+  </div>
+
+  <div class="verdict warn">
+    <h3>What actually kills full-time flippers</h3>
+    <p style="margin-bottom:0">Not bad luck, and not bad craftsmanship. It is <strong>the need to keep the machine fed.</strong> With $52,000 of annual overhead and a household to support, the operator <em>must</em> complete three deals a year — which means bidding on marginal deals in months when nothing good is available, because sitting idle is not survivable. Marginal deals are where every loss in this business comes from. A contractor who flips opportunistically has no such pressure: he can decline fifty deals and take the one that is genuinely mispriced. <strong>The financial independence to say no is the highest-value asset in this business</strong>, and full-time flipping is precisely the structure that takes it away.</p>
+  </div>
+
+  <h3>Consider holding rather than selling</h3>
+  <p>Exhibit 11 makes the case: $25,840 of the $68,486 created is consumed at the closing table. Refinancing instead of selling avoids that entirely, returns most of the operator's cash, and keeps a $340,000 asset carrying roughly $85,000 of equity created by his own labor.</p>
+  <p><strong>The honest caveat</strong> is that Florida currently makes this hard. At present rates, a $340,000 house rents for roughly $2,400 against a post-refinance payment closer to $2,550 once the reset property tax and Florida insurance premium are included. The hold is cash-flow negative and is therefore a bet on appreciation and amortization, not an income strategy. It should be considered on properties where the rent-to-value relationship works — smaller units, inland markets, lower insurance exposure — and rejected where it does not. It is a genuine alternative, not a default.</p>
+
+  <h3>What would change this recommendation</h3>
+  <ul>
+    <li><strong>An off-market acquisition channel.</strong> Consistent direct-to-seller sourcing — probate, code violations, tired landlords, pre-foreclosure — that lands deals 10–15% below what the MLS and wholesalers cost. This is the only durable edge in the business, and it is the same conclusion the vehicle memo reached: <em>sourcing is the moat, not execution.</em> With it, the advantage stops being spent at the bidding stage and starts being banked.</li>
+    <li><strong>Cheaper capital.</strong> A private lender at 8% with one point rather than hard money at 11.5% with 2.5 saves roughly $12,000 a deal — 28% of the profit — for no additional work.</li>
+    <li><strong>Enough capital for six-plus deals a year.</strong> At that count, variance starts to average out and the labor advantage compounds instead of merely qualifying you to bid. This is the volume threshold at which flipping becomes a business rather than a series of bets.</li>
+    <li><strong>A softer insurance market.</strong> Florida premiums are currently a direct tax on your exit price. Material relief would lift ARVs across the entire affordable band.</li>
+  </ul>
+
+  <h3>Metrics to run it on</h3>
+  <ul>
+    <li><strong>Acquisition discipline</strong> — purchase price plus rehab as a percentage of ARV; hard ceiling at 70%. Every loss traces back to a breach here.</li>
+    <li><strong>The funnel</strong> — deals analyzed : offers made : contracts : closings. A healthy ratio is roughly 100 : 20 : 3 : 2. If you are closing on most of what you offer on, you are bidding too high.</li>
+    <li><strong>Days from acquisition to listing</strong> — target 120. The most controllable input to the sensitivity grid.</li>
+    <li><strong>Rehab variance</strong> — actual against budget, target within 8%. Separates bad buying from bad estimating.</li>
+    <li><strong>Net profit as a percentage of ARV</strong> — target 12% or better, before owner labor. Below 10%, the deal is not paying for the risk it carries.</li>
+  </ul>
+</section>
+
+<footer>
+  ANALYTICAL BASIS — Figures are directional estimates for an owner-operated Florida fix-and-flip in the $250–420K ARV band, built for structural analysis rather than as an audited forecast. Acquisition cost, rehab scope, hold period, insurance and carrying costs vary materially by county, flood zone, building age and rate environment; Exhibits 8 and 9 exist because those inputs must be re-derived per deal before capital is committed. Regulatory items — flood-zone substantial improvement, condominium milestone and reserve requirements, and contractor licensing — are summarized at a level suitable for underwriting judgment and are not legal advice; confirm current requirements with the relevant jurisdiction and counsel before relying on them.<br><br>
+  FRAMEWORKS APPLIED — Market funnel (TAM/SAM/SOM) · Porter's Five Forces · Value chain and margin-pool analysis · State-specific structural analysis · Bottom-up unit economics with isolated advantage decomposition · Two-variable sensitivity · Adverse-case scenario · Cross-business velocity comparison · Risk register · Economic profit adjustment for owner labor.
+</footer>
+
+</article>
+
+</body></html>
