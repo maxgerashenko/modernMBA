@@ -4,10 +4,10 @@
 
 **Underwriting Memo · GC Crew & Lead Brokerage · Florida**
 
-An MBA-style teardown of a Florida GC who finds the clients, signs the contracts, and runs the crew of Russian-speaking specialists under his own license — and why the same control that keeps him legal under contractor licensing is what turns his crew into misclassified employees under wage law.
+An MBA-style teardown of a Florida GC who finds the clients, signs the contracts, and runs a crew of non-English-speaking immigrant specialists under his own license — and why the same control that keeps him legal under contractor licensing is what turns his crew into misclassified employees under wage law.
 
-**SUBJECT:** FL-licensed general contractor who sources, contracts, and supervises a crew of immigrant trade specialists directly
-**MARKET:** Miami-Dade/Broward "Little Moscow" corridor (Sunny Isles Beach)
+**SUBJECT:** FL-licensed general contractor who sources, contracts, and supervises a crew of non-English-speaking immigrant trade specialists directly
+**MARKET:** South Florida tri-county (Miami-Dade / Broward / Palm Beach) immigrant trade labor
 **BASE CASE:** 14 active specialists, paid 75% of contract value per job with no monthly fee, GC furnishes tools and finances vans, GC absorbs the cost of redoing bad work
 
 > **Revision — two corrections to how this business actually runs:**
@@ -52,11 +52,11 @@ Unlike a flip or a car flip, the constraint here isn't capital and it isn't dema
 |---|---|---:|
 | TAM | US construction industry workforce | ~8.0M |
 | SAM — state | Florida construction workforce; ~40% foreign-born (NAHB) | ~280K immigrant |
-| SAM — segment | Russian-speaking / FSU-origin trade workers, South FL corridor | ~12,000 |
-| SAM — addressable | Without an independent FL license or an established lead account | ~3,500 |
+| SAM — segment | Non-English-proficient (LEP) immigrant trade workers, South FL tri-county | ~45,000 |
+| SAM — addressable | Without an independent FL license or an established lead account | ~13,000 |
 | **SOM** | **Capacity-bound: owner's genuine full-job supervision hours ÷ hours/specialist** | **14** |
 
-*Share of the addressable segment: 0.4%.*
+*Share of the addressable segment: 0.1%. Broadening past a single language community enlarges the addressable pool by roughly 4x — the ceiling still has nothing to do with it.*
 
 Capacity math, stated explicitly:
 - Genuine oversight per job — client-facing quality control, not just paperwork: **~2 hours/job**, plus **~2 more hours** on the ~57% of jobs that also require a permit — at a loaded Florida GC rate of **$75/hour**.
@@ -119,7 +119,7 @@ Removing the fee didn't touch this constraint — the ceiling was always about t
 | Florida workers' comp — construction threshold | Moderate–High | Construction triggers FL's 1-employee comp threshold, not the general 4-employee one. |
 | Retail installment & usury law | High | The van markup implies an effective APR near 22% — in range to breach Florida's civil usury ceiling. Confirm current thresholds with counsel. |
 | Truth in Lending Act (federal) | Moderate | Consumer vehicle financing triggers federal disclosure requirements. |
-| Community concentration (Sunny Isles / tri-county corridor) | Moderate | The bilingual trust network that makes recruiting cheap is the same network that would carry word of a dispute just as fast. |
+| Immigrant labor network concentration (South FL tri-county) | Moderate | The language-bridge trust network that makes recruiting cheap is the same network that would carry word of a dispute just as fast. |
 
 ---
 
