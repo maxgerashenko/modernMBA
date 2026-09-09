@@ -95,6 +95,23 @@ The four-seat format is a deliberate trade against this constraint: minimal seat
 
 > **The line that should stop you:** In the Florida companion memo, the landlord's take was $0.59 of a $6.50 ticket — 9%. Here it's $1.75 of a $7.00 ticket — 25%, and it is the single largest line in this entire value chain, ahead of the cost of the coffee itself. The landlord bears none of the risk of whether this concept works and takes more of every sale than anyone who does.
 
+### What's inside the 30% COGS line
+
+"Coffee, dairy & packaging suppliers" in Exhibit 3 is a single row standing in for five genuinely different inputs, each with its own price behavior. Milk is the one people underestimate — a milk-forward menu (lattes, cappuccinos) can rival the bean cost itself, and packaging is not far behind either.
+
+**Exhibit 3b — COGS breakdown, annual and per ticket**
+
+| Input | Annual | Per ticket | % of COGS | Note |
+|---|---:|---:|---:|---|
+| Coffee / espresso beans | $58,212 | $0.73 | 35% | Premium roaster relationships push this above the Florida memo's share — the driver of NYC's higher 30% vs. 28% COGS ratio |
+| Milk & dairy alternatives | $43,243 | $0.55 | 26% | The largest hidden line in a milk-forward menu; oat and other alt-milks run a further premium over dairy |
+| Packaging (cups, lids, sleeves, napkins) | $38,254 | $0.48 | 23% | Paid per unit regardless of what's inside the cup — a to-go-heavy mix raises this line, dine-in at the 4 seats lowers it |
+| Syrups & flavorings | $14,969 | $0.19 | 9% | Scales with specialty-drink mix |
+| Other consumables (stirrers, cleaning, misc.) | $11,642 | $0.15 | 7% | |
+| **Total COGS** | **$166,320** | **$2.10** | **100%** | 30% of revenue |
+
+*Beans and dairy together are 61% of COGS — nearly two-thirds of what this business spends on inputs is driven by two commodities whose prices move independently of everything else in this memo.*
+
 ---
 
 ## Section 04 — New York–specific structure

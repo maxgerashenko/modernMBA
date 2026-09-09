@@ -96,6 +96,23 @@ The gap between the 480-car physical ceiling and the 262-car realistic draw is t
 
 > **The line that should stop you:** The landlord is paid whether the site was a good choice or not — and is often the party with the best information about what the site is actually worth. The owner is the only participant whose return is entirely conditional on a judgment call made once, before opening day.
 
+### What's inside the 28% COGS line
+
+"Coffee, dairy & packaging suppliers" in Exhibit 3 stands in for five genuinely different inputs with different price behavior. Milk is the one people underestimate — on a milk-forward menu (lattes, cappuccinos) it can rival the bean cost itself.
+
+**Exhibit 3b — COGS breakdown, annual and per ticket**
+
+| Input | Annual | Per ticket | % of COGS | Note |
+|---|---:|---:|---:|---|
+| Coffee / espresso beans | $51,492 | $0.55 | 30% | Standard-grade sourcing, not the premium-roaster relationships common among NYC independents (see the Manhattan companion memo) |
+| Milk & dairy alternatives | $48,059 | $0.51 | 28% | The largest hidden line in a milk-forward menu |
+| Packaging (cups, lids, sleeves, napkins) | $42,910 | $0.46 | 25% | Paid per unit regardless of what's inside the cup; drive-thru is almost entirely to-go, so this line doesn't shrink with any seating format |
+| Syrups & flavorings | $17,164 | $0.18 | 10% | Scales with specialty-drink mix |
+| Other consumables (stirrers, cleaning, misc.) | $12,015 | $0.13 | 7% | |
+| **Total COGS** | **$171,640** | **$1.82** | **100%** | 28% of revenue |
+
+*Beans and dairy together are 58% of COGS — nearly two-thirds of what this business spends on inputs is driven by two commodities whose prices move independently of everything else in this memo.*
+
 ---
 
 ## Section 04 — Florida-specific structure
