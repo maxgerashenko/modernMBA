@@ -8,7 +8,7 @@ An MBA-style teardown of buying a single secondhand Handysize bulk carrier as a 
 - Notion summary: https://app.notion.com/p/3d6ba21e32d481d09d86eb9b9c2bdce7
 
 **SUBJECT:** capital investor, no shipping operating experience or contacts
-**MARKET:** Handysize dry bulk (28–40K DWT), international trade incl. US export/import lanes
+**MARKET:** Handysize dry bulk (28–40K DWT), worldwide trade across Asia-Pacific, Africa, and the Americas incl. US export/import lanes
 **BASE CASE:** one secondhand Chinese-built Handysize, 50% ship-mortgage LTV, third-party managed
 
 ---
@@ -167,6 +167,22 @@ Four of five forces unfavorable to the small owner. Excess return has to come fr
 
 **Net answer to "cheap Chinese ship, US market, not Asia":** yes for international cargo moving through US ports, no for domestic US-to-US cargo. That split costs this buyer nothing — domestic Jones Act trade was never realistically accessible to a first-timer, and the international trade this ship is built for remains fully open and, at this size, fee-exempt.
 
+### Zooming out: Asia, Africa, or the Americas?
+
+The US question is one instance of a broader decision every Handysize owner faces: this vessel is not committed to one ocean. It is small enough, and (if geared) self-sufficient enough, to trade profitably across all three of the world's major dry-bulk regions — and they are not equivalent.
+
+| Region | Typical cargo | Competitive intensity | Port infrastructure fit | Key risk |
+|---|---|---|---|---|
+| Asia-Pacific (intra-Asia, Indonesia/China, India) | Coal, grain, minor bulks, cement, fertilizer | **Highest** — the largest concentration of Handysize tonnage anywhere competes here | Good, but least differentiating — most Asian ports already have shore cranes, so a geared hull's edge is smallest | **Lowest** — deepest, most liquid chartering market; easiest backhaul cargo |
+| Africa (West Africa steel/cement/bauxite corridors, East Africa grain/steel imports) | Steel products, cement, fertilizer, grain imports, general cargo — bulk bauxite itself has shifted to Capesize tonnage | **Lowest** — fewer geared owners willing to trade in, wider owner-charterer spreads | **Best** — many African ports lack reliable shore cranes; this is exactly where a geared Handysize earns a premium over gearless tonnage | **Highest** — the Gulf of Guinea accounted for 92% of global crew kidnappings in 2025; war-risk premiums run 0.3–0.7% of vessel value per voyage (~$18,000–42,000 on this ship), plus slower ports mean more demurrage exposure |
+| Americas / USA (US Gulf grain export, US East Coast imports, South American grain backhaul) | Grain (corn, soy, wheat), steel and mineral imports | **Moderate** — deep, established charterer base (grain majors) but still commoditized | Good — adequate shore infrastructure narrows the geared-hull advantage versus Africa | **Low-moderate** — minimal piracy/political risk, but carries the Jones Act boundary and Section 301 policy watch covered above |
+
+A Handysize is genuinely global — the same hull can work any of these three regions. The tradeoffs are structural, not about vessel capability.
+
+The pattern across all three regions is the same one this memo keeps surfacing: **the better the margin, the more the buyer has to manage themselves.** Africa pays the widest owner-charterer spread precisely because it demands operational sophistication — chasing demurrage in weak-governance ports, managing war-risk cover, tolerating slower turnarounds — that a total outsider relying entirely on a third-party manager and broker has no direct ability to supervise. Asia-Pacific is the opposite: the thinnest margin, but also the most liquid, most broker-intermediated, hardest-to-get-wrong market, which is exactly why it is where third-party managers default a new owner's ship without being asked. The Americas sit in between, with the added benefit that this vessel's size and non-Chinese ownership keep it clear of both the Jones Act and the Section 301 fee regime.
+
+> **For this buyer, the right answer is not to chase Africa's premium.** Let the third-party manager and broker fix the ship where the market is deepest — predominantly Asia-Pacific and the Atlantic/US Gulf grain trade, the standard basins a Handysize positions between — and treat any African fixture opportunistically, through the manager's judgment, rather than as a deliberate strategy. The margin Africa offers is real, but it is compensation for risks this buyer cannot personally assess or mitigate.
+
 ## Section 06 — Payback and the cycle-timing problem
 
 **The analytical question:** How many years does it take to get the equity back — and does that number mean what it sounds like?
@@ -212,6 +228,7 @@ The obvious follow-on question: does paying up for a Korean-built hull remove en
 | Decarbonization compliance (EEXI/CII) | Medium | Moderate | Check CII rating before purchase — a D/E rating risks speed restrictions or retrofit costs. |
 | Section 301 fee policy reversal | Low–medium | Moderate | Confirm non-Chinese ownership/operation maintained; monitor suspension (lapses Nov 9, 2026). |
 | Total reliance on third-party manager | Medium | High | Select an established, referenceable manager; retain independent surveyor for periodic checks. |
+| Piracy / war risk in higher-margin lanes | Low, if avoided | Severe | The Gulf of Guinea's premium exists because of real kidnapping/armed-robbery risk. Default to Asia-Pacific and Atlantic/US Gulf fixtures; treat West African cargo as opportunistic only, with full war-risk cover priced in. |
 
 ## Section 10 — Recommendation
 
