@@ -9,6 +9,7 @@ An MBA-style teardown of an independent drive-thru coffee kiosk in South Florida
 **SUBJECT:** independent drive-thru / walk-up coffee kiosk, second-generation restaurant space
 **MARKET:** Miami-Dade / Broward, targeting 15,000+ vehicles-per-day sites
 **BASE CASE:** 600 sq ft build-out, ~$190K startup capital, 262 transactions/day at a $6.50 average ticket
+**COMPANION TO:** [the Manhattan walk-in coffee counter memo](coffee-walkin-manhattan.md) in this repo — same concept, a very different verdict once rent is priced.
 
 ---
 
