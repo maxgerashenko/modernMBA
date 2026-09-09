@@ -202,20 +202,20 @@ Ship values and freight rates move together, on the same cycle. A Handysize was 
 
 Supramax clears ~56% more margin per dollar invested but demands ~42% more absolute capital in one asset and cannot call at the small/shallow ports Handysize can. Handysize remains the more sensible entry-level choice for this buyer: deepest/most liquid secondhand market, broadest port access, and it caps the absolute dollar loss in adverse scenarios. A buyer with real chartering contacts or more capital should reconsider Supramax.
 
-### Chinese-built vs. Korean-built, same age and size
+### Chinese-built vs. Korean-built vs. Japanese-built, same age and size
 
-The obvious follow-on question: does paying up for a Korean-built hull remove enough risk to justify the premium? It removes one real risk entirely — but it does not pay for itself on the two dimensions that actually constrain this buyer.
+The obvious follow-on question: does paying up for a Korean- or Japanese-built hull remove enough risk to justify the premium? Each removes one real risk entirely — but neither pays for itself on the two dimensions that actually constrain this buyer.
 
-| Factor | Chinese-built (base case) | Korean-built |
-|---|---|---|
-| Purchase price | $6.0M | ~$6.8M (~13% premium — real, but smaller than Japan's, since Japan is the traditional bulk-carrier specialist) |
-| Realistic first-timer financing | Chinese leasing sale-and-leaseback — lessor motivated to move its own yard's output, often 70–80% LTV | Conventional ship-mortgage bank only — no equivalent motivated-lessor channel for secondhand Korean tonnage, typically 50–60% LTV |
-| Effective equity required | ~$1.5–1.8M (at 70–75% LTV) | ~$3.0–3.4M (at 50–55% LTV — roughly double) |
-| Section 301 exposure | Exempt at ≤80,000 DWT and non-Chinese ownership — conditional | **Not applicable at all** — the action targets Chinese-built/owned/operated tonnage specifically; Korean-built is outside its scope regardless of size or future policy changes |
-| Secondhand market depth (2026 YTD sales) | ~52 vessels | ~13 vessels — a much thinner resale market, worse for exit liquidity |
-| Reliability / resale retention | Improving, still the value tier | Stronger reputation — likely fewer unplanned major repairs and better residual value, though directional rather than precisely priceable |
+| Factor | Chinese-built (base case) | Korean-built | Japanese-built |
+|---|---|---|---|
+| Purchase price | $6.0M | ~$6.8M (~13% premium) | ~$8.0M (~33% premium — Japan is the traditional bulk-carrier specialist and commands the highest quality premium of the three) |
+| Realistic first-timer financing | Chinese leasing sale-and-leaseback — lessor motivated to move its own yard's output, often 70–80% LTV | Conventional ship-mortgage bank only, typically 50–60% LTV | Conventional ship-mortgage bank only. Japan's own leasing market (Japanese Operating Lease) is large and cheap, but it's built around financing newbuilds ordered direct from Japanese yards, not secondhand resale tonnage — so it doesn't reach this buyer either. ~50–60% LTV. |
+| Effective equity required | ~$1.5–1.8M (at 70–75% LTV) | ~$3.0–3.4M (roughly double) | ~$4.0–4.4M (at 50–55% LTV — nearly triple the Chinese-built case) |
+| Section 301 exposure | Exempt at ≤80,000 DWT and non-Chinese ownership — conditional | **Not applicable at all** — outside the action's scope regardless of size or future policy changes | **Not applicable at all** — same as Korean-built |
+| Secondhand market depth (2026 YTD sales) | ~52 vessels | ~13 vessels — the thinnest resale market of the three | ~37 vessels — second-most liquid, meaningfully deeper than Korean-built |
+| Reliability / resale retention | Improving, still the value tier | Stronger reputation — likely fewer unplanned major repairs, better residual value | Best of the three — the traditional benchmark for well-built, fuel-efficient bulk carriers; typically the strongest residual value retention |
 
-> **Not the better choice, for this buyer.** Korean-built removes Section 301 exposure entirely rather than merely managing it — but that risk was already small and already mitigated in the base case. What it does not remove is the constraint that actually binds this buyer: access to financing. The Chinese-built base case's realistic way in was a motivated lessor willing to go to 70–80% LTV; a Korean-built hull sends this buyer back to a conventional bank underwriting a first-timer at 50–60% LTV on a 13% higher price — which roughly **doubles the equity check, from ~$1.6M to ~$3.2M, to eliminate a risk that was already small.** Korean-built becomes the better choice for a buyer with more capital, an existing bank relationship, or a genuine intent to hold for a decade-plus without needing to sell into a much thinner market — not for the buyer this memo is underwriting.
+> **Not the better choice, for this buyer — Japanese-built least of all.** Korean- and Japanese-built both remove Section 301 exposure entirely rather than merely managing it — but that risk was already small and already mitigated in the base case. Neither removes the constraint that actually binds this buyer: access to financing. The Chinese-built base case's realistic way in was a motivated lessor willing to go to 70–80% LTV; Korean- or Japanese-built tonnage sends this buyer back to a conventional bank underwriting a first-timer at 50–60% LTV on a materially higher price. Japanese-built is the clearest case of the premium not paying for itself: it **nearly triples the equity check, from ~$1.6M to ~$4.2M**, to buy the best quality and resale liquidity of the three — real advantages, but not ones a single-ship, first-time owner with no chartering edge can convert into a better return. That tradeoff flips for a buyer with the capital to self-finance and a multi-decade hold horizon, where Japanese-built's superior residual value becomes the deciding factor rather than a cost to avoid.
 
 ## Section 09 — Risk register
 
@@ -239,7 +239,7 @@ Four findings converge:
 2. Today's rate is only ~5% above the full cash cost of ownership — almost no margin of safety in buying now.
 3. At trough rates the vessel loses money on opex alone, regardless of leverage — this is a cycle-timing bet, not a yield investment.
 4. The Chinese-built, sub-80K-DWT profile is structurally well-suited to US-linked international trade — Jones Act and Section 301 fee risk are both non-issues here, as long as ownership stays non-Chinese.
-5. Upgrading to a Korean-built hull is not the better choice for this buyer — it trades away the one financing channel that makes this buyer financeable at all, roughly doubling the equity check to remove a risk that was already small.
+5. Upgrading to a Korean- or Japanese-built hull is not the better choice for this buyer — both trade away the one financing channel that makes this buyer financeable at all, roughly doubling (Korean) to nearly tripling (Japanese) the equity check to remove a risk that was already small.
 
 > **Recommended structure, if proceeding:** Buy a Handysize, not a Supramax; finance through a Chinese-lessor sale-and-leaseback at 30–40% effective leverage, not 50–70%; and fix a multi-year period charter at signing rather than trading spot. That combination converts an undiversified, spot-exposed bet into something closer to a bond with equity upside: a known hire rate for 2–3 years, opex and debt service both anchored, and enough leverage buffer to survive a cyclical downturn without a forced sale. It does not fix the underlying problem that this is one asset, one market, one cycle — but it is the version of this trade a total outsider can actually survive being wrong in.
 
