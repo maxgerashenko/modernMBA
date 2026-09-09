@@ -8,11 +8,11 @@ An MBA-style teardown of Life Time's 8-court pickleball-and-fitness club at PENN
 
 **SUBJECT:** Life Time PENN 1 — 3-floor, 8-court indoor pickleball + fitness/gym club
 **MARKET:** Manhattan, directly across from Madison Square Garden / Penn Station
-**BASE CASE:** ~54,000 sq ft, ~$10.76M estimated buildout, 2,220 estimated members (2,000 gym-only, 180 all-access, 40 pickleball-only) at an estimated $360/mo gym and $120/mo pickleball
+**BASE CASE:** ~54,000 sq ft, ~$10.76M estimated buildout, 2,200 estimated members (2,000 gym-only, 200 gym+pickleball — no pickleball-only tier exists) at an estimated $360/mo gym and $480/mo combined
 
-> **A different scale than the rest of this repo — and an outside estimate of a real operator:** Every other memo in this hub is a hypothetical small, owner-operated concept underwritten in the $185K–$305K range. This one is not, on two counts: it's a multi-million-dollar institutional-scale facility, and — per the operator's own confirmation — it's an outside analytical estimate of a real, identifiable business: Life Time's actual PENN 1 club. Every number here is this memo's own directional estimate built from public facility-size data, general industry benchmarks, and the layout and pricing the operator described — not Life Time's actual reported financials, which are not public at the segment level. Treat this as a teardown of what the pickleball footprint probably costs to run, not as Life Time's real numbers.
+> **A different scale than the rest of this repo — and an outside estimate of a real operator:** Every other memo in this hub is a hypothetical small, owner-operated concept underwritten in the $185K–$305K range. This one is not, on two counts: it's a multi-million-dollar institutional-scale facility, and — per the operator's own confirmation — it's an outside analytical estimate of a real, identifiable business: Life Time's actual PENN 1 club. Every number here is this memo's own directional estimate built from public facility-size data, general industry benchmarks, and the layout, pricing, and observed usage pattern the operator described — not Life Time's actual reported financials, which are not public at the segment level. Treat this as a teardown of what the pickleball footprint probably costs to run, not as Life Time's real numbers.
 >
-> The analytical framework stays the same as the rest of this repo; the "owner's time charged at market rate" device doesn't apply the same way at this scale, since a business this size runs on a paid management team already embedded in the labor line. The bottom line here is EBITDA and cash yield on invested capital, not economic profit after owner comp — and Section 03 now isolates the pickleball segment specifically, which is the question this memo is built around.
+> The analytical framework stays the same as the rest of this repo; the "owner's time charged at market rate" device doesn't apply the same way at this scale, since a business this size runs on a paid management team already embedded in the labor line. The bottom line here is EBITDA and cash yield on invested capital, not economic profit after owner comp — and Section 03 isolates the pickleball segment specifically, which is the question this memo is built around.
 
 ---
 
@@ -22,19 +22,19 @@ An MBA-style teardown of Life Time's 8-court pickleball-and-fitness club at PENN
 
 | KPI | Value | Note |
 |---|---|---|
-| Pickleball segment revenue | $701,600 | memberships + non-member court time |
-| Pickleball segment result | **($867,895)** | fair space-based cost allocation |
-| Even at $0 pickleball staffing | **($714,595)** | rent/tax/utilities share alone exceeds revenue |
-| Whole-club EBITDA | $1.96M | 18.3% cash yield — carried by the gym floors |
-| Pickleball capacity | **~230** | members, hard-capped by 8 courts |
+| Pickleball segment revenue | $443,600 | pickleball dues + weekday rental + tournaments |
+| Pickleball segment result | **($1.03M)** | fair space-based cost allocation |
+| Even at $0 pickleball staffing | **($965K)** | rent/tax/utilities share alone exceeds revenue |
+| Whole-club EBITDA | $1.85M | 17.2% cash yield — carried by the gym floors |
+| Actual weekday court use | **~10 hrs/wk** | of 896 possible — most volume is weekend tournaments |
 
-> **Answer:** Marketing. Isolated on a fair allocation of the space it occupies, the pickleball segment loses roughly $868,000 a year. It is not a profit center, and the gap isn't close enough for better execution to plausibly close it — the courts occupy 27% of the building's square footage and generate about 6.5% of its revenue.
+> **Answer:** Marketing, and more decisively than it first looked. There is no standalone pickleball-only membership — the courts are accessible only through the combined gym-and-pickleball tier — and actual court usage is light: on a typical weekday only 1–2 of the 8 courts are in use, for an hour or two. The real volume is weekend tournaments, which use all 8 courts for a half-day, sometimes both weekend days. Isolated on a fair allocation of the space it occupies, the segment loses roughly $1.03M a year.
 >
-> The most useful version of this finding doesn't even need a labor assumption: charge the pickleball segment nothing for staff — zero dedicated court monitors, zero lesson instructors — and it still loses about $715,000 a year, purely from its proportional share of rent, the NYC Commercial Rent Tax, utilities, insurance, marketing, and admin. The loss isn't a staffing-efficiency problem. It's that eight courts take up a huge, expensive footprint and can only ever generate revenue from ~230 memberships and some drop-in/lesson time, no matter how well they're run.
+> The most useful version of this finding still doesn't need a labor assumption: charge the segment nothing for staff at all, and it still loses about $965,000 a year, purely from its proportional share of rent, the NYC Commercial Rent Tax, utilities, insurance, marketing, and admin. Removing the pickleball-only tier and replacing theoretical utilization with the actual light-usage pattern cut the segment's revenue by more than a third relative to the earlier estimate — the loss widened, not narrowed, once real usage replaced a modeled utilization rate.
 >
-> Run the same math the other way — allocate shared costs by revenue share instead of space share, which is generous to pickleball since it charges the segment for less real estate than it actually occupies — and the result flips to roughly breakeven (+$46K to +$200K depending on the labor assumption). That's the ceiling of a defensible case for pickleball being self-funding on its own. It is not, under any allocation method tested here, a real profit center anywhere close to what the gym floors generate.
+> Run the same math the generous way — allocate shared costs by revenue share instead of space share, effectively charging pickleball less rent than the real estate it occupies — and the result flips to a modest profit (roughly $150K–$190K). That remains the ceiling of a defensible case for pickleball paying for itself. Under any method that charges the courts for the space they actually occupy, they lose money.
 >
-> None of this means the courts are a mistake. A ~$700–900K/year marketing and differentiation cost is not unreasonable for a flagship amenity that draws members into a building where 93%+ of revenue comes from gym membership dues — the question is simply whether it's underwritten as a marketing line, which it should be, rather than expected to carry its own weight, which the numbers say it can't. Sections 03 and 05 show the full isolated segment P&L and the allocation-method sensitivity behind this conclusion.
+> None of this means the courts are a mistake. A roughly $1M/year marketing and differentiation cost, concentrated around weekend tournament events that draw people into a building where the gym floors generate the overwhelming majority of revenue, can be a perfectly reasonable amenity spend. The question is whether it's underwritten as one. Sections 01 and 03 show the usage data and the full isolated segment P&L behind this conclusion.
 
 ---
 
@@ -53,16 +53,25 @@ An MBA-style teardown of Life Time's 8-court pickleball-and-fitness club at PENN
 
 *1 court-unit (CU) = ~1,800 sq ft, the standard commercial indoor-pickleball footprint including run-off space. This total lands within a few hundred square feet of PENN 1's real, publicly reported ~53,000 sq ft — the actual facility this memo is estimating, not a hypothetical.*
 
-**Exhibit 2 — Two different capacity models under one roof**
+**Exhibit 2 — Theoretical capacity models under one roof**
 
-| Product | Constraint | Realistic capacity |
+| Product | Constraint | Theoretical capacity |
 |---|---|---:|
 | Pickleball membership | 8 courts × 16 operating hrs × 7 days = 896 court-hrs/week; ~55% target utilization = 493 usable hrs/week; 70% reserved for members at ~1.5 hrs/member/week | ~230 members |
 | **Gym/fitness membership** | 27,000 sq ft of fitness floor; industry-standard 250 total members per 1,000 sq ft | **~6,750 members** |
 
-*The gym floor can theoretically support nearly 30x the membership base the courts can. This is the central structural fact this memo is built around.*
+*The gym floor can theoretically support nearly 30x the membership base the courts can. But Exhibit 2b shows actual pickleball usage runs far below even its own modest theoretical ceiling.*
 
-The remaining 148 court-hours/week not allocated to members (30% of usable court time) support non-member drop-ins, private lessons, leagues, and corporate bookings — real ancillary revenue, but it doesn't change the hard ceiling on how many people can hold a pickleball membership and actually get to play.
+**Exhibit 2b — Actual court usage vs. the theoretical ceiling**
+
+| Period | Observed pattern | Court-hrs/week |
+|---|---|---:|
+| Weekdays (Mon–Fri) | Usually only 1–2 of the 8 courts are in use at any time, for 1–2 hours per court, more often less | ~10 |
+| **Weekends** | Dominated by tournaments — most weekends, all 8 courts for a half-day on one day; some weekends extend to a half-day on both days | **~90 avg** |
+
+*~100 court-hours/week actually used, against the 493 usable hours/week the 55%-utilization theoretical model assumed — real day-to-day usage runs at roughly a fifth of that. Weekday open play is genuinely light; weekend tournaments, not steady daily play, are where the courts actually see volume.*
+
+This changes what "capacity" means here. The ~230-member figure is a theoretical ceiling, not a description of what's happening — actual weekday utilization suggests most gym+pickleball members who technically have court access do not play regularly. The courts aren't full; they're occasionally full, on a schedule (tournament weekends), and quiet the rest of the time. That pattern shapes the revenue model in Section 03 directly: most of the non-membership pickleball revenue comes from weekend tournaments, not daily rentals.
 
 ---
 
@@ -76,7 +85,7 @@ The remaining 148 court-hours/week not allocated to members (30% of usable court
 |---|---|---|
 | Supplier power (fitness/court equipment) | Low | Commodity equipment vendors, many suppliers, no meaningful lock-in. |
 | Buyer power | Medium–High | Manhattan has no shortage of premium gym alternatives, but a genuine combined pickleball-and-fitness offering at this scale and location is differentiated. |
-| Threat of entry | Medium | Capital requirements ($10M+) are a real barrier for most operators — but well-funded national pickleball chains (Ace Pickleball Club and others) are actively raising capital to build exactly this concept in dense urban markets. |
+| Threat of entry | Medium | Capital requirements ($10M+) are a real barrier for most operators — but well-funded national pickleball chains (Ace Pickleball Club and others) are actively raising capital for exactly this concept in dense urban markets. |
 | Threat of substitutes | **High** | Every other gym, boutique fitness studio, and pickleball facility in the metro competes for the same discretionary dollar. |
 | Rivalry | **High** | The national pickleball industry is in an active land-grab expansion phase, drawing serious institutional capital into exactly this category. |
 
@@ -88,20 +97,20 @@ The remaining 148 court-hours/week not allocated to members (30% of usable court
 
 **The analytical question:** Of every dollar this business brings in, who takes what — and who carries the risk for it?
 
-**Exhibit 4 — Value extracted from $10.77M of annual revenue**
+**Exhibit 4 — Value extracted from $10.60M of annual revenue**
 
 | Participant | Take | Capital / risk at stake | Quality |
 |---|---:|---|---|
-| Payment processor | $323,076 (3%) | None. Fixed % regardless of profitability. | Excellent |
+| Payment processor | $317,928 (3%) | None. Fixed % regardless of profitability. | Excellent |
 | F&B / pro shop suppliers | $180,000 (COGS) | None. Paid on delivery. | Excellent |
-| **Landlord** | **$3,503,500 (32.5%)** | None. Fixed rent, indifferent to membership count. | Best |
+| **Landlord** | **$3,503,500 (33.1%)** | None. Fixed rent, indifferent to membership count. | Best |
 | New York City (Commercial Rent Tax) | $136,637 (1.3%) | None. This facility's rent is far above the small-business CRT exemption both coffee/pizza memos in this repo qualified for. | Excellent |
-| Labor | $3,230,760 (30%) | Wage risk only; includes management, already replacing the "owner time" charge used elsewhere in this repo. | Good |
-| Owner / investor | $1,964,027 (EBITDA, 18.2%) | **All of it** — the full ~$10.76M invested, a long-term institutional lease, and total exposure to whether membership scales. | Mixed |
+| Labor | $3,179,280 (30%) | Wage risk only; includes management, already replacing the "owner time" charge used elsewhere in this repo. | Good |
+| Owner / investor | $1,849,055 (EBITDA, 17.4%) | **All of it** — the full ~$10.76M invested, a long-term institutional lease, and total exposure to whether membership scales. | Mixed |
 
 *The landlord and the city together take nearly twice what the owner keeps. At this scale, the building — not the courts, not the equipment — is the dominant claim on the business.*
 
-> **The line that should stop you:** Every dollar this business earns from the courts — the part of the pitch that gets the press coverage and the glass-walled floor — is a rounding error next to what the landlord takes from the whole building. The pickleball courts occupy the most expensive, most visible real estate in this facility and generate roughly 10% of its revenue.
+> **The line that should stop you:** Every dollar this business earns from the courts — the part of the pitch that gets the press coverage and the glass-walled floor — is a rounding error next to what the landlord takes from the whole building.
 
 ### Isolating the pickleball segment
 
@@ -111,34 +120,34 @@ The exhibit above treats the club as one business. Split out the courts and char
 
 | Line | Amount | Note |
 |---|---:|---|
-| Pickleball-only membership (40 × $120/mo) | $57,600 | |
-| Pickleball share of all-access dues (180 × $120/mo) | $259,200 | The $120 pickleball component of the $480 combined fee |
-| Non-member court time — drop-ins, lessons, leagues | $384,800 | 148 hrs/week not reserved for members |
-| **Segment revenue** | **$701,600** | 6.5% of total club revenue |
+| Pickleball share of combined dues (200 × $120/mo) | $288,000 | The $120 pickleball component of the $480 combined fee — the only way to get court access |
+| Weekday court rental / lessons | $26,000 | ~10 court-hrs/week actually used, at a blended $50/hr |
+| Weekend tournament entry fees | $129,600 | ~45 tournament weekends/yr — most single-day, some full-weekend |
+| **Segment revenue** | **$443,600** | 4.2% of total club revenue |
 | Rent | ($935,435) | 26.7% of total — 14,400 of 53,900 sq ft is court space |
 | NYC Commercial Rent Tax | ($36,482) | 26.7% share |
 | Utilities | ($115,130) | 26.7% share |
-| Insurance | ($87,500) | 35% share — elevated for court-injury liability vs. a pure space allocation |
-| Marketing | ($160,000) | 40% share — pickleball is the featured differentiator in acquisition marketing |
+| Insurance | ($87,500) | 35% share — elevated for court-injury and tournament liability |
+| Marketing | ($160,000) | 40% share — pickleball is the featured differentiator |
 | Admin | ($53,400) | 26.7% share |
-| Card processing | ($21,048) | 3% of segment revenue |
-| Direct pickleball labor | ($153,300) | Lean, tech-enabled staffing: lesson pros + periodic monitor coverage, not a full-time attendant per court |
+| Card processing | ($13,308) | 3% of segment revenue |
+| Direct pickleball labor | ($69,300) | Light weekday coverage given actual usage, plus real tournament-day staffing (director, court monitors) for ~60 half-day sessions/yr |
 | Pickleball equipment maintenance | ($7,200) | Direct, not allocated |
-| **Segment costs** | **($1,569,495)** | |
-| **Segment result** | **($867,895)** | A loss, not a rounding error |
+| **Segment costs** | **($1,477,755)** | |
+| **Segment result** | **($1,034,155)** | A larger loss than a light-usage-blind estimate would suggest |
 
-*Space-based allocation charges the courts for the real estate they occupy, independent of how much revenue that real estate happens to produce — the more defensible method, since a landlord bills by the square foot regardless of what a tenant does with it.*
+*Space-based allocation charges the courts for the real estate they occupy, independent of how much revenue that real estate happens to produce — the more defensible method, since a landlord bills by the square foot regardless of what a tenant does with it. Direct labor fell versus a theoretical-utilization estimate, but revenue fell much further — light weekday use plus the loss of the pickleball-only tier more than offset the lower staffing need.*
 
 **Exhibit 4c — How sensitive is the answer to the allocation method?**
 
 | Method | Segment result | Why it's more or less generous to pickleball |
 |---|---:|---|
-| Space-based (Exhibit 4b) | ($867,895) | Charges the courts for the 26.7% of the building they physically occupy — the standard way commercial real estate cost actually works. |
-| Space-based, zero pickleball labor | ($714,595) | Even with no dedicated staff at all, rent/tax/utilities/insurance/marketing/admin alone exceed segment revenue by more than the direct labor line itself. |
-| Revenue-share allocation | $46,865 | Charges the courts only 6.5% of shared costs — their share of total revenue, not their share of space. Generous to pickleball; still barely breakeven. |
-| **Revenue-share, leaner labor** | **$200,165** | The most favorable defensible case for pickleball — and it requires both a generous allocation method and lean staffing to get there. |
+| Space-based (Exhibit 4b) | ($1,034,155) | Charges the courts for the 26.7% of the building they physically occupy — the standard way commercial real estate cost actually works. |
+| Space-based, zero pickleball labor | ($964,855) | Even with no dedicated staff at all — no tournament director, no court monitors — rent/tax/utilities/insurance/marketing/admin alone exceed segment revenue. |
+| Revenue-share allocation | $147,806 | Charges the courts only 4.2% of shared costs — their share of total revenue, not their share of space. Generous to pickleball. |
+| **Revenue-share, leaner labor** | **$175,106** | The most favorable defensible case for pickleball — and it requires both a generous allocation method and near-zero weekday staffing to get there. |
 
-*Only the method that charges pickleball less rent than the space it occupies — a method with no basis in how commercial leases actually work — produces a profit. Every space-based version loses money.*
+*Only the method that charges pickleball less rent than the space it occupies — a method with no basis in how commercial leases actually work — produces a profit. Every space-based version loses over $900K.*
 
 ---
 
@@ -187,15 +196,15 @@ The exhibit above treats the club as one business. Split out the courts and char
 
 | Line | Amount | Note |
 |---|---:|---|
-| Gym-only membership (2,000 × $360/mo) | $8,640,000 | |
-| All-access membership (180 × $480/mo) | $1,036,800 | Gym + pickleball combined |
-| Pickleball-only membership (40 × $120/mo) | $57,600 | |
-| Ancillary — drop-ins, lessons, leagues | $384,800 | 148 court-hrs/week not allocated to members |
+| Gym-only membership (2,000 × $360/mo) | $8,640,000 | No pickleball access — the base tier |
+| Gym + pickleball membership (200 × $480/mo) | $1,152,000 | The only way to get court access — no standalone pickleball tier |
+| Weekday court rental / lessons | $26,000 | ~10 court-hrs/week actually used |
+| Weekend tournament entry fees | $129,600 | ~45 tournament weekends/yr |
 | F&B, pro shop, corporate events | $650,000 | |
-| **Revenue** | **$10,769,200** | |
+| **Revenue** | **$10,597,600** | |
 | COGS (F&B / pro shop) | ($180,000) | |
-| Card processing (3%) | ($323,076) | |
-| Labor (30%) | ($3,230,760) | Front desk, instructors, trainers, management, maintenance |
+| Card processing (3%) | ($317,928) | |
+| Labor (30%) | ($3,179,280) | Front desk, instructors, trainers, management, maintenance |
 | Rent | ($3,503,500) | 53,900 sq ft, large-block premium submarket rate |
 | NYC Commercial Rent Tax | ($136,637) | 3.9% of base rent |
 | Utilities | ($431,200) | |
@@ -203,11 +212,11 @@ The exhibit above treats the club as one business. Split out the courts and char
 | Marketing | ($400,000) | |
 | Equipment maintenance/replacement | ($150,000) | |
 | Admin, software, other | ($200,000) | |
-| **EBITDA** | **$1,964,027** | 18.2% margin — cash yield on capital: 18.3% |
+| **EBITDA** | **$1,849,055** | 17.4% margin — cash yield on capital: 17.2% |
 
-*Management compensation is inside the labor line; there is no separate owner-time charge, unlike the small-format memos in this repo.*
+*Management compensation is inside the labor line; there is no separate owner-time charge, unlike the small-format memos in this repo. Labor here uses a blanket 30%-of-revenue estimate for the whole club; Exhibit 4b builds the pickleball segment's labor bottom-up instead, which is why the two don't reconcile to a simple split of this line.*
 
-> **Gym floor economics, not pickleball economics:** $8.64M of this $10.77M comes from gym-only membership — 80% of revenue from the product with no hard capacity ceiling. Everything pickleball-related contributes roughly 10% of revenue for the space that dominates the ground floor and the marketing.
+> **Gym floor economics, not pickleball economics:** $8.64M of this $10.6M comes from gym-only membership — 82% of revenue from the product with no hard capacity ceiling. Everything pickleball-related, including the pickleball share of the combined-tier dues, contributes roughly 4–11% of revenue (depending on how the combined tier is split) for the space that dominates the ground floor and the marketing.
 
 ---
 
@@ -215,7 +224,7 @@ The exhibit above treats the club as one business. Split out the courts and char
 
 **The analytical question:** What does the path from opening day to the base case actually look like?
 
-Exhibit 7 is a stabilized, mature-membership year — not year one. A facility this size opening cold has no existing member base, and building toward 2,000 gym-only members against entrenched Manhattan competition (Equinox, Chelsea Piers, and every other premium club in the borough) realistically takes 18–36 months of active sales and marketing. During that ramp, fixed costs — rent, the CRT, base staffing, utilities — are largely present from day one regardless of membership count, meaning the early cash burn before reaching breakeven membership (roughly 1,200–1,400 gym-only members, per Exhibit 8) could run into the millions before the facility turns cash-flow positive. This should be underwritten explicitly as a separate, dedicated ramp-capital line beyond the $10.76M build-out figure — not assumed away.
+Exhibit 7 is a stabilized, mature-membership year — not year one. A facility this size opening cold has no existing member base, and building toward 2,000 gym-only members against entrenched Manhattan competition (Equinox, Chelsea Piers, and every other premium club in the borough) realistically takes 18–36 months of active sales and marketing. During that ramp, fixed costs — rent, the CRT, base staffing, utilities — are largely present from day one regardless of membership count, meaning the early cash burn before reaching breakeven membership (roughly 1,300–1,400 gym-only members, per Exhibit 8) could run into the millions before the facility turns cash-flow positive. This should be underwritten explicitly as a separate, dedicated ramp-capital line beyond the $10.76M build-out figure — not assumed away.
 
 ---
 
@@ -229,12 +238,12 @@ Pickleball-inclusive membership is capacity-capped near its base-case level rega
 
 | Gym-only members | $320 | $340 | $360 — base | $400 |
 |---|---:|---:|---:|---:|
-| 1,200 | ($737,413) | ($544,453) | ($351,493) | $34,427 |
-| 1,600 | $291,707 | $548,987 | $806,267 | $1,320,827 |
-| **2,000 (base)** | $1,320,827 | $1,642,427 | **$1,964,027** | $2,607,227 |
-| 2,600 | $2,864,507 | $3,282,587 | $3,700,667 | $4,536,827 |
+| 1,200 | ($852,385) | ($659,425) | ($466,465) | ($80,545) |
+| 1,600 | $176,735 | $434,015 | $691,295 | $1,205,855 |
+| **2,000 (base)** | $1,205,855 | $1,527,455 | **$1,849,055** | $2,492,255 |
+| 2,600 | $2,749,535 | $3,167,615 | $3,585,695 | $4,421,855 |
 
-*Below ~1,300 gym-only members at current pricing, this facility loses money at the EBITDA line despite a strong location. That membership count is the entire underwriting question — everything else in this memo is comparatively fixed.*
+*Below ~1,360 gym-only members at current pricing, this facility loses money at the EBITDA line despite a strong location. That membership count is the entire underwriting question — everything else in this memo is comparatively fixed.*
 
 ### The scenario the grid does not show
 
@@ -242,12 +251,12 @@ Pickleball-inclusive membership is capacity-capped near its base-case level rega
 
 | Event | Impact | Comment |
 |---|---:|---|
-| Base case EBITDA | $1,964,027 | |
+| Base case EBITDA | $1,849,055 | |
 | Gym membership settles at 1,500, not 2,000 | ($1,447,200) | A realistic outcome against Equinox, Chelsea Piers, and Manhattan's other premium gym brands, not a failure scenario |
 | Standard NYC lease escalation (3%) | ($105,105) | |
 | Utility & insurance overrun | ($100,000) | A 54,000 sq ft, high-occupancy athletic facility carries real variance here |
-| Ancillary revenue 30% below plan | ($207,995) | Court drop-ins, lessons, leagues, F&B underperform launch projections |
-| **Adverse case EBITDA** | **$103,727** | Down 95% — near breakeven from four ordinary events |
+| Weekday rental & tournament revenue 30% below plan | ($31,276) | Smaller dollar exposure now that this line reflects actual light usage rather than a theoretical estimate |
+| **Adverse case EBITDA** | **$165,474** | Down 91% — thin, but not quite breakeven, from four ordinary events |
 
 *None of these four events requires anything unusual for a new large-format fitness concept in a competitive market. Together they nearly erase an otherwise strong base case.*
 
@@ -262,13 +271,13 @@ Pickleball-inclusive membership is capacity-capped near its base-case level rega
 | Dimension | NY coffee counter | NY pizzeria | NY pickleball/gym |
 |---|---:|---:|---:|
 | Startup capital | $185,000 | $305,000 | $10,759,000 |
-| Occupancy as % of revenue | 25% | 20% | 32.5% |
-| Bottom line | ($8,582) | $88,024 | $1,964,027 |
+| Occupancy as % of revenue | 25% | 20% | 33.1% |
+| Bottom line | ($8,582) | $88,024 | $1,849,055 |
 | **Verdict** | Do not sign without a plan to beat base case | Proceed, contingent on pizzaiolo & site | Proceed, contingent on gym-membership ramp |
 
 *Rent burden as a share of revenue is actually worse here than in either small-format Manhattan memo — scale did not fix the fundamental Manhattan rent problem this repo keeps finding. It just made the absolute numbers large enough that a real business still fits underneath it, if membership scales.*
 
-The through-line across every Manhattan memo in this repo holds here too: **revenue per square foot, not footprint or format, is what determines whether a Manhattan lease pencils.** A $10.8M facility with 2,000+ members generates enough revenue per square foot to absorb even a 32.5% rent ratio. The same math applied to a smaller membership base — as Exhibit 8 shows below roughly 1,300 members — does not.
+The through-line across every Manhattan memo in this repo holds here too: **revenue per square foot, not footprint or format, is what determines whether a Manhattan lease pencils.**
 
 ---
 
@@ -281,7 +290,7 @@ The through-line across every Manhattan memo in this repo holds here too: **reve
 | Risk | Likelihood | Impact | Mitigation |
 |---|---|---|---|
 | Gym-only membership ramp falls short | High | Severe | Underwrite a dedicated ramp-capital reserve separate from build-out; set a hard go/no-go membership checkpoint at 12 and 24 months. |
-| Pickleball segment evaluated in isolation and cut | Medium | High | If the segment is ever reviewed on a standalone P&L rather than as marketing spend, Exhibit 4b's ~$868K loss reads as a cost center to eliminate rather than a customer-acquisition channel — worth deliberately tracking gym-membership attribution (sign-ups citing pickleball) to keep the subsidy defensible internally. |
+| Pickleball segment evaluated in isolation and cut | Medium | High | If reviewed on a standalone P&L, the ~$1.03M loss reads as a cost center to eliminate rather than a customer-acquisition channel — worth tracking gym-membership attribution (sign-ups citing pickleball) to keep the subsidy defensible internally. |
 | Long, costly assembly-occupancy approval | Medium | High | Engage DOB expediting and a code consultant before signing the lease, not after. |
 | Rent-to-revenue ratio structurally above industry norm | High | Moderate–High | Negotiate a percentage-rent or graduated structure tied to membership ramp rather than a flat institutional lease from day one. |
 | Subway-adjacent vibration/structural requirements | Medium | Moderate | Structural engineering study specific to court and gym flooring before finalizing build-out budget. |
@@ -295,30 +304,30 @@ The through-line across every Manhattan memo in this repo holds here too: **reve
 **The analytical question:** Given all of it, is pickleball profitable on its own, and what should follow from that?
 
 Four findings converge:
-1. **Isolated, the pickleball segment loses money under every defensible allocation method** (Section 03, Exhibits 4b–4c) — roughly $868K/year on a fair space-based cost split, and it stays negative even at zero labor cost. It is marketing, not a profit center.
-2. **That loss is structural, not fixable** (Section 01) — a hard ~230-member ceiling caps pickleball-inclusive revenue near $1.1M regardless of execution quality, while the courts occupy 27% of the building's most prominent space.
-3. **The whole club is nonetheless genuinely profitable** (Section 05) — $1.96M EBITDA, an 18.3% cash yield on ~$10.76M invested — entirely because gym-only membership (93%+ of revenue) more than covers the pickleball subsidy.
-4. **Gym-only membership is the only lever that determines whether the subsidy is affordable** (Section 07) — below ~1,300 gym members, the whole club loses money and the pickleball subsidy becomes unsustainable; above ~2,000, it's comfortably absorbed.
+1. **Isolated, the pickleball segment loses money under every defensible allocation method** (Section 03, Exhibits 4b–4c) — roughly $1.03M/year on a fair space-based cost split, and it stays negative even at zero labor cost. It is marketing, not a profit center.
+2. **That loss is structural, not fixable** (Section 01) — a theoretical ~230-member ceiling caps pickleball-inclusive revenue on paper, but actual weekday usage runs at roughly a fifth of even that modest theoretical level, while the courts occupy 27% of the building's most prominent space.
+3. **The whole club is nonetheless genuinely profitable** (Section 05) — $1.85M EBITDA, a 17.2% cash yield on ~$10.76M invested — entirely because gym-only membership (82% of revenue) more than covers the pickleball subsidy.
+4. **Gym-only membership is the only lever that determines whether the subsidy is affordable** (Section 07) — below ~1,360 gym members, the whole club loses money and the pickleball subsidy becomes unsustainable; above ~2,000, it's comfortably absorbed.
 
-> **Answer to the original question:** Pickleball, on its own, is not profitable — it's a marketing and member-acquisition cost, running roughly $700K–$900K/year depending on allocation method. That's a defensible cost as long as gym membership stays well above the ~1,300-member breakeven, because gym membership is what actually pays for it.
+> **Answer to the original question:** Pickleball, on its own, is not profitable — it's a marketing and member-acquisition cost, running roughly $965K–$1.03M/year depending on the labor assumption. That's a defensible cost as long as gym membership stays well above the ~1,360-member breakeven, because gym membership is what actually pays for it.
 >
-> The number worth tracking internally, if this were being run rather than analyzed from outside, isn't pickleball court utilization — it's how many gym-only members cite the pickleball courts as why they joined. That conversion rate is the only thing that would turn Exhibit 4b's loss from "the cost of a very effective marketing channel" into "a cost center with no offsetting benefit," and it's the number this outside estimate has no way to see.
+> The number worth tracking internally, if this were being run rather than analyzed from outside, isn't pickleball court utilization — it's how many gym-only members cite the pickleball courts, or the tournaments specifically, as why they joined. That conversion rate is the only thing that would turn Exhibit 4b's loss from "the cost of a very effective marketing channel" into "a cost center with no offsetting benefit," and it's the number this outside estimate has no way to see.
 
 ### What would change this conclusion
 - **Life Time's actual segment financials** — every number here is a directional estimate; the real allocation of shared costs, real utilization, and real member-acquisition attribution would refine or overturn this materially.
-- **A member-acquisition attribution study** tying gym-only sign-ups to pickleball as the stated reason for joining — the actual test of whether the marketing framing holds up.
+- **A member-acquisition attribution study** tying gym-only sign-ups to pickleball, or specifically to tournament attendance, as the stated reason for joining.
 - **A different allocation convention** than space-based cost-sharing — Exhibit 4c shows the answer flips to breakeven-or-better only under a method that has no real grounding in how commercial rent works.
-- **Gym-only membership falling meaningfully below ~1,300** — at that point the pickleball subsidy stops being affordable regardless of its marketing value, per Section 07.
+- **Gym-only membership falling meaningfully below ~1,360** — at that point the pickleball subsidy stops being affordable regardless of its marketing value, per Section 07.
 
 ### Metrics to run it on
-- **Gym-only membership count** against the ~1,300 breakeven and 2,000 base-case targets — the single number this entire memo turns on.
-- **Pickleball court utilization** — tracked separately, since it caps at ~230 members regardless and shouldn't be mistaken for the growth metric.
-- **Rent as a % of trailing revenue** — watch against the 32.5% base case and the 10–18% industry norm as membership scales.
+- **Gym-only membership count** against the ~1,360 breakeven and 2,000 base-case targets — the single number this entire memo turns on.
+- **Pickleball court utilization**, split explicitly into weekday open-play and weekend-tournament components — they behave completely differently and shouldn't be tracked as one number.
+- **Rent as a % of trailing revenue** — watch against the 33.1% base case and the 10–18% industry norm as membership scales.
 - **Months of ramp-capital runway remaining** — the metric that determines whether the business survives to stabilization.
-- **Ancillary revenue (lessons, leagues, F&B, corporate)** as a % of plan — the buffer this memo's adverse case shows matters more than it looks like it should.
+- **Tournament entry-fee revenue and attendance** as a % of plan — now the single largest ancillary pickleball revenue line, and the least certain one.
 
 ---
 
-**ANALYTICAL BASIS** — This memo estimates the economics of a real, identifiable business — Life Time's PENN 1 club — from public facility-size information and the operator-described layout and pricing, not from Life Time's actual reported financials, which are not disclosed at the segment level. Every dollar figure, especially the pickleball-segment isolation in Exhibits 4b–4c, is this memo's own directional construction, most sensitive to two judgment calls: the cost-allocation method (space-based vs. revenue-share) and the direct pickleball labor assumption. Treat the segment conclusion — pickleball as marketing spend, not a profit center — as a structurally likely finding given the physical court-count math in Section 01, not as Life Time's actual internal number. Rent, construction cost, membership capture, and utilization assumptions vary materially with the actual lease terms and specific building condition. NYC Commercial Rent Tax, assembly-occupancy, and liquor-licensing items are summarized at a level suitable for underwriting judgment and are not legal, tax, or engineering advice.
+**ANALYTICAL BASIS** — This memo estimates the economics of a real, identifiable business — Life Time's PENN 1 club — from public facility-size information and the operator-described layout, pricing, and observed court-usage pattern, not from Life Time's actual reported financials, which are not disclosed at the segment level. Every dollar figure, especially the pickleball-segment isolation in Exhibits 4b–4c, is this memo's own directional construction, most sensitive to three judgment calls: the cost-allocation method (space-based vs. revenue-share), the direct pickleball labor assumption, and the weekend-tournament frequency/revenue estimate, which is a genuine guess dressed as a number — confirm actual tournament cadence and entry-fee structure before relying on it. Treat the segment conclusion — pickleball as marketing spend, not a profit center — as a structurally likely finding given the physical court-count math and the described light weekday usage, not as Life Time's actual internal number. Rent, construction cost, membership capture, and utilization assumptions vary materially with the actual lease terms and specific building condition. NYC Commercial Rent Tax, assembly-occupancy, and liquor-licensing items are summarized at a level suitable for underwriting judgment and are not legal, tax, or engineering advice.
 
-**FRAMEWORKS APPLIED** — Dual-constraint capacity analysis (physical court-hours vs. sqft-based membership capacity) · Porter's Five Forces · Value chain and margin-pool analysis with segment isolation and allocation-method sensitivity · City-specific structural analysis · Bottom-up unit economics with startup-capital decomposition · Two-variable sensitivity · Adverse-case scenario · Cross-memo structural comparison at institutional scale · Risk register · EBITDA and cash-yield-on-capital in place of owner-labor-adjusted economic profit.
+**FRAMEWORKS APPLIED** — Dual-constraint capacity analysis (physical court-hours vs. sqft-based membership capacity) with theoretical-vs-actual usage comparison · Porter's Five Forces · Value chain and margin-pool analysis with segment isolation and allocation-method sensitivity · City-specific structural analysis · Bottom-up unit economics with startup-capital decomposition · Two-variable sensitivity · Adverse-case scenario · Cross-memo structural comparison at institutional scale · Risk register · EBITDA and cash-yield-on-capital in place of owner-labor-adjusted economic profit.
