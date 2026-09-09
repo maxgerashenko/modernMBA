@@ -9,7 +9,7 @@ An MBA-style teardown of a four-seat walk-in coffee counter in Manhattan — and
 **SUBJECT:** independent walk-in coffee counter, 4 seats, second-generation space
 **MARKET:** Manhattan, secondary commercial corridor
 **BASE CASE:** 450 sq ft, ~$185K startup capital, 220 transactions/day at a $7.00 average ticket
-**COMPANION TO:** the South Florida drive-thru memo in this repo
+**COMPANION TO:** [the South Florida drive-thru coffee memo](coffee-kiosk-south-florida.md) and [the Manhattan Neapolitan pizzeria memo](pizzeria-manhattan.md) in this repo
 
 ---
 
