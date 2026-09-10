@@ -54,10 +54,18 @@ Produces one memo per business type researched, in a fixed visual and analytical
 
 6. **Save the full memo to GitHub as Markdown.** Create `research/<slug>.md` (slug = the business type, e.g. `research/food-truck-austin.md` — one file directly under `research/`, no per-memo subfolder) with the entire memo converted faithfully to Markdown — every section, every exhibit table, every verdict callout (as blockquotes), the footer's analytical-basis note and frameworks-applied line. No CSS/HTML, just the data and text, so it stays diffable and greppable. Include links back to the Artifact and the Notion page at the top. This is the durable, complete backup; Notion holds the short summary, the Artifact holds the styled version, GitHub holds all the data.
 
-7. Confirm to the user: what was researched, the one-line verdict, the Artifact link, the Notion page link, and the GitHub file path.
+7. **Update the compare table — Artifact and Markdown — every time, not just on request.** This is the last step of every `mba-research` run, whether it created a brand-new memo or revised an existing one:
+   - Pull the current Section 00 (executive summary) and Section 06 (annual model) figures for *every* memo in `research/*.md` (not just the one just written) — capital, revenue/headline metric, bottom line (economic profit, or the equivalent metric for a memo that doesn't use owner-labor economic profit — state which it is), one-line verdict, and the real binding constraint.
+   - Group rows into three bands — clears a real return / conditional / does not clear a real return — same as the existing table.
+   - Republish the compare **Artifact** to the same URL (pass `url` to the `Artifact` tool — do not create a new one): `https://claude.ai/code/artifact/dfeb0ddb-3c34-4fc8-af93-0a76addb5053`. Read it first if this conversation didn't just publish it.
+   - Overwrite `research/compare.md` with the regenerated table (same file path each time, not a new one).
+   - If this run added a new business type, add it to the table; if it revised an existing one, update its row in place rather than duplicating it.
+
+8. Confirm to the user: what was researched, the one-line verdict, the Artifact link, the Notion page link, the GitHub file path, and that the compare table (Artifact + `research/compare.md`) was updated.
 
 ## Notes
 
 - Every new chat about a *new* business type gets its own Notion sub-page under Modern MBA — never append multiple business types into one page.
 - If the user is iterating on the *same* business type across messages in one chat, update the existing Artifact/Notion page rather than creating a new one.
 - Numbers should be directional and clearly framed as estimates (see the footer's "ANALYTICAL BASIS" note in the example) — this is a structural teardown, not a certified forecast.
+- The compare table (`research/compare.md` and its Artifact, URL above) is a living index over every memo in `research/`, not a memo itself — it has no Notion page and no Section 00–10 structure. Regenerate it per step 7 above after *every* memo is created or revised, without waiting to be asked. Treat a request to only "update the compare table" (no new research) as calling for the same step 7 process against the current state of `research/*.md`.
