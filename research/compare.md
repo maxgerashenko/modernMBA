@@ -24,6 +24,7 @@ This is an index, not a new analysis. Every figure below is pulled directly from
 | **[Controlling Interest](gc-license-umbrella-florida.md)** — GC crew & lead brokerage | South Florida | n/a (existing GC license) | $1.58M | $69,799 (vs. ($152,042) if reclassified) | Works, legal risk open | Worker misclassification exposure under the federal control test |
 | **[The Board Meets Once a Month](parking-lpr-miami.md)** — parking LPR compliance startup | Miami-Dade / Broward, FL | <$50,000 | $253,000 (@ 15 sites, growth year) | ($9,100) (econ. profit @ 15 sites) | Build it, solo first | HOA board sales-cycle velocity — not capital, hardware, or demand |
 | **[The Ad Costs More Than the Cut](junk-removal-app-miami.md)** — junk-removal marketplace app | Miami-Dade, FL | <$30,000 | $183,040 (platform revenue @ 20 drivers) | $2,784 (econ. profit @ 20 drivers) | Local grind, not ad-funded | Customer-acquisition channel mix — paid ads cost more than the commission |
+| **[The Platform Fee Is the Business](ai-receptionist-nyc.md)** — AI phone receptionist & booking agent | New York City | <$50,000 | $167,400 (@ 62 clients) | $620 (econ. profit @ 62 clients) | Rent first, build second | Owner trust & booking-system onboarding — not compute cost or demand |
 
 ## DOES NOT CLEAR A REAL RETURN, AS MODELED
 
@@ -36,13 +37,13 @@ This is an index, not a new analysis. Every figure below is pulled directly from
 
 ---
 
-## Three patterns across eleven businesses
+## Three patterns across twelve businesses
 
-**The analytical question:** What, if anything, generalizes across a coffee kiosk, a cargo ship, and a parking-camera startup?
+**The analytical question:** What, if anything, generalizes across a coffee kiosk, a cargo ship, and an AI phone receptionist?
 
-- **Capital is almost never the real constraint.** Only the cargo ship and the pickleball club are genuinely capital-bound at entry; every other memo's real ceiling is time, a site's traffic, a legal test, or a counterparty's decision calendar — not the size of the check the founder can write.
-- **"Charge the owner's time at market rate" flips more verdicts than any other single move in this hub.** Several of the non-"Proceed" rows above look genuinely good on a cash basis and only turn negative once the owner's own hours are priced honestly — the fix-and-flip, the sneaker resale, and the Manhattan coffee counter all read as a fine business until that line is added.
-- **Manhattan rent and volunteer/committee-style decision-makers are the two recurring adversaries.** Every Manhattan memo in this hub (coffee, pizza, pickleball) is decided by occupancy cost or space allocation; every memo with a board, committee, or classification test (parking LPR, GC brokerage) is decided by how slowly or unpredictably an external party can move, not by the underlying unit economics.
+- **Capital is almost never the real constraint.** Only the cargo ship and the pickleball club are genuinely capital-bound at entry; every other memo's real ceiling is time, a site's traffic, a legal test, a counterparty's decision calendar, or a trust/sales problem — not the size of the check the founder can write.
+- **"Charge the owner's time at market rate" flips more verdicts than any other single move in this hub.** Several of the non-"Proceed" rows above look genuinely good on a cash basis and only turn negative (or barely break even) once the owner's own hours are priced honestly — the fix-and-flip, the sneaker resale, the Manhattan coffee counter, and the AI receptionist's own $620-of-daylight base case all read as a fine business until that line is added.
+- **Manhattan rent, volunteer/committee-style decision-makers, and crowded commodity-tech categories are the three recurring adversaries.** Every Manhattan memo in this hub (coffee, pizza, pickleball) is decided by occupancy cost or space allocation; every memo with a board, committee, or classification test (parking LPR, GC brokerage) is decided by how slowly or unpredictably an external party can move; and the AI receptionist memo shows a fourth pattern — a genuinely good margin built entirely on commodity inputs that any funded competitor can copy just as easily.
 
 ---
 
