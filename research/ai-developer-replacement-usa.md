@@ -28,8 +28,9 @@ An MBA-style teardown of one pricing idea. Work out what one machine running a t
 | H6 | Agents per engineer grow exponentially with level: 1, 2, 4, 8, 16, 32, 64 (L1–L7). | No data can confirm a future multiplier, so the memo shows how many agents each salary can pay for. | **The deciding assumption, untested.** Senior pay grows ~1.5× per level while agents double, so seniors are the hardest to replace. At $46,961, agents save money at L1–L3 and cost more from L4 up. |
 | H7 | Agents run 24/7, which makes the hour cheaper. | Check what the machine-hour already covers. | **Partly.** The machine-hour already includes power, space, staff and write-off for all 8,760 hours. Running 24/7 doesn't lower the price per hour of work. It means one agent supplies 4.2 engineer-years of hours, so a buyer needs 4.2× fewer agents. |
 | H8 | Agents do everything (architecture, coding, review, testing). | Treated as Max's assumption. | **Applied.** No human review cost in the buyer's saving. This is optimistic; Section 09 lists it as a risk. |
+| H9 | Owning the rack beats renting a frontier model's API. | Price the same agent-hour on Claude Fable 5.1 ($10 in / $50 out per million tokens) at a full 1M-token context. | **Supported.** The API re-bills the cached context on every turn: ~$72 per agent-hour, $149,760 per engineer-year, already including the lab's margin. The rack's price with a 75% margin is $22.58, about 31% of that. |
 
-> **How the hypotheses resolve:** The cost side holds up once the hardware is right. One GB200 NVL72 rack runs ~30 frontier-size agents with 1M-token contexts at 80 tokens/s, and the true agent-hour costs $5.64, not the $76 that one-agent-per-machine H100 math gives. At a true 75% margin that is $46,961 per engineer-year of agent work. Two things then decide the case: how many agents really equal each level (H6), and whether buyers pay $22.58 an hour when the Opus API costs about $9.46 per agent-hour.
+> **How the hypotheses resolve:** The cost side holds up once the hardware is right. One GB200 NVL72 rack runs ~30 frontier-size agents with 1M-token contexts at 80 tokens/s, and the true agent-hour costs $5.64, not the $76 that one-agent-per-machine H100 math gives. At a true 75% margin that is $46,961 per engineer-year of agent work. That is about 31% of what the same 1M-context agent-hour costs on Claude Fable 5.1's API (~$72), so price is not the problem. Two things then decide the case: how many agents really equal each level (H6), and whether an open-weights model on your own rack does Fable-class work.
 
 ---
 
@@ -44,15 +45,15 @@ An MBA-style teardown of one pricing idea. Work out what one machine running a t
 | Same formula, 16× H100, 1 agent per machine | $633,181 / engineer-year | and 0 agents fit at a 1M-token context |
 | Levels where agents save money | L1–L3 | exponential agents, 1 → 64 |
 | Operator economic profit, 2 racks | $5.09M | 60 agents 24/7; breakeven ~25 agents on the first rack |
-| Price ceiling set by the API | ~$9.46 / agent-hour | Opus 5.5 API cost per agent-hour; at that price the operator loses $1.8M |
+| Price ceiling set by the API | ~$72 / agent-hour | Fable 5.1 API at a full 1M-token context ($149,760 per engineer-year); the rack price is 31% of it |
 
-> **Recommendation: Conditional. Owning the right racks makes agents cheap enough to replace L1–L3 engineers, even with a true 75% margin, but not L4 and above. Build only if your model is good enough that buyers won't simply rent the same agent-hour from a model lab's API for less than half the price.**
+> **Recommendation: Conditional. Owning the right racks makes agents cheap enough to replace L1–L3 engineers, even with a true 75% margin, but not L4 and above. The rack's price is about a third of a frontier API at the same 1M-token context, so build if an open-weights model on the rack does Fable-class work.**
 >
 > The idea's structure is sound: machine-hour cost, a margin, agents per level, compared with salary. What changed is the machine. A 16× H100 server can't hold even one agent with a 1M-token context, and it tops out at 44 tokens a second. A GB200 NVL72 rack links 72 GPUs at full speed, holds the model once, and leaves ~12 TB for agent contexts. Bandwidth limits it to ~60 agents at 80 tokens/s, and real efficiency plus 2X compute brings that to ~30. Each agent-hour then costs $5.64, and the true-75%-margin price is $22.58.
 >
 > At that price, an engineer-year of agent work costs $46,961. With agents doubling at each level, the bundle saves $58K at L1, $61K at L2 and $27K at L3, then costs more from L4 up: 64 agents for an L7 costs $3.0M against a $1.1M salary (Exhibit 1). Junior and mid-level work is the market. Senior replacement isn't, unless the multiplier stays far below doubling.
 >
-> As a business, two racks ($6.8M) earn about $5.1M of economic profit at full use. The weak point is price. The Opus API delivers a comparable agent-hour for about $9.46, so a $22.58 price only holds if the operator's model or service is clearly better. At API-parity pricing the same two racks lose $1.8M a year (Section 07).
+> As a business, two racks ($6.8M) earn about $5.1M of economic profit at full use. Price has room. On Claude Fable 5.1's API ($10 / $50 per million tokens), a full 1M-token context is re-billed every turn, so the same agent-hour costs about $72, already including the lab's margin. The rack's $22.58 is about 31% of that, and owning gets cheaper the longer the context. The weak point is the model: the operator has to run an open-weights model that does Fable-class work, since Fable itself can't be self-hosted.
 
 ---
 
@@ -121,7 +122,7 @@ The capacity math that actually governs this business:
 
 - **Memory bandwidth is the cap per rack.** Every token, the rack reads the model plus every agent's context. At 576 TB/s and 80 tokens/s that is ~7.2 TB per step, so ~60 agents in theory and ~30 in practice.
 - **The multiplier is the cap on the market.** Every revenue figure above assumes doubling agents per level. Until that is measured on real codebases, the market is a forecast.
-- **The API price is the cap on the margin.** Buyers can rent a comparable agent-hour from a model lab for ~$9.46.
+- **The API price is a ceiling well above cost.** A 1M-context agent-hour on Fable 5.1's API costs ~$72, so the rack's $22.58 has headroom. Cheaper API models (Opus 5.5, ~$9.46 at a 100K context) set a lower bar only if they do the same work.
 
 ---
 
@@ -134,12 +135,12 @@ The capacity math that actually governs this business:
 | Force | Rating | Evidence |
 |---|---|---|
 | Supplier power (NVIDIA, memory makers, model weights) | Very high | NVIDIA sells the only rack-scale systems that fit this workload; non-priority buyers report 30–52 week lead times and deposits 9–12 months ahead. DRAM prices rose ~90–95% in Q1 2026 and HBM3E ~20% for 2026 contracts. The top closed models (Claude Opus) cannot be licensed for self-hosting. |
-| Buyer power (engineering managers, CTOs) | High | Buyers can measure output (merged pull requests, tickets closed), cancel monthly, and compare with API agents at ~$9.46 per agent-hour. |
+| Buyer power (engineering managers, CTOs) | High | Buyers can measure output (merged pull requests, tickets closed), cancel monthly, and compare with API agents: ~$72 per agent-hour on Fable 5.1 at a 1M-token context, less on smaller models or shorter contexts. |
 | Threat of new entry | High | Capital is the barrier ($3.4M per rack) but cloud providers rent the same racks by the hour. |
 | Substitutes | Very high | Claude Code, Cursor, GitHub Copilot and the labs' own agents; offshore contractors; hiring. |
-| Rivalry | Very high | Model labs sell agents directly at API prices, so the cheapest substitute comes from the companies with the best models. |
+| Rivalry | High | Model labs sell agents directly at API prices. At long contexts those prices run ~3× the rack's price, so the rivalry is over model quality more than price. |
 
-*Five of five forces unfavorable. Owning racks lowers cost but does not create pricing power.*
+*Four forces strongly unfavorable, rivalry less so. Owning racks gives a real cost edge at long contexts, but not pricing power on its own.*
 
 ---
 
@@ -196,9 +197,10 @@ The capacity math that actually governs this business:
 | **GB200 NVL72, 3 yr, fully costed, 2X (base case)** | **~30** | **$5.64** | **$46,961** | ~$3.4M + $350K/yr; bandwidth-bound |
 | GB200 NVL72, ideal efficiency | 60 | $2.82 | $23,480 | Upper bound |
 | GB300 NVL72, 3 yr, fully costed, 2X | ~30 | $6.35 | $52,871 | ~$3.9M + $370K/yr; extra memory unused at 80 tok/s |
-| Reference: Opus 5.5 API (rented) | — | $9.46 | $78,680 | Same true 75% margin on API cost; cannot be self-hosted |
+| **Reference: Fable 5.1 API, full 1M context (rented)** | — | **~$72 (price)** | **$149,760** | $10 / $50 per M tokens, cached reads assumed $0.50; already includes the lab's margin; cannot be self-hosted |
+| Reference: Opus 5.5 API, 100K context (rented) | — | $9.46 (price) | $19,677 | Smaller model and context; not comparable at 1M |
 
-*Rack prices are press-reported estimates; NVIDIA publishes no list prices. Specs: H100 80 GB, 3.35 TB/s; GB200 NVL72 13.4 TB, 576 TB/s; GB300 NVL72 20.7 TB, 576 TB/s. Owning the right rack makes the agent-hour cheaper than renting it from the API.*
+*Rack prices are press-reported estimates; NVIDIA publishes no list prices. Specs: H100 80 GB, 3.35 TB/s; GB200 NVL72 13.4 TB, 576 TB/s; GB300 NVL72 20.7 TB, 576 TB/s. Fable's API price implies a lab cost of ~$18 per 1M-context agent-hour if the lab also keeps 75%, against the rack's $5.64. At a 100K context, Fable's API costs ~$22.20, which matches the rack price almost exactly.*
 
 **Exhibit 9 — Per-agent P&L, annual (one 24/7 agent on a GB200 rack)**
 
@@ -276,13 +278,13 @@ An ordinary bad year at the two-rack base case:
 | Event | Impact | Comment |
 |---|---|---|
 | Base case economic profit (Exhibit 10) | $5,090,000 | |
-| A model lab or funded rival cuts prices; 15% price cut | ($1,780,000) | API agents cost less than half the base price |
+| A model lab or funded rival cuts prices; 15% price cut | ($1,780,000) | Cheaper models at short contexts undercut |
 | 12 of 60 agent slots unsold (80% full) | ($2,017,333) | Lost gross margin; rack costs are fixed |
 | New GPU generation; racks written off over 2 years, not 3 | ($1,133,333) | Faster write-off |
 | One agent-caused production incident: credits, legal | ($150,000) | |
 | **Adverse case economic profit** | **$9,333** | |
 
-*At API-parity pricing ($9.46 per agent-hour, $82,870 per 24/7 agent), two full racks earn $4.97M of revenue and lose $1.80M of economic profit, at a 40% gross margin. The business only works if buyers pay ~2.4× the API agent-hour for a better or more trusted service.*
+*Upside the base case leaves on the table: priced at half of Fable's 1M-context API ($36 per agent-hour), two full racks would earn ~$18.9M and ~$12.1M of economic profit. The downside test is a buyer comparing with a cheaper model at short context (Opus 5.5, ~$9.46): at that price two racks lose ~$1.8M a year.*
 
 ---
 
@@ -321,9 +323,8 @@ An ordinary bad year at the two-rack base case:
 
 | Risk | Likelihood | Impact | Mitigation |
 |---|---|---|---|
-| Buyers pay API prices (~$9.46/agent-hour), not $22.58 | High | High | Sell what the API doesn't: private deployment, a model tuned to the buyer's codebase, guaranteed capacity, measured output. Otherwise rent, don't own. |
+| The open-weights model on the rack doesn't do Fable-class work, so buyers compare with cheaper models (~$9.46/agent-hour) | High | High | Benchmark candidate models on the buyer's own tasks before buying a rack; sell long-context work, where the rack's cost edge over the API is largest. |
 | The real multiplier grows faster than doubling, or agents can't do senior work at all | High | High | Sell L1–L3 work only until the multiplier is measured per level in paid pilots. |
-| No open-weights model matches the top closed models on long coding tasks | Medium | High | Benchmark candidate models on the buyer's own tasks before buying a rack. |
 | Unsold rack slots | Medium | High | Sign anchor customers for ~25 agents before buying the first rack; rent cloud racks for overflow. |
 | Hardware obsolescence (new GPU generation yearly) | High | Medium | 3-year write-off at most; lease rather than buy where possible. |
 | Agents doing their own review ship a harmful change | Medium | High | Agents open pull requests only; CI gates; E&O and cyber cover; liability caps. |
@@ -340,13 +341,13 @@ Four findings converge:
 1. **The per-level structure is right** (Section 01): machine-hour cost × 4, times agents per level, compared with each level's salary.
 2. **The machine decides the cost** (Section 05): H100s can't serve a 1M-token agent at all; a GB200 NVL72 rack serves ~30 at $5.64 per agent-hour, so $46,961 per engineer-year of work at a true 75% margin.
 3. **The multiplier decides the market** (Sections 01 and 07): with agents doubling per level, replacement pays at L1–L3 and loses from L4 up.
-4. **The API decides the price** (Sections 02 and 07): the same agent-hour rents for ~$9.46, so a 75% margin needs a product buyers value above the API.
+4. **The rack beats the API at long contexts** (Sections 05 and 07): a 1M-context agent-hour costs ~$72 on Fable 5.1's API and $22.58 from the rack with a 75% margin. The open question is whether the rack's model is as good.
 
 > **Recommended structure and sequence**
 >
 > **Sell junior-to-senior (L1–L3) work, not senior replacement.** Use Exhibit 1 as the sales tool, with the GB200 column. Don't buy a rack first. Run 20–30 agents on rented rack capacity or the API as paid pilots on one narrow kind of work, and count accepted changes per agent against the engineers doing the same work. That measures the multiplier per level.
 >
-> Buy the first rack only when two things are true: signed demand for ~25 agents (the single-rack breakeven), and an open-weights model that does the work as well as the API models on the buyer's tasks. Then the rack's $5.64 agent-hour, against $9.46 on the API, is a real cost edge, and a price between the two still earns a strong margin.
+> Buy the first rack only when two things are true: signed demand for ~25 agents (the single-rack breakeven), and an open-weights model that does the work as well as the API models on the buyer's tasks. Then the rack's $5.64 agent-hour, against ~$72 on Fable's API at the same context, is a real cost edge, and there is room to price above $22.58.
 
 > **What would change this recommendation**
 >
@@ -357,11 +358,11 @@ Four findings converge:
 - **Agent-years per engineer, measured per level** — accepted changes per agent-week vs. per engineer-week on the same work.
 - **Agents per rack at 80 tok/s and 1M context** — measured, against the ~30 base case.
 - **Rack fill rate** — against the ~83% single-rack breakeven.
-- **Price per agent-hour vs. the API** — how much above ~$9.46 buyers actually pay.
+- **Price per agent-hour vs. Fable's API** — the share of ~$72 buyers will pay, and the model quality gap.
 - **Buyer saving per engineer replaced** (Exhibit 12 inputs, measured).
 
 ---
 
-**ANALYTICAL BASIS** — Figures are directional estimates for an operator selling AI coding-agent capacity to US employers, built for structural analysis rather than as an audited forecast. Developer counts and the median wage are from the US Bureau of Labor Statistics (May 2025). Loaded cost per level and the share of developers at each level are assumptions, set so the level totals reconcile to BLS-based payroll (~$346B); BLS does not report engineer levels. Max's review set these inputs: 3-year write-off, $120K/yr running costs per 16× H100 machine, 2X compute for a future model twice as capable, a true 75% margin, a 1.2 TB model, a 1M-token context, 80 tokens/s per agent, 24/7 use, agents doing their own review, and agents per level doubling from 1 to 64. GPU and rack specs are NVIDIA's published figures (H100 80 GB, 3.35 TB/s; GB200 NVL72 13.4 TB, 576 TB/s; GB300 NVL72 20.7 TB, 576 TB/s). Rack prices (~$3.4M GB200, ~$3.9M GB300) and running costs are press-reported or engineering estimates. Agents per rack (~30) is an estimate from memory bandwidth, real-world efficiency (~60%) and the compute factor, assuming ~10 GB of context memory per 100K tokens. H100 purchase ($27K–40K) and rental (~$3.50 median) prices and memory price changes are from October 2026 market surveys and TrendForce. The API reference uses Claude Opus 5.5 list prices ($4 / $20 / $0.20 cached per million tokens) and an assumed token profile of ~$9.46 per agent-hour. Claims from the source conversation are treated as hypotheses; Section 08 lists which were corrected.
+**ANALYTICAL BASIS** — Figures are directional estimates for an operator selling AI coding-agent capacity to US employers, built for structural analysis rather than as an audited forecast. Developer counts and the median wage are from the US Bureau of Labor Statistics (May 2025). Loaded cost per level and the share of developers at each level are assumptions, set so the level totals reconcile to BLS-based payroll (~$346B); BLS does not report engineer levels. Max's review set these inputs: 3-year write-off, $120K/yr running costs per 16× H100 machine, 2X compute for a future model twice as capable, a true 75% margin, a 1.2 TB model, a 1M-token context, 80 tokens/s per agent, 24/7 use, agents doing their own review, and agents per level doubling from 1 to 64. GPU and rack specs are NVIDIA's published figures (H100 80 GB, 3.35 TB/s; GB200 NVL72 13.4 TB, 576 TB/s; GB300 NVL72 20.7 TB, 576 TB/s). Rack prices (~$3.4M GB200, ~$3.9M GB300) and running costs are press-reported or engineering estimates. Agents per rack (~30) is an estimate from memory bandwidth, real-world efficiency (~60%) and the compute factor, assuming ~10 GB of context memory per 100K tokens. H100 purchase ($27K–40K) and rental (~$3.50 median) prices and memory price changes are from October 2026 market surveys and TrendForce. The API benchmark uses Claude Fable 5.1 at $10 input / $50 output per million tokens (cached reads assumed at $0.50) with ~120 turns an hour, a full 1M-token context 95% cached and ~1.5K output tokens per turn, giving ~$72 per agent-hour; the Opus 5.5 reference ($4 / $20 / $0.20) uses a 100K context, giving ~$9.46. Claims from the source conversation are treated as hypotheses; Section 08 lists which were corrected.
 
 **FRAMEWORKS APPLIED** — Hypothesis-first framing with explicit tests · Per-level substitution table with break-even multipliers · Hardware capacity model (memory, bandwidth, compute) · Market sizing from payroll by level (ceiling → theoretical agent revenue → vendor pool → SOM) · Porter's Five Forces · Value chain and margin pool · Cost-plus formula audit and build-vs-rent comparison · Two-variable sensitivities (price by agents per rack and compute factor; buyer saving by multiplier and level) · Adverse-case scenario · Source-claim error log · Risk register · Economic profit adjustment for owner labor and capital.
