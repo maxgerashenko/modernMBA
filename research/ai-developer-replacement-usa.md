@@ -1,239 +1,282 @@
-# The Cluster Is Not the Developer
+# How Many Agents Make an Engineer
 
 **Artifact:** https://claude.ai/artifact/W1kcyA5nYTzimgDhrULt36
 **Notion:** https://app.notion.com/p/413ba21e32d4815980fdd79459e1d203?pvs=204
 
-An MBA-style teardown of a "virtual developer" business: own a GPU cluster, run a frontier-class coding model on it, and sell each agent seat to US companies at a price set from the hardware's amortized cost plus a 75% margin, pitched as a replacement for a salaried engineer. The memo states the hypotheses behind that idea first, tests each one against current numbers, and corrects the source conversation where it was wrong.
+An MBA-style teardown of one pricing idea: work out what one machine running a top coding model costs per hour, add a 75% company margin, assume that some number of agents will one day equal one software engineer (more agents for more senior levels), and compare that bundle with each engineer level's salary. The memo states the hypotheses first, builds the per-level table, then corrects the inputs where the source conversation got them wrong.
 
-**SUBJECT:** an operator selling full-time AI coding-agent seats to US employers, built either on an owned 16× H100 cluster (the source formula) or on a frontier model's API (the corrected base case)
-**MARKET:** US software developers and QA testers, ~1.9M people (BLS, 2025)
-**BASE CASE:** API-based agent seat at $36,000/yr, one agent working a 2,080-hour year, 250 seats at steady state
-**SOURCE:** a long chat with another AI assistant that built the formula `((1.28 TB / 80 GB × $40K) / (4Y × 8,760H)) × 2,080H × 2X + 75%M = $132,968`. Its numbers are treated as claims to test, not as facts.
+**SUBJECT:** an operator selling AI coding-agent capacity to US employers, priced as (cost per agent-hour × 2,080 h × 2X redundancy) + 75% margin, with N agents sold per engineer replaced
+**MARKET:** US software developers and QA testers, ~1.9M people (BLS, 2025), split into seven engineer levels (L1–L7)
+**BASE CASE:** source formula = $132,968 per agent-year; corrected (Claude Opus 5.5 on the API, same 75% margin) = $34,400 per agent-year; 1 agent for an L1 up to 10 for an L7
+**SOURCE:** a long chat with another AI assistant that built the formula `((1.28 TB / 80 GB × $40K) / (4Y × 8,760H)) × 2,080H × 2X + 75%M`. Its numbers are treated as claims to test, not as facts.
 
 ---
 
 ## Preface — Hypotheses, stated before the verdict
 
-**The analytical question:** What would have to be true for "replace a US developer with a GPU cluster running a frontier model, priced cost-plus" to be a good business — and is each of those things true?
+**The analytical question:** What has to be true for "N agents, priced at machine cost plus 75%, replace one engineer at every level" to be a good business — and is each of those things true?
 
-The source chat moved from hardware prices to a pricing formula to a $387B "market" without stopping to name its assumptions. They are named here, each with the test this memo runs and the result. Everything after this table is the evidence.
+The idea has one pricing rule and one capability assumption. The table names each piece, how it is tested, and the result. Everything after it is the evidence.
 
 **Exhibit A — Hypotheses, tests, and results**
 
-| # | Hypothesis (from the source chat) | How it is tested | Result |
+| # | Hypothesis | How it is tested | Result |
 |---|---|---|---|
-| H1 | A frontier-class coding agent can work a full 2,080-hour year for well under a developer's loaded cost. | Price one agent's token use on Claude Opus 5.5 list prices ($4 in / $20 out / $0.20 cached per million tokens); price a batched self-hosted cluster. | **Supported, strongly.** About $18,500/yr on the API, $2,000–9,000/yr self-hosted at full batching, against ~$177,000 for a median-wage developer. Compute is not the obstacle. |
-| H2 | The formula `(cluster cost ÷ lifetime hours) × 2,080 × 2X × 1.75` is a valid cost-plus price for one agent seat. | Rebuild the real annual cost of the cluster the formula describes, and compare. | **Rejected.** It contains two errors that happen to offset. It bills only 2,080 of 8,760 hours (23.7% of depreciation) and leaves out power, space and staff, so a *dedicated* 2X cluster costs ~$560,000/yr against a $132,968 price. But one agent does not need a dedicated cluster: a batched cluster serves ~30 agents, so the true cost per seat is ~$19,000. The price is right only by accident, and has no link to cost. |
-| H3 | Owning the hardware beats renting it or buying API tokens. | Owned cost per GPU-hour vs. the October 2026 rental market; what model the hardware can actually run. | **Rejected for this operator.** An owned H100 costs ~$2.00/GPU-hr at 100% utilization vs. a $3.49 rental median and a $1.70 floor. More important, Claude Opus cannot be self-hosted at all — its weights are not sold — so owned hardware runs a weaker open-weights model. |
-| H4 | One agent seat replaces one developer, so the buyer will pay up to a developer's salary. | Compare what a buyer gains (share of a developer's work the agent completes) with what it costs (price plus review time). | **Not supported.** Agents complete tasks, not jobs, and need review. At a $36,000 price the buyer only comes out ahead if the agent does at least ~33% of a median developer's output. The price ceiling is set by that share, not by the salary. |
-| H5 | The market is $300B+ (the chat's $387B, or 2.9M "agent equivalents"). | Rebuild payroll from BLS; separate the payroll pool from the revenue a vendor can capture. | **Partly supported.** US developer + QA payroll is real and large: ~$330–350B loaded. But that is a ceiling on displaced spending, not a market. The revenue pool vendors can capture is ~$10–30B. The 2.9M-agent figure is circular (salary ÷ price × headcount just restates payroll). |
-| H6 | A 75% margin is achievable and defensible. | Check the arithmetic; check who sets the input price. | **Rejected as stated.** A 75% *markup* is a 42.9% gross margin, and the chat mixed the two. The model lab sets the main input price and also sells competing seats, so a reseller's margin is held down by its own supplier. |
+| H1 | One agent's year of work costs far less than one engineer. | Price an agent-year on Claude Opus 5.5 list prices ($4 in / $20 out / $0.20 cached per million tokens), and on a batched self-hosted cluster. | **Supported, strongly.** ~$19,700 of cost per agent-year on the API (~$34,400 with the 75% margin), ~$4,400 self-hosted at full batching, vs. $105,000–1.1M per engineer. |
+| H2 | One machine (16× H100, $640K) runs one agent, so the agent-hour costs the machine-hour: $640K ÷ (4 yr × 8,760 h) = $18.26. | Rebuild the machine's real hourly cost and how many agents it serves. | **Rejected.** All-in (power, space, staff) the machine costs ~$32/hour, not $18.26. But it serves ~30 agents at once, so one agent-hour costs ~$1.07. The formula overcharges each agent by ~17× and undercounts the machine by ~43%. |
+| H3 | Self-hosting the top model is possible and cheapest. | Check model availability; compare owned vs. rented GPU-hours. | **Rejected.** The top coding model (Claude Opus) is sold only as a service; it cannot run on owned hardware. Owned H100s cost ~$2.00/GPU-hour at full use vs. a $3.49 rental median. |
+| H4 | A fixed number of agents equals one engineer, rising with level (1 for L1 … 10 for L7). | No data can confirm a future multiplier, so the memo inverts it: how many agents can each level's salary pay for before agents cost more? | **The deciding assumption, and untested.** At the source price, an L1 salary pays for 0.8 agents and an L7 for 8.3, so the bundle costs *more* than the engineer at most levels. At the corrected price, an L1 pays for 2.4 agents and an L7 for 31. Cost stops being the question; capability is. |
+| H5 | Replacing all US developers moves ~$300B+. | Rebuild payroll by level from BLS totals. | **Supported as a ceiling.** ~$346B loaded payroll across 1.9M people. At the corrected price, the full agent bundle would cost ~$99B, of which ~$43B is the 75% margin. That is a theoretical maximum; a realistic vendor pool is ~$10–30B. |
+| H6 | "+75% margin" means the company keeps 75%. | Check the arithmetic. | **Rejected as stated.** Cost × 1.75 is a 75% markup, which is a 42.9% gross margin (0.75 ÷ 1.75). The source chat used both definitions on the same totals. |
 
-> **How the hypotheses resolve:** H1 is true and is the reason the idea feels inevitable. H2, H3 and H6 are why this particular business — owning GPUs and pricing off their cost — does not work. H4 and H5 are why the price can't be set off a developer's salary either. What survives is a narrower, API-based agent-operations service that has to earn its price by how much finished, reviewed work each seat delivers.
+> **How the hypotheses resolve:** H1 is true and is why the idea is attractive. H2 and H3 mean the hardware-hour is the wrong cost base: the agent-hour is ~17× cheaper than the formula says, and the top model is rented, not owned. With the corrected cost, every level's salary covers several agents, so the whole case rests on H4, the number of agents it really takes to equal one engineer at each level. That number is a forecast, not a fact, and it sets both the buyer's savings and the operator's revenue.
 
 ---
 
 ## Section 00 — Executive summary
 
-**The analytical question:** Should an operator buy a GPU cluster and sell "virtual developer" seats to US companies priced at amortized hardware cost plus 75% — and if not, what version of the idea works?
+**The analytical question:** If one engineer at each level equals N agents priced at cost plus 75%, does the bundle beat the salary — and is there a business in selling it?
 
 | KPI | Value | Note |
 |---|---|---|
-| Source formula price | $132,968 / seat-yr | 16× H100 at $40K, 4-yr life, 2,080 h, 2X, +75% |
-| True cost, dedicated 2X cluster | ~$560,000 / yr | the formula recovers ~14% of it |
-| True cost, one agent-year on Opus 5.5 API | ~$18,500 | 2,080 h at ~$8.90/agent-hour |
-| US dev + QA payroll (ceiling, not market) | ~$330–350B | 1.905M people, BLS May 2025, ×1.3 loaded |
-| Vendor revenue pool (SAM) | ~$10–30B | share of work automatable × price capture |
-| Corrected base case | $1.41M econ. profit @ 250 seats | breakeven ~164 seats; API-based, $36K/seat |
+| Agent-year, source formula | $132,968 | one 16× H100 machine per agent, 4-yr life, 2,080 h, 2X, +75% |
+| Agent-year, corrected (Opus 5.5 API +75%) | $34,400 | ~$19,700 of tokens and sandbox, ×1.75 |
+| Agents an L5 ($480K) salary pays for | 3.6 vs. 13.3 | source price vs. corrected price |
+| US dev payroll by level (ceiling) | ~$346B | 1.905M people, BLS 2025, level split assumed |
+| Full agent bundle, all levels, corrected | ~$99B | ~$43B of it is the 75% margin |
+| Operator economic profit | $1.01M | at 250 agents; breakeven ~181 agents at $34,400 |
 
-> **Recommendation: Do not buy the cluster, and do not price off a salary. The replacement math is real, but the margin goes to the model lab and to the buyer, not to whoever owns the GPUs. The only version that clears is an API-based agent-operations service priced on delivered work.**
+> **Recommendation: Keep the per-level model, but price agents off the agent-hour on the API, not off a machine-hour you own. At that price every engineer level can afford several agents, so the business depends entirely on how many agents it really takes to replace each level, and that has to be measured before it is sold.**
 >
-> The core intuition in the source chat is correct: a frontier coding agent is now cheap to run. Working a full 2,080-hour year at a realistic token load, an Opus 5.5 agent costs about $18,500 at list price. A median US software developer costs about $177,000 a year to employ. That gap is why this idea feels like a $300B opportunity.
+> The model in the source chat has the right shape. Cost per agent-hour, plus a margin, times the agents needed to match one engineer, compared level by level with salary: that is the right way to price labor substitution. The problem is the input. The formula charges each agent for a whole 16-GPU machine, about $18 an hour. An inference machine runs about 30 agents at once, so the real hardware cost per agent-hour is about a dollar, and the top coding model can't run on owned hardware anyway. On the Opus 5.5 API, one agent working a 2,080-hour year costs about $19,700, or $34,400 with the 75% margin.
 >
-> The formula built to capture that gap does not hold up. It bills the cluster for 2,080 hours but pays for it for 8,760, and leaves out power, space and staff. A cluster really dedicated to one seat, with the formula's 2X redundancy, costs about $560,000 a year to own and run, and the formula charges $132,968 for it. The formula only lands on a sane number because a single agent never needed its own 16-GPU cluster in the first place: batched, one cluster serves about 30 agents. Once that is understood, the cluster stops being an asset and becomes a cost line — one that rents for less than it costs to own, and that can't run Claude Opus at all, since Opus is only available as a service.
+> At the source price ($132,968), the bundle costs more than the engineer at six of seven levels; it saves money only at L2 (Exhibit 1). At the corrected price, it costs 22–34% of the engineer at every level, and an L7 salary would cover 31 agents, not 10. So the per-level table now turns on one number: how many agents really equal one engineer at each level. That is a capability forecast, not a cost fact. The buyer and the operator both win only if it holds.
 >
-> The demand side has the same problem. An agent seat doesn't replace a developer; it replaces some share of a developer's tasks and needs someone to review its work. At a $36,000 price the buyer only saves money if the agent does about a third of a median developer's output. That share, not the salary, sets the ceiling price. The business that survives is a managed agent-seat service on the API, at roughly $36,000 per seat-year with ~45% gross margin. It needs ~164 seats to pay its team and founder, and an ordinary bad year (a competitor price cut plus token overruns) erases its profit.
+> As a business, selling agents at cost plus 75% clears a market return at ~181 agents and makes about $1M at 250. Margin is thin in dollars ($14,730 per agent-year) because a cost-plus price shrinks as model prices fall. An ordinary bad year — a rival's price cut plus token overruns — wipes out the profit (Exhibit 13).
 
 ---
 
-## Section 01 — Market definition and capacity
+## Section 01 — Market definition and capacity: agents per engineer level
 
-**The analytical question:** How large is the developer-replacement opportunity in the US, and what actually caps how much of it one operator can take?
+**The analytical question:** For each engineer level, what does the agent bundle cost against the salary — and how large is the US opportunity once that is added up?
 
-**Exhibit 1 — Market funnel, payroll ceiling to SOM**
+**Exhibit 1 — Agents per engineer vs. salary, by level**
+
+| Level | Loaded cost / yr | Agents per engineer (assumed) | Bundle, source price | Saving | Bundle, corrected price | Saving |
+|---|---|---|---|---|---|---|
+| L1 Junior | $105,000 | 1 | $132,968 | ($27,968) | $34,400 | $70,600 |
+| L2 Mid | $155,000 | 1 | $132,968 | $22,032 | $34,400 | $120,600 |
+| L3 Senior | $215,000 | 2 | $265,936 | ($50,936) | $68,800 | $146,200 |
+| L4 Staff | $300,000 | 3 | $398,904 | ($98,904) | $103,200 | $196,800 |
+| L5 Principal | $480,000 | 4 | $531,872 | ($51,872) | $137,600 | $342,400 |
+| L6 Distinguished | $700,000 | 6 | $797,808 | ($97,808) | $206,400 | $493,600 |
+| L7 Fellow | $1,100,000 | 10 | $1,329,680 | ($229,680) | $344,000 | $756,000 |
+
+*Loaded cost = total pay × employer taxes and benefits; directional, set so the level totals reconcile to BLS payroll (Exhibit 3). L5 uses the source chat's own $480K / 4-agent example. L6–L7 exist mostly at large tech firms. The agents-per-level column is the source idea's assumption, not a measurement. At the source price the bundle saves money only at L2.*
+
+**Exhibit 2 — How many agents each salary can pay for (break-even multiplier)**
+
+| Level | Loaded cost | Max agents, source price | Max agents, corrected price | Assumed agents |
+|---|---|---|---|---|
+| L1 Junior | $105,000 | 0.8 | 2.4 | 1 |
+| L2 Mid | $155,000 | 1.2 | 3.9 | 1 |
+| L3 Senior | $215,000 | 1.6 | 5.6 | 2 |
+| L4 Staff | $300,000 | 2.3 | 8.1 | 3 |
+| L5 Principal | $480,000 | 3.6 | 13.3 | 4 |
+| L6 Distinguished | $700,000 | 5.3 | 19.7 | 6 |
+| L7 Fellow | $1,100,000 | 8.3 | 31.4 | 10 |
+
+*This is the more useful way to read the model: the multiplier is unknown, so ask how high it can go before replacement stops paying. At the corrected price there is room for 2.4–3.9× the assumed agents at every level. The corrected column first deducts ~$21,000 of review time (~4 h/week of a senior engineer per engineer replaced) is an assumption.*
+
+### Adding it up across the US
+
+**Exhibit 3 — US developers by level: payroll vs. agent bundle**
+
+| Level | Share (assumed) | Headcount | Payroll | Agents needed | Bundle cost, source price | Bundle cost, corrected price |
+|---|---|---|---|---|---|---|
+| L1 Junior | 27% | 514,458 | $54.0B | 514,458 | $68.4B | $17.7B |
+| L2 Mid | 40% | 762,160 | $118.1B | 762,160 | $101.3B | $26.2B |
+| L3 Senior | 21% | 400,134 | $86.0B | 800,268 | $106.4B | $27.5B |
+| L4 Staff | 8% | 152,432 | $45.7B | 457,296 | $60.8B | $15.7B |
+| L5 Principal | 3% | 57,162 | $27.4B | 228,648 | $30.4B | $7.9B |
+| L6 Distinguished | 0.8% | 15,243 | $10.7B | 91,459 | $12.2B | $3.1B |
+| L7 Fellow | 0.2% | 3,811 | $4.2B | 38,108 | $5.1B | $1.3B |
+| **Total** | **100%** | **1,905,400** | **$346.2B** | **2.89M** | **$384.6B** | **$99.5B** |
+
+*Headcount total is BLS 2025 (1,717,800 software developers + 187,600 QA analysts and testers). The split by level is an assumption; BLS does not report levels. At the source price, replacing everyone costs more than the payroll it replaces. At the corrected price it costs 29% of it.*
+
+**Exhibit 4 — Market funnel, payroll ceiling to SOM**
 
 | Layer | Definition | Value |
 |---|---|---|
-| Payroll pool (ceiling) | US software developers (1,717,800) + QA analysts/testers (187,600), BLS 2025; wage bill ~$253B, ×1.3 for employer cost | ~$330–350B / yr |
-| Automatable work | Share of developer hours on tasks an agent can complete with review — **assumption: 20–30% by 2028** | ~$66–105B of labor value |
-| SAM — vendor revenue pool | Vendors capture ~15–30% of displaced labor value as price (the rest is buyer savings) — **assumption** | ~$10–30B / yr |
-| SAM — this segment | Mid-market US employers buying managed agent seats rather than self-serve tools (~20% of the pool) — **assumption** | ~$2–6B / yr |
-| **SOM — 3 yr** | **250 seats × $36,000 — bound by distribution and trust, not compute or demand** | **$9.0M / yr** |
+| Payroll pool (ceiling) | All US developers and QA testers, loaded (Exhibit 3) | ~$346B / yr |
+| Theoretical agent revenue | Every engineer replaced at the assumed multipliers, corrected price | ~$99B / yr (~$43B margin) |
+| Realistic vendor pool (SAM) | 10–30% of that work automated within ~3 years — **assumption** | ~$10–30B / yr |
+| SAM — this segment | Mid-market employers buying managed agents rather than self-serve tools (~20%) — **assumption** | ~$2–6B / yr |
+| **SOM — 3 yr** | **250 agents × $34,400 — capped by distribution and trust, not compute or demand** | **$8.6M / yr** |
 
-*Cross-check on the SAM: paid AI coding tools are already a multi-billion-dollar category — Cursor alone passed $2B in annualized revenue in March 2026 (Bloomberg, TechCrunch). The source chat's $387B figure is the payroll pool, not a market; its $51.45B and $1.67T figures are payroll pools for subsets and for other industries, with no capability test applied.*
+*Cross-check: paid AI coding tools are already a multi-billion-dollar category; Cursor alone passed $2B in annualized revenue in March 2026 (Bloomberg, TechCrunch).*
 
 The capacity math that actually governs this business:
 
-- **Compute is not the cap.** At list prices, a whole year of one agent's tokens costs about a tenth of the developer it supports. Any operator can buy as many tokens as it can sell.
-- **The cap is how much work a seat finishes that a customer accepts.** Every assumption in the funnel above (20–30% of work automatable, 15–30% price capture) is a statement about that. Neither is measured yet for this operator, and Exhibit 9 shows the business is very sensitive to both.
-- **Distribution is the second cap.** Each seat is sold to an engineering manager who has to trust the agent with a codebase, set up review, and justify it against tools the team already has (Claude Code, Cursor, GitHub Copilot). That is a sales cycle, not a sign-up.
+- **Compute is not the cap.** A year of one agent's tokens costs about 12% of an L2 engineer. Any operator can buy as many as it can sell.
+- **The multiplier is the cap.** Every revenue figure above assumes the agents-per-level column in Exhibit 1. Until that is measured on real codebases, the market is a forecast.
+- **Distribution is the second cap.** Each sale goes to an engineering manager who has to trust agents with a codebase and set up review, against tools the team already has (Claude Code, Cursor, GitHub Copilot).
 
 ---
 
 ## Section 02 — Industry structure (Five Forces)
 
-**The analytical question:** What return does an agent-seat operator earn, structurally, before any firm-specific advantage?
+**The analytical question:** What return does an agent-capacity operator earn, structurally, before any firm-specific advantage?
 
-**Exhibit 2 — Force assessment**
+**Exhibit 5 — Force assessment**
 
 | Force | Rating | Evidence |
 |---|---|---|
-| Supplier power (model labs, GPU vendors, clouds) | Very high | Frontier coding models come from a handful of labs, and Claude Opus is only available as a service (Anthropic API, AWS, Google Cloud, Microsoft Foundry). The lab sets the input price — Opus 5.5 lists at $4 / $20 per million tokens, 20% below Opus 5 — and can change it at any time. |
-| Buyer power (engineering managers, CTOs) | High | Buyers can measure output directly (merged pull requests, tickets closed), can cancel monthly, and already pay for agent tools at $20–200 per developer per month. |
-| Threat of new entry | Very high | The same API is open to everyone. A competing agent-seat service needs no capital, only an orchestration layer that can be built in weeks. |
-| Substitutes | Very high | Claude Code, Cursor, GitHub Copilot and similar tools used by the buyer's own staff; offshore contractors; and simply hiring. Each is cheaper to try than a new vendor. |
-| Rivalry | Very high | Model labs sell agents directly, so the supplier is also a competitor. Well-funded coding-agent companies compete on price and capability every quarter. |
+| Supplier power (model labs, GPU vendors, clouds) | Very high | The top coding models come from a few labs, and Claude Opus is sold only as a service (Anthropic API, AWS, Google Cloud, Microsoft Foundry). The lab sets the input price; Opus 5.5 lists at $4 / $20 per million tokens, 20% below Opus 5. |
+| Buyer power (engineering managers, CTOs) | High | Buyers can measure output directly (merged pull requests, tickets closed), can cancel monthly, and already pay $20–200 per developer per month for agent tools. |
+| Threat of new entry | Very high | The same API is open to everyone. A competing service needs no capital, only an orchestration layer. |
+| Substitutes | Very high | Claude Code, Cursor, GitHub Copilot and similar tools used by the buyer's own staff; offshore contractors; hiring. |
+| Rivalry | Very high | Model labs sell agents directly, so the supplier is also a competitor. |
 
-*Five of five forces unfavorable. The one structural tailwind — compute keeps getting cheaper — helps every competitor equally and pushes cost-plus prices down over time.*
+*Five of five forces unfavorable. Falling compute prices help every competitor equally, and they push a cost-plus price down every model generation.*
 
 ---
 
 ## Section 03 — Value chain and margin pool
 
-**The analytical question:** Of what a buyer pays for one agent seat, who takes what — and who carries the risk?
+**The analytical question:** Of what a buyer pays for one agent-year, who takes what — and who carries the risk?
 
-**Exhibit 3 — Value extracted per seat-year, $36,000 price**
+**Exhibit 6 — Value extracted per agent-year, $34,400 price**
 
 | Participant | Take | Risk carried |
 |---|---|---|
-| Model lab (Opus 5.5 tokens, 2,080 h × ~$8.90) | $18,470 | None. Billed per token whether or not the code is accepted. |
+| Model lab (Opus 5.5 tokens, 2,080 h × ~$8.88) | $18,470 | None. Billed per token whether or not the code is accepted. |
 | Cloud sandbox, CI runners, tooling | $1,200 | None. Metered. |
-| **The operator** | **$16,330** | **Token overruns on a flat price, uptime, onboarding each codebase, and the reputational and contractual risk when an agent ships a bad change.** |
-| Buyer — value of work done (agent does 30% of a median developer's output) | $53,000 of labor value | Pays the $36,000 price plus ~$21,000 of senior review time (4 h/week). Carries code-quality and security risk in its own systems. |
+| **The operator (75% markup)** | **$14,730** | **Token overruns on a fixed price, uptime, onboarding each codebase, liability when an agent ships a bad change.** |
+| Buyer replacing one L3 with 2 agents | Saves $146,200 vs. a $215,000 engineer | Pays $68,800 plus ~$21,000 of review time; carries code-quality and security risk. Saving holds only if 2 agents really do an L3's work. |
 
-*At 30% substitution the buyer is about $4,000 a year worse off than doing nothing. The buyer only comes out ahead above ~33%. The operator keeps 45% of the price, but every dollar of it depends on the buyer's math staying positive.*
-
-> **Where the 75% margin went:** the source chat priced the seat at cost × 1.75 and called the extra "a 75% margin." That is a 75% markup, which is a 42.9% gross margin (0.75 ÷ 1.75). The chat then used both definitions on the same $51.45B: once as $22.05B of margin with $29.40B of compute, and once as $38.59B of margin with $12.86B of compute. Later it labeled a $300B pool as 43% compute and 57% margin, which is the split reversed. The correct split of any price at a 75% markup is 57% cost, 43% margin.
+> **Where the 75% margin went:** Cost × 1.75 is a 75% markup, which is a 42.9% gross margin. The source chat applied both meanings to the same $51.45B (once $22.05B of margin with $29.40B of compute, once $38.59B with $12.86B), and labeled a $300B pool as 43% compute and 57% margin, which reverses the split. At a 75% markup, any price is 57% cost and 43% margin.
 
 ---
 
 ## Section 04 — Domain-specific structural factors
 
-**The analytical question:** What does the AI-model and US-employment landscape do to this model that a generic SaaS plan would miss?
+**The analytical question:** What does the AI-model and US-employment landscape do to this model that a generic plan would miss?
 
-**Exhibit 4 — Structural factors and their transmission**
+**Exhibit 7 — Structural factors and their transmission**
 
 | Factor | Effect | Mechanism |
 |---|---|---|
-| Closed model weights | Decisive against the hardware plan | Claude Opus is sold only as a service. "Running Opus 5.5 at 4-bit on Mac Studios or DGX Sparks," as the source chat suggested, is not possible. Owned hardware can only run open-weights models, which have generally trailed the frontier on long agentic coding work. |
-| Model size and memory are not public | The 1.28 TB sizing is a guess | Anthropic does not publish parameter counts or memory footprints. The chat's "~600 GB unquantized," "350–400 GB at 4-bit," and "1.2 TB with context" are estimates for open models of a similar class, stated as fact. |
-| Token prices fall each model generation | Cost-plus prices ratchet down | Opus 5.5 lists 20% below Opus 5 for the same tier. A price set as cost × 1.75 has to fall with it; a price set on delivered work does not. |
-| Hardware economic life is 2–4 years, not 5 | Accelerates write-downs | Hyperscalers depreciate GPUs over 5–6 years for accounting, but NVIDIA now ships a new architecture roughly yearly. The chat's own 2-year case moves the formula price from $132,968 to $265,936. |
-| Batching | One cluster serves many agents | Inference servers run many conversations at once. A 16× H100 cluster with ~280 GB left after model weights holds roughly 30–40 long-context agent sessions. Pricing one seat as if it owned the cluster is the formula's largest error. |
-| Layoffs and WARN Act | Slows "replacement" sales | Replacing staff at scale triggers 60-day notice duties for employers with 100+ workers, plus internal politics. Buyers more often redirect hiring budgets than fire people, which lengthens the sale. |
-| Copyright of AI-generated code | Contract issue for buyers | The US Copyright Office's position is that protection requires human authorship. Buyers will want IP warranties and indemnities that an operator must stand behind. |
+| Closed model weights | Decisive against owning the machine | Claude Opus is sold only as a service. Running "Opus 5.5 at 4-bit on Mac Studios or DGX Sparks," as the source chat suggested, is not possible. Owned hardware can only run open-weights models, which have generally trailed the top models on long agentic coding work. |
+| Model size and memory are not public | The 1.28 TB sizing is a guess | Anthropic does not publish parameter counts or memory footprints. The chat's "~600 GB," "350–400 GB at 4-bit" and "1.2 TB with context" are estimates for open models, stated as fact. |
+| Batching | One machine serves many agents | Inference servers run many conversations at once. A 16× H100 machine with ~280 GB left after model weights holds roughly 30–40 long-context agent sessions. Charging one agent for the whole machine is the formula's largest error. |
+| Token prices fall each model generation | Cost-plus prices ratchet down | Opus 5.5 lists 20% below Opus 5. A price set as cost × 1.75 falls with it; a price set on the buyer's saving does not. |
+| Hardware economic life is 2–4 years | Faster write-downs if hardware is owned | Hyperscalers depreciate GPUs over 5–6 years, but NVIDIA now ships a new architecture roughly yearly. The chat's own 2-year case doubles the source price to $265,936. |
+| Layoffs and the WARN Act | Slows "replacement" sales | Replacing staff at scale triggers 60-day notice duties for employers with 100+ workers. Buyers more often redirect hiring budgets than cut people, which lengthens the sale. |
+| Copyright of AI-generated code | Contract issue for buyers | The US Copyright Office's position is that protection requires human authorship. Buyers will want IP warranties an operator must stand behind. |
 
 ---
 
-## Section 05 — Unit economics
+## Section 05 — Unit economics: the agent-hour
 
-**The analytical question:** What does one agent seat really cost to run, and what does the operator's choice of how to run it change?
+**The analytical question:** What does one agent-hour really cost, and what does the choice of machine change?
 
-### The advantage, isolated
+### The cost base, isolated
 
-**Exhibit 5 — Annual cost of one agent seat, by how it is run**
+**Exhibit 8 — One agent-year (2,080 h, ×2 redundancy where hardware is owned, +75%)**
 
-| Option | Annual cost per seat | Note |
-|---|---|---|
-| Source formula, as written (no margin) | $75,982 | Bills 2,080 of 8,760 hours of a 4-yr, $640K cluster, ×2; no power, space or staff |
-| **Dedicated 2X cluster, honestly costed** | **~$560,000** | 2 × ($160K depreciation + ~$23K power + ~$37K colocation + ~$60K ops) |
-| Owned cluster, batched (~30 agents per cluster), 2X | ~$18,700 | Same hardware, shared; runs an open-weights model, not Opus |
-| **Opus 5.5 API, one agent working 2,080 h** | **~$18,500** | ~120 turns/h, ~100K-token context 95% cached, ~1.5K output tokens per turn |
-| Median US developer, loaded | ~$177,000 | BLS median wage $135,980 × 1.3 |
+| Cost base | Cost per agent-hour | Agent-year price | Note |
+|---|---|---|---|
+| Source formula: 1 machine per agent, hardware only | $18.26 | $132,968 | $640K ÷ (4 yr × 8,760 h); no power, space or staff |
+| 1 machine per agent, fully costed | $31.96 | $232,654 | + ~$23K power, ~$37K colocation, ~$60K operations per year |
+| Owned machine shared by ~30 agents, fully costed | $1.07 | $7,755 | Same hardware, batched; runs an open-weights model, not Opus |
+| **Claude Opus 5.5 API (base case)** | **$8.88 + sandbox** | **$34,400** | ~120 turns/h, ~100K-token context 95% cached, ~1.5K output tokens per turn; no 2X needed |
 
-*Per GPU-hour, the owned cluster costs ~$2.00 at 100% utilization and ~$4.00 at 50%, against an October 2026 rental median of $3.49 and a floor of $1.70. Owning only wins at very high utilization, and even then it buys a weaker model. The operator's advantage, if it has one, is in the orchestration and review workflow, not in the hardware.*
+*Per GPU-hour, the owned machine costs ~$2.00 at 100% use and ~$4.00 at 50%, against an October 2026 rental median of $3.49 and a floor of $1.70. The cheapest line runs a weaker model; the base case uses the top model at about 4× the cost. Either is a small fraction of any engineer level.*
 
-**Exhibit 6 — Per-seat P&L, annual (API-based base case)**
+**Exhibit 9 — Per-agent P&L, annual (API base case)**
 
 | Line | Amount | Note |
 |---|---|---|
-| Seat price | $36,000 | $3,000/month; ~20% of a median developer's loaded cost |
+| Agent-year price | $34,400 | (tokens + sandbox) × 1.75 |
 | Opus 5.5 tokens | ($18,470) | $8.88/agent-hour × 2,080 h |
 | Sandbox, CI, tooling | ($1,200) | |
-| **Gross margin / seat** | **$16,330** | **45.4%** |
+| **Gross margin / agent** | **$14,730** | **42.8%** |
 
-*The token estimate is the line most likely to be wrong. Light agentic use runs ~$3–4/hour; heavy use with large uncached context or fast mode ($8 / $40 per million tokens) runs $15–25/hour. Exhibit 8 shows the effect.*
+*The token estimate is the line most likely to be wrong. Light agentic use runs ~$3–4/hour; heavy use with large uncached contexts or fast mode ($8 / $40 per million tokens) runs $15–25/hour (Exhibit 11).*
 
 ---
 
 ## Section 06 — Annual operating model
 
-**The analytical question:** How many seats does it take to cover a real team and pay the founder a market wage?
+**The analytical question:** How many agents does the operator have to sell to pay a team and the founder at market?
 
-**Exhibit 7 — Annual P&L at 250 seats (steady state, year 3)**
+**Exhibit 10 — Annual P&L at 250 agents (steady state, year 3)**
 
-| Line | Annual | Per seat |
+| Line | Annual | Per agent |
 |---|---|---|
-| Revenue — 250 seats × $36,000 | $9,000,000 | $36,000 |
+| Revenue — 250 agents × $34,400 | $8,600,000 | $34,400 |
 | Model tokens | ($4,617,500) | ($18,470) |
 | Sandbox, CI, tooling | ($300,000) | ($1,200) |
-| **Gross margin** | **$4,082,500** | **$16,330** |
+| **Gross margin** | **$3,682,500** | **$14,730** |
 | Engineering & on-call (4 × $230K loaded) | ($920,000) | — |
 | Sales & customer success (3 × $200K loaded) | ($600,000) | — |
 | Marketing / paid acquisition | ($500,000) | — |
 | G&A, E&O and cyber insurance, legal | ($350,000) | — |
-| **Profit before owner compensation** | **$1,712,500** | — |
-| Owner compensation at market (founder-CEO / staff engineer) | ($300,000) | — |
-| **Economic profit** | **$1,412,500** | — |
+| **Profit before owner compensation** | **$1,312,500** | — |
+| Owner compensation at market | ($300,000) | — |
+| **Economic profit** | **$1,012,500** | — |
 
-*Breakeven after paying the founder at market is ~164 seats. Below that, the founder is subsidizing the company with their own wage.*
+*Breakeven after paying the founder at market is ~181 agents — for example, 45 L5 principals at 4 agents each. 250 agents is about 125 L3 seniors replaced at 2 agents each.*
 
-For comparison, the source formula's hardware version at the same scale: 250 seats on batched owned clusters needs ~9 batched clusters, or ~18 with the formula's 2X redundancy (~$11.5M of capex at $40K/GPU), to run a weaker model, at a cost per seat no lower than the API. Priced at the formula's $132,968, it would earn a large paper margin on seats no buyer has a reason to choose over cheaper Opus-backed seats. Priced at the market, it earns about the same gross margin as the API version, with $11.5M of hardware at risk of obsolescence.
+For comparison, running the same 250 agents on owned hardware with the source formula's one-machine-per-agent rule would need 500 machines (with 2X) and ~$320M of GPUs. Batched at 30 agents per machine, it needs ~18 machines (~$11.5M), runs a weaker model, and saves little against the API.
 
 ---
 
 ## Section 07 — Sensitivity analysis
 
-**The analytical question:** Which matters more — what the operator pays for tokens, what it charges, or how much work each seat actually does?
+**The analytical question:** Which matters more — what an agent-hour costs, what the agent sells for, or how many agents it takes to equal an engineer?
 
-**Exhibit 8 — Operator gross margin per seat, by token cost and seat price**
+**Exhibit 11 — Operator gross margin per agent, by token cost and agent-year price**
 
-| Token cost per agent-hour | $24,000 | $36,000 (base) | $48,000 | $60,000 |
+| Token cost per agent-hour | $24,000 | $34,400 (base) | $48,000 | $60,000 |
 |---|---|---|---|---|
-| $4 (light use) | $14,480 | $26,480 | $38,480 | $50,480 |
-| **$8.88 (base)** | $4,330 | **$16,330** | $28,330 | $40,330 |
-| $15 (heavy) | ($8,400) | $3,600 | $15,600 | $27,600 |
-| $25 (very heavy / fast mode) | ($29,200) | ($17,200) | ($5,200) | $6,800 |
+| $4 (light use) | $14,480 | $24,880 | $38,480 | $50,480 |
+| **$8.88 (base)** | $4,330 | **$14,730** | $28,330 | $40,330 |
+| $15 (heavy) | ($8,400) | $2,000 | $15,600 | $27,600 |
+| $25 (very heavy / fast mode) | ($29,200) | ($18,800) | ($5,200) | $6,800 |
 
-*2,080 agent-hours per seat-year; $1,200 sandbox cost per seat. A flat seat price leaves the operator holding the token risk: one step down this grid erases most of the base-case margin.*
+*2,080 agent-hours per year; $1,200 sandbox cost per agent. A fixed agent price leaves the operator holding the token risk.*
 
-**Exhibit 9 — Buyer's net saving per seat, by share of a developer's work done and seat price**
+**Exhibit 12 — Buyer's saving per engineer replaced, by agents needed and engineer level (corrected price)**
 
-| Agent's share of a median developer's output | $24,000 | $36,000 (base) | $48,000 | $60,000 |
+| Agents needed per engineer | L2 Mid ($155K) | L3 Senior ($215K) | L5 Principal ($480K) | L7 Fellow ($1.1M) |
 |---|---|---|---|---|
-| 20% | ($9,645) | ($21,645) | ($33,645) | ($45,645) |
-| 30% | $8,032 | ($3,968) | ($15,968) | ($27,968) |
-| 40% | $25,710 | $13,710 | $1,710 | ($10,290) |
-| 60% | $61,064 | $49,064 | $37,064 | $25,064 |
+| 1 | $99,600 | $159,600 | $424,600 | $1,044,600 |
+| 2 | $65,200 | $125,200 | $390,200 | $1,010,200 |
+| 4 | ($3,600) | $56,400 | $321,400 | $941,400 |
+| 8 | ($141,200) | ($81,200) | $183,800 | $803,800 |
+| 16 | ($416,400) | ($356,400) | ($91,400) | $528,600 |
 
-*Value of work = share × $176,774 (BLS median wage × 1.3); less the seat price and ~$21,000 of senior review time. This grid, not the developer's salary, is the price ceiling. At 100% substitution (the source chat's assumption) any price below ~$156,000 would work, which is why the chat's prices looked reasonable.*
+*Saving = loaded cost − agents × $34,400 − ~$21,000 review time. The multiplier swings the outcome far more than price or token cost: it moves an L3 from +$160K to −$356K. That is why it has to be measured per level before any of this is sold.*
 
-### The scenario the grid does not show
+### The scenario the grids do not show
 
-Exhibits 8 and 9 vary one side of the trade at a time. An ordinary bad year at the 250-seat base case:
+An ordinary bad year at the 250-agent base case:
 
-**Exhibit 10 — Adverse case, nothing exotic**
+**Exhibit 13 — Adverse case, nothing exotic**
 
 | Event | Impact | Comment |
 |---|---|---|
-| Base case economic profit (Exhibit 7) | $1,412,500 | |
-| A model lab or funded rival bundles agent seats; price cut 15% to $30,600 | ($1,350,000) | The supplier is also a competitor |
-| Token use runs 30% over plan (longer contexts, retries, harder repos) | ($1,385,250) | Flat seat price; operator absorbs it |
-| 15% of seats churn mid-year after a quarter of low acceptance | ($306,188) | Lost half-year gross margin |
+| Base case economic profit (Exhibit 10) | $1,012,500 | |
+| A model lab or funded rival bundles agents; price cut 15% to $29,240 | ($1,290,000) | The supplier is also a competitor |
+| Token use runs 30% over plan (longer contexts, retries, harder repos) | ($1,385,250) | Fixed price; operator absorbs it |
+| 15% of agents cancelled mid-year after weak acceptance | ($276,188) | Lost half-year gross margin |
 | One agent-caused production incident: credits, legal | ($150,000) | |
-| **Adverse case economic profit** | **($1,778,938)** | |
+| **Adverse case economic profit** | **($2,088,938)** | |
 
-*None of these is unusual for a 2026 AI product. Any two together wipe out the year. The business has no fixed assets to fall back on, which is good, and no pricing power, which is the problem.*
+*Any two of these together wipe out the year. There are no fixed assets to lose, which is good, and no pricing power, which is the problem with cost-plus pricing on someone else's model.*
 
 ---
 
@@ -241,26 +284,26 @@ Exhibits 8 and 9 vary one side of the trade at a time. An ordinary bad year at t
 
 **The analytical question:** Which claims in the source chat survive checking, and which should be dropped from any pitch built on it?
 
-**Exhibit 11 — Error log**
+**Exhibit 14 — Error log**
 
 | # | Claim in the source chat | What is actually true | Effect on the case |
 |---|---|---|---|
-| 1 | Opus 5.5 needs ~600 GB unquantized, 350–400 GB at 4-bit, 1.2 TB with full context | Anthropic does not publish model size. These are estimates for open models, stated as fact. Opus cannot be self-hosted at any precision. | The whole hardware branch is hypothetical. |
-| 2 | Anthropic serves Claude on "over 1 million Trainium2 chips" and Inferentia2 handles API traffic | Anthropic says it runs Claude on AWS Trainium, Google TPUs and NVIDIA GPUs, and Amazon announced a ~1M Trainium2 plan. Which chip serves which request is not public. | Irrelevant to the business; should not be cited. |
-| 3 | Opus 5.5 is "40% cheaper and 30% faster" and included in a $20 plan | Not verifiable from the chat's sources. Published API list price is $4 / $20 per million tokens, 20% below Opus 5. | Use list prices only. |
-| 4 | `(cost ÷ 5Y × 8,760) × 2,080` is the hourly cost of one seat | It recovers 23.7% of depreciation. True only if the other 76% of hours are sold to someone else. | Formula price has no link to cost (Section 05). |
-| 5 | One agent needs one 16-GPU cluster | Inference is batched; one cluster serves ~30–40 long-context agents. | True cost per seat is ~$2–19K, not $76K. |
-| 6 | `2X` means redundancy, `4A` means four agents | Doubling all hardware is not standard practice (N+1 is). 4A multiplies the price by four for four agents that would share the same batched cluster. | Inflates cost and price. |
-| 7 | "+75% margin" | A 75% markup is a 42.9% margin. The chat used both on the same $51.45B ($22.05B vs. $38.59B of margin) and reversed the split on $300B. | Margin overstated by up to 1.75×. |
-| 8 | "Top 15% earn $196K+, 262,500 people" | A $196K *loaded* cost is a ~$145K wage — roughly the top ~45%. A $196K *salary* is near the top ~10–15% (BLS 90th percentile wage: $214,670). The chat mixed the two. | $51.45B figure is undefined. |
-| 9 | L1–L7 ladder: 25/40/20/10/4/0.8/0.2% split; L6 at $1.15M, L7 at $2.4M | The split is invented. L6/L7 pay exists at a few big tech firms, not across 1.75M developers. Ladder total $387B vs. ~$330–350B from BLS. | Overstates the pool ~10–15%; tiers are not data. |
-| 10 | "Agents per tier" = salary ÷ $132,968, giving 2.9M agents | Circular: dividing payroll by a price and multiplying back returns payroll. It says nothing about what an agent can do. | Remove from any pitch. |
-| 11 | Top 10 / top 20 industries, agent counts, $1.67T and $2.33T "capitalization" | No sources given; numbers not traceable. | Remove. |
-| 12 | 9.34M jobs lost; robotics 3.7M, later 8.72M | Unsourced, and inconsistent within the chat. | Out of scope; remove. |
+| 1 | Opus 5.5 needs ~600 GB unquantized, 350–400 GB at 4-bit, 1.2 TB with full context | Anthropic does not publish model size. These are estimates for open models, stated as fact. Opus cannot be self-hosted at any precision. | The machine sizing (16× H100) is a guess for an open model. |
+| 2 | Anthropic serves Claude on "over 1 million Trainium2 chips" and Inferentia2 handles API traffic | Anthropic says it runs Claude on AWS Trainium, Google TPUs and NVIDIA GPUs; Amazon announced a ~1M Trainium2 plan. Which chip serves which request is not public. | Irrelevant to the business; do not cite. |
+| 3 | Opus 5.5 is "40% cheaper and 30% faster" and included in a $20 plan | Not verifiable. Published API list price is $4 / $20 per million tokens, 20% below Opus 5. | Use list prices only. |
+| 4 | Machine cost ÷ 8,760 h is the agent-hour cost | One inference machine serves ~30–40 long-context agents at once. | Agent-hour overstated ~17× (Exhibit 8). |
+| 5 | Hardware is the whole cost | Power, colocation and operations add ~75% to depreciation for this machine. | Machine-hour understated ~43%. |
+| 6 | `2X` redundancy doubles all hardware | Standard practice is N+1 spare capacity, not a full mirror; on the API it does not apply. | Doubles the source price. |
+| 7 | "+75% margin" | A 75% markup is a 42.9% margin; the chat mixed the two and reversed the split on $300B. | Margin overstated up to 1.75×. |
+| 8 | "Top 15% earn $196K+, 262,500 people" | A $196K loaded cost is a ~$145K wage, roughly the top ~45%. A $196K salary is near the top ~10–15% (BLS 90th percentile wage: $214,670). | The $51.45B figure is undefined. |
+| 9 | Level split 25/40/20/10/4/0.8/0.2% with L6 at $1.15M and L7 at $2.4M; total $387B | Invented. L6–L7 pay at that level exists at a few large tech firms. This memo uses a split that reconciles to BLS (~$346B), still an assumption. | Payroll overstated ~12%. |
+| 10 | Agents per level = salary ÷ $132,968 (2.9M agents, $387B) | Circular: it restates payroll and says nothing about capability. This memo keeps an assumed multiplier per level and shows the break-even multiplier instead (Exhibit 2). | Remove from any pitch. |
+| 11 | Top 10 / top 20 industries, agent counts, $1.67T and $2.33T | No sources given; numbers not traceable. | Remove. |
+| 12 | 9.34M jobs lost; robotics 3.7M, later 8.72M | Unsourced and inconsistent within the chat. | Out of scope; remove. |
 | 13 | Healthcare is 7.5% of GDP, later 23.7%; shadow economy 10–12% of GDP | The chat contradicts itself on healthcare. Shadow-economy estimates vary by method and are usually lower for the US. | Macro section is a thought experiment, not a forecast. |
 | 14 | `($300K × 10,000 ÷ 43,800) × 90`, then "if $6.1M is 20%" | The 10,000 and 90 were never defined; the arithmetic is right but measures nothing. | Ignore. |
 
-*What survives checking: H100 purchase and rental ranges are in line with October 2026 market data; BLS developer counts (1,717,800) and median wage ($135,980) are correct; Opus 5.5 API prices ($4 / $20, fast mode $8 / $40) are correct; the arithmetic of each individual formula evaluation is correct. The errors are in what the formulas assume, not in the multiplication.*
+*What survives checking: H100 purchase and rental ranges match October 2026 market data; BLS developer counts (1,717,800) and median wage ($135,980) are correct; Opus 5.5 API prices are correct; each individual formula evaluation is arithmetically right. The errors are in what the formulas assume.*
 
 ---
 
@@ -268,17 +311,16 @@ Exhibits 8 and 9 vary one side of the trade at a time. An ordinary bad year at t
 
 **The analytical question:** What can stall or break the corrected business, and what specifically prevents it?
 
-**Exhibit 12 — Ranked exposures**
+**Exhibit 15 — Ranked exposures**
 
 | Risk | Likelihood | Impact | Mitigation |
 |---|---|---|---|
-| Model labs or funded coding-agent companies sell equivalent seats directly | High | High | Specialize where a general tool is weakest: a vertical (e.g., legacy migrations, test backfill, dependency upgrades) with its own evaluation harness and review workflow. |
-| Token use above plan on a flat seat price | High | High | Price per accepted pull request or per task, or include a token allowance with overage. Track cost per merged change weekly. |
-| Agent completes too small a share of work for the buyer to save money (Exhibit 9) | Medium | High | Sell only into backlogs the agent has been measured on in a paid pilot; publish acceptance rates per repo. |
-| Agent ships a harmful change to production | Medium | High | Agents open pull requests only; human review and CI gates are mandatory; E&O and cyber cover; contractual liability caps. |
-| Supplier price or terms change (model deprecation, rate limits) | Medium | Medium | Keep the harness model-agnostic; hold accounts with at least two model providers or cloud channels. |
-| Buyer IP and data-handling requirements (SOC 2, on-prem demands) | Medium | Medium | SOC 2 early; for regulated buyers, offer a private-cloud deployment through AWS, Google Cloud or Microsoft rather than owned hardware. |
-| Reputational and political backlash to "replacing developers" | Medium | Medium | Sell capacity on backlogs, not headcount cuts; that is also what buyers actually buy. |
+| The real agents-per-engineer multiplier is higher than assumed | High | High | Measure it per level in paid pilots (accepted changes per agent vs. per engineer) before quoting a replacement price; price per accepted change until it is known. |
+| Model labs or funded coding-agent companies sell equivalent agents directly | High | High | Specialize where general tools are weakest (legacy migrations, test backfill, dependency upgrades) with your own evaluation and review workflow. |
+| Token use above plan on a fixed price | High | High | Price with a token allowance and overage, or per accepted change; track cost per merged change weekly. |
+| Agent ships a harmful change to production | Medium | High | Agents open pull requests only; human review and CI gates are mandatory; E&O and cyber cover; liability caps. |
+| Model price cuts shrink a cost-plus price | High | Medium | Move from cost-plus to value pricing (share of the saving in Exhibit 12) once the multiplier is measured. |
+| Buyer IP and data requirements (SOC 2, on-premises) | Medium | Medium | SOC 2 early; offer private-cloud deployment through AWS, Google Cloud or Microsoft rather than owned hardware. |
 
 ---
 
@@ -288,31 +330,31 @@ Exhibits 8 and 9 vary one side of the trade at a time. An ordinary bad year at t
 
 Four findings converge:
 
-1. **Compute is cheap and getting cheaper** (Section 05) — a full agent-year costs ~$18,500 on the API. That is real, and it is why the idea is attractive.
-2. **Owning GPUs adds cost, risk and a weaker model, and removes nothing** (Sections 04–05) — Opus is only sold as a service, and owned hardware costs about what renting does.
-3. **The price ceiling is the share of work an agent finishes, not the developer's salary** (Section 07, Exhibit 9). Below ~33% at $36,000, the buyer loses money.
-4. **Five of five forces are unfavorable and the supplier is also a competitor** (Section 02) — margin is held down from both sides, and an ordinary bad year erases it (Exhibit 10).
+1. **The per-level structure is right** (Section 01): agent cost × agents per level, compared with each level's salary, is the correct way to price labor substitution.
+2. **The cost input was ~4× too high** (Section 05): price the agent-hour on the API ($34,400 per agent-year with the 75% margin), not as a whole machine per agent ($132,968). At the source price the bundle loses to the engineer at six of seven levels; at the corrected price it wins at all seven.
+3. **The multiplier decides everything** (Sections 01 and 07): each salary covers 2.4–3.9× the assumed agents, but if the real multiplier is higher than that, the saving disappears.
+4. **Cost-plus pricing leaves the operator thin and exposed** (Sections 02 and 06): $14,730 per agent-year, breakeven ~181 agents, and an ordinary bad year erases the profit.
 
 > **Recommended structure and sequence**
 >
-> **Drop the hardware and the salary-based price. If the idea is pursued, build a managed agent-operations service on the API.** Pick one narrow, measurable kind of work — dependency upgrades, test backfill, framework migrations — where an agent's acceptance rate can be measured in a paid pilot before a seat is sold. Price per accepted change, or a seat price with a token allowance, so token overruns are not the operator's alone. Include human review in the offer, because that is what makes the buyer's math work.
+> **Keep the per-level table as the sales tool; change its inputs.** Price agents on the API agent-hour plus 75% ($34,400 per agent-year), drop the owned machine and the 2X mirror, and show buyers Exhibit 2 (how many agents each level's salary can pay for) next to the assumed multiplier.
 >
-> Target ~164 seats (about $5.9M of revenue at $36,000) as the floor for paying a team and the founder at market, and 250+ for a real outcome. Run the first 20–30 seats as priced pilots to measure the two numbers this memo cannot: the share of work accepted, and tokens per accepted change.
+> Then measure the multiplier before selling replacement. Run 20–30 agents as paid pilots on one narrow kind of work and count accepted changes per agent against the engineers doing the same work. Once the real multiplier per level is known, move from cost-plus to a price that shares the buyer's saving: that is where the operator's margin can grow instead of shrinking with every model price cut. Target ~181 agents as the floor for paying a team and the founder, and 250+ for a real outcome.
 
 > **What would change this recommendation**
 >
-> If open-weights models reach parity with frontier models on long agentic coding work *and* a buyer group requires fully on-premises deployment (defense, some finance and healthcare), owned hardware gets a real niche, and the corrected per-token cost from Exhibit 5 (not the source formula) should price it. If measured acceptance rates come in at 50%+ of a developer's output, Exhibit 9 supports prices of $60,000+ and the economics improve sharply. If a model lab cuts agent-seat prices below ~$25,000, the reseller version stops working at any scale.
+> If open-weights models match the top models on long agentic coding and a buyer group requires fully on-premises deployment, owned hardware gets a real niche, priced at the batched agent-hour (~$1.07), not the machine-hour. If measured multipliers come in at or below the assumed column, value pricing could support 2–3× the cost-plus price. If measured multipliers come in above the break-even column (Exhibit 2), replacement doesn't pay at that level, and the product becomes extra capacity rather than replacement.
 
 ### Metrics to run it on
 
-- **Accepted changes per seat per week** — the number that sets the buyer's savings and the ceiling price.
-- **Token cost per accepted change** — tracked weekly against the $8.88/agent-hour base case; the early warning on margin.
-- **Buyer net saving per seat** (Exhibit 9 inputs, measured) — if negative for a customer, that seat will churn.
-- **Gross margin per seat** — target ≥40% after tokens and sandbox.
-- **Seats under contract vs. the 164-seat floor** — the number that decides whether the founder is paid.
+- **Agents per engineer, measured per level** — accepted changes per agent-week vs. per engineer-week on the same work.
+- **Token cost per accepted change** — weekly, against the $8.88/agent-hour base case.
+- **Buyer saving per engineer replaced** (Exhibit 12 inputs, measured) — if negative for a customer, that account will churn.
+- **Gross margin per agent** — target ≥40% after tokens and sandbox.
+- **Agents under contract vs. the 181-agent floor.**
 
 ---
 
-**ANALYTICAL BASIS** — Figures are directional estimates for an operator selling AI coding-agent seats to US employers, built for structural analysis rather than as an audited forecast. Developer counts and wages are from the US Bureau of Labor Statistics (May 2025); the 1.3× loaded-cost factor is an assumption. Model prices are Anthropic's published API list prices for Claude Opus 5.5 ($4 input / $20 output / $0.20 cached input per million tokens; fast mode $8 / $40). The per-hour token profile (~120 turns, ~100K-token context 95% cached, ~1.5K output tokens per turn) is an assumption and the most uncertain input in the memo. H100 rental prices are from an October 2026 survey of 45 providers ($1.70 floor, $3.49 median); purchase price uses the source chat's $40K/GPU, close to new 8-GPU server pricing per GPU. Cluster opex (power at $0.10/kWh, colocation at $150/kW-month, ~$60K/yr operations) and batching capacity (~30 long-context agents per 16× H100 cluster) are engineering estimates. Market-share, automation-share and price-capture figures in Exhibit 1 are assumptions, labeled as such. Claims from the source conversation are treated as hypotheses; Section 08 lists which were corrected.
+**ANALYTICAL BASIS** — Figures are directional estimates for an operator selling AI coding-agent capacity to US employers, built for structural analysis rather than as an audited forecast. Developer counts and the median wage are from the US Bureau of Labor Statistics (May 2025). Loaded cost per level and the share of developers at each level are assumptions, set so the level totals reconcile to BLS-based payroll (~$346B); BLS does not report engineer levels. The agents-per-level multipliers (1, 1, 2, 3, 4, 6, 10) are the source idea's assumption about future capability, not a measurement. Model prices are Anthropic's published API list prices for Claude Opus 5.5 ($4 input / $20 output / $0.20 cached input per million tokens; fast mode $8 / $40). The per-hour token profile (~120 turns, ~100K-token context 95% cached, ~1.5K output tokens per turn) is an assumption and the most uncertain cost input. H100 rental prices are from an October 2026 survey of 45 providers ($1.70 floor, $3.49 median); purchase price uses the source chat's $40K/GPU. Machine opex (power at $0.10/kWh, colocation at $150/kW-month, ~$60K/yr operations) and batching capacity (~30 long-context agents per 16× H100 machine) are engineering estimates. Claims from the source conversation are treated as hypotheses; Section 08 lists which were corrected.
 
-**FRAMEWORKS APPLIED** — Hypothesis-first problem framing with explicit tests · Market funnel (payroll ceiling → automatable work → vendor revenue pool → SOM) · Porter's Five Forces · Value chain and margin-pool analysis, both sides of the trade · Domain-specific structural analysis (closed weights, batching, hardware life, labor law) · Cost-plus formula audit and build-vs-rent decomposition · Two two-variable sensitivities (operator margin, buyer saving) · Adverse-case scenario · Source-claim error log · Risk register · Economic profit adjustment for owner labor.
+**FRAMEWORKS APPLIED** — Hypothesis-first framing with explicit tests · Per-level substitution table with break-even multipliers · Market sizing from payroll by level (ceiling → theoretical agent revenue → vendor pool → SOM) · Porter's Five Forces · Value chain and margin pool · Cost-plus formula audit and build-vs-rent decomposition · Two-variable sensitivities (operator margin; buyer saving by multiplier and level) · Adverse-case scenario · Source-claim error log · Risk register · Economic profit adjustment for owner labor.
