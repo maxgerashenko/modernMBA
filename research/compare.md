@@ -1,4 +1,4 @@
-# Sixteen Teardowns, One Table
+# Seventeen Teardowns, One Table
 
 **Artifact:** https://claude.ai/code/artifact/dfeb0ddb-3c34-4fc8-af93-0a76addb5053
 
@@ -38,10 +38,11 @@ This is an index, not a new analysis. Every figure below is pulled directly from
 | **[Three At-Bats a Year](fix-and-flip-houses-florida.md)** — residential fix-and-flip | Florida | ~$140,000 (working capital) | $1.02M (3 deals/yr) | ($9,062) (econ. profit) | Do not go full-time | Deal concentration — 3 at-bats/yr, no volume to average variance against |
 | **[Sixty Pairs a Month, Still Underwater](sneaker-resale-nyc.md)** — sneaker resale | New York City | $75,000 | $123,600 (720 pairs/yr) | ($19,506) (econ. profit) | Do not go full-time | Operator's own hours — bandwidth-capped, not capital-capped |
 | **[The Courts Are the Marketing](pickleball-gym-manhattan.md)** — pickleball club (segment) | Manhattan, NY | ~$10.76M (whole-club buildout est.) | $443,600 (pickleball segment only) | ($1.03M) (segment result; whole-club EBITDA $1.85M) | Not a profit center | N/A — a deliberate marketing/amenity spend, not a capacity problem |
+| **[The Agent Costs $4 an Hour. The Reviewer Is the Bill.](ai-developer-agents-independent-usa.md)** — supervised AI developer agents, independent second opinion (API tokens, L1–L2) | United States | $12M (operating losses + working capital; no hardware) | $22.8M (@ 300 L1–L2 bundles, year 3) | ($1.8M) (econ. profit after 25% capital charge; +$1.2M operating) | Do not build the seven-level business; narrow L1–L2 service at most | Supervising senior engineers (~12 L1 bundles per reviewer) — not compute or demand |
 
 ---
 
-## Five patterns across sixteen businesses
+## Five patterns across seventeen businesses
 
 **The analytical question:** What, if anything, generalizes across a coffee kiosk, a cargo ship, and a folding table inside a pickleball facility?
 
@@ -53,6 +54,6 @@ This is an index, not a new analysis. Every figure below is pulled directly from
 
 ---
 
-**ANALYTICAL BASIS** — "Bottom line" isn't a single uniform metric: most rows are economic profit after charging the owner's own time at market rate (each memo's Section 06); the cargo-ship memo instead shows residual owner income against a daily cash-breakeven rate, and the pickleball club memo shows an isolated segment result against whole-club EBITDA, because those two businesses don't run on an owner-operator's priced-out labor the way the other fourteen do.
+**ANALYTICAL BASIS** — "Bottom line" isn't a single uniform metric: most rows are economic profit after charging the owner's own time at market rate (each memo's Section 06); the cargo-ship memo instead shows residual owner income against a daily cash-breakeven rate, and the pickleball club memo shows an isolated segment result against whole-club EBITDA, because those two businesses don't run on an owner-operator's priced-out labor the way the other fifteen do.
 
 **MAINTENANCE NOTE** — This file and its companion Artifact (`https://claude.ai/code/artifact/dfeb0ddb-3c34-4fc8-af93-0a76addb5053`) must be regenerated as the last step of every future `mba-research` run — both for a brand-new memo and for an update to an existing one. See `.claude/skills/mba-research/SKILL.md` for the step and the artifact URL to republish to (not recreate).
