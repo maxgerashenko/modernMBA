@@ -65,7 +65,38 @@
 
 > Software developers: 1,687,890 jobs × $148,100 mean = **$250B**, 3.3% of white-collar pay, 2.3% of all measured wages, 0.81% of GDP. With QA testers (186,740 × $111,490) it is $271B, 0.88% of GDP. Loaded with employer taxes and benefits it is ~$346B, the payroll pool used in the AI developer replacement memo.
 
-## Exhibit 3 — What unemployment rate means recession, depression or collapse
+## Exhibit 3 — How many people are in each group
+
+By headcount the picture is less lopsided than by pay: white-collar workers are 51% of the labor force but take 69% of measured wages; blue and pink-collar workers are 40% of the labor force and take 31%.
+
+| Labor force slice | People | % of labor force |
+|---|---:|---:|
+| White-collar | 87.1M | 51.1% |
+| Blue-collar | 35.2M | 20.6% |
+| Pink-collar & service | 33.2M | 19.4% |
+| Other employed (self-employed, farm, household) | 8.1M | 4.8% |
+| Unemployed | 7.1M | 4.1% |
+| **Total labor force** | **170.7M** | **100%** |
+
+**White-collar jobs by group**
+
+| Group | Jobs | % of white-collar |
+|---|---:|---:|
+| Office & admin support | 17.8M | 20.4% |
+| Sales | 13.4M | 15.4% |
+| Management | 11.1M | 12.8% |
+| Business & financial | 10.5M | 12.1% |
+| Healthcare practitioners | 9.8M | 11.3% |
+| Education & library | 9.1M | 10.4% |
+| **Software developers** | **1.7M** | **1.9%** |
+| Other computer & math | 3.6M | 4.1% |
+| Architecture & engineering | 2.6M | 3.0% |
+| Legal, science, social service, arts | 7.5M | 8.6% |
+| **Total** | **87.1M** | **100%** |
+
+*Collar headcounts are BLS OES jobs (May 2025, 155.5M). "Other employed" is the gap to the household survey's 163.6M employed (October 2026). Unemployed 7.1M and labor force 170.7M are October 2026; the surveys are 17 months apart, so the split is approximate. Software developers are 1% of the labor force.*
+
+## Exhibit 4 — What unemployment rate means recession, depression or collapse
 
 Today: **4.1%** (October 2026; 7.07M unemployed, 170.68M labor force).
 
@@ -80,7 +111,7 @@ Today: **4.1%** (October 2026; 7.07M unemployed, 170.68M labor force).
 
 > The theoretical danger is the feedback loop: lost pay cuts spending, which cuts more jobs (Keynesian demand spiral); long unemployment destroys skills (hysteresis); loan and mortgage defaults then hit banks.
 
-## Exhibit 4 — Two scenarios
+## Exhibit 5 — Two scenarios
 
 Assumptions: displaced workers stay in the labor force (170.7M); no re-employment in year one. Unemployment = (7.07M + displaced) ÷ 170.68M. Lost pay = collar share of OES wages applied to BEA compensation. Knock-on (one round): unemployment insurance, savings and severance cover 35% of lost wages in year one; households spend 90% of the rest; consumer spending = 68% of GDP; remaining jobs shrink by (spending drop ÷ PCE) × 0.68.
 
