@@ -14,27 +14,7 @@
 | White-collar wages | $7.52T, 87.1M jobs |
 | Software developer wages | $250B, 1.69M jobs |
 
-## Exhibit 1 — Where every dollar of GDP goes (GDI 2025)
-
-| Slice | $ | % of GDI |
-|---|---:|---:|
-| **Paid to employees** | **$15.72T** | **50.9%** |
-| White-collar wages | $7.52T | 24.3% |
-| Blue-collar wages | $1.95T | 6.3% |
-| Pink-collar & service wages | $1.38T | 4.5% |
-| Other: wages outside OES (bonuses, stock pay, military, farm, household) | $2.15T | 7.0% |
-| Other: employer benefits & payroll taxes | $2.72T | 8.8% |
-| **Not paid as wages** | **$15.19T** | **49.1%** |
-| Depreciation (consumption of fixed capital) | $5.06T | 16.4% |
-| Corporate profits (IVA, CCAdj) | $4.03T | 13.0% |
-| Self-employed (proprietors' income) | $2.02T | 6.5% |
-| Rental income of persons | $1.14T | 3.7% |
-| Production taxes less subsidies, net interest, other (residual) | $2.95T | 9.5% |
-| **Total GDI** | **$30.91T** | **100%** |
-
-*Collar slices are BLS OES wages (employment × annual mean wage, May 2025; total $10.85T). OES excludes bonuses and stock pay, farms, private households, the self-employed and the military; that gap to BEA's $13.0T of wages is shown separately.*
-
-### Collar definitions
+## Definitions — Who counts as which collar
 
 | Collar | BLS major groups | Jobs | Share of jobs | Wages | Share of OES wages |
 |---|---|---:|---:|---:|---:|
@@ -44,59 +24,47 @@
 
 *Production and transportation are combined as the residual of the BLS total (22.2M jobs, mean $50,553). Sales and office/admin are the "routine" white-collar jobs most exposed to AI (31M jobs, $1.65T).*
 
+## Exhibit 1 — Where every dollar of GDP goes, and how many people get it
+
+| $ | % GDP | Group | % people | People |
+|---:|---:|:---:|---:|---:|
+| **$15.72T** | **50.9%** | **Paid to employees** | | |
+| $7.52T | 24.3% | White-collar | 51.1% | 87.1M |
+| $1.95T | 6.3% | Blue-collar | 20.6% | 35.2M |
+| $1.38T | 4.5% | Pink-collar & service | 19.4% | 33.2M |
+| $2.15T | 7.0% | Other: wages outside OES (bonuses, stock pay, military, farm, household) | — | — |
+| $2.72T | 8.8% | Other: employer benefits & payroll taxes | — | — |
+| — | — | Other employed (self-employed, farm, household) | 4.8% | 8.1M |
+| — | — | Unemployed | 4.1% | 7.1M |
+| **$15.19T** | **49.1%** | **Not paid as wages** | | |
+| $5.06T | 16.4% | Depreciation (consumption of fixed capital) | — | — |
+| $4.03T | 13.0% | Corporate profits (IVA, CCAdj) | — | — |
+| $2.02T | 6.5% | Self-employed (proprietors' income) | — | — |
+| $1.14T | 3.7% | Rental income of persons | — | — |
+| $2.95T | 9.5% | Production taxes less subsidies, net interest, other (residual) | — | — |
+| **$30.91T** | **100%** | **Total GDI / labor force** | **100%** | **170.7M** |
+
+*Left side: GDI 2025 dollars; collar dollars are BLS OES wages (May 2025; total $10.85T), which exclude bonuses and stock pay, farms, private households, the self-employed and the military; that gap to BEA's $13.0T of wages is shown separately. Right side: the labor force; collar headcounts are OES jobs (May 2025), "other employed" is the gap to the household survey's 163.6M employed (October 2026), and unemployed/labor force are October 2026, so the people split is approximate. White-collar workers are 51% of the people and get 69% of measured wages; blue and pink-collar workers are 40% of the people and get 31%.*
+
 ## Exhibit 2 — What white-collar pay is made of
 
-| Group | Wages | % of white-collar | % of GDP |
-|---|---:|---:|---:|
-| Management | $1,617B | 21.5% | 5.24% |
-| Healthcare practitioners | $1,068B | 14.2% | 3.46% |
-| Business & financial ops | $1,003B | 13.3% | 3.25% |
-| Office & admin support | $915B | 12.2% | 2.97% |
-| Sales & related | $738B | 9.8% | 2.39% |
-| Education & library | $615B | 8.2% | 1.99% |
-| **Software developers** | **$250B** | **3.3%** | **0.81%** |
-| Other computer & math | $382B | 5.1% | 1.24% |
-| Architecture & engineering | $280B | 3.7% | 0.91% |
-| Legal | $182B | 2.4% | 0.59% |
-| Community & social service | $169B | 2.2% | 0.55% |
-| Arts, design, media | $163B | 2.2% | 0.53% |
-| Life, physical & social science | $139B | 1.9% | 0.45% |
-| **Total white-collar** | **$7,522B** | **100%** | **24.4%** |
+| $ | % pay | Group | % jobs | People |
+|---:|---:|:---:|---:|---:|
+| $1,617B | 21.5% | Management | 12.8% | 11.1M |
+| $1,068B | 14.2% | Healthcare practitioners | 11.3% | 9.8M |
+| $1,003B | 13.3% | Business & financial ops | 12.1% | 10.5M |
+| $915B | 12.2% | Office & admin support | 20.4% | 17.8M |
+| $738B | 9.8% | Sales & related | 15.4% | 13.4M |
+| $615B | 8.2% | Education & library | 10.4% | 9.1M |
+| **$250B** | **3.3%** | **Software developers** | **1.9%** | **1.7M** |
+| $382B | 5.1% | Other computer & math | 4.1% | 3.6M |
+| $280B | 3.7% | Architecture & engineering | 3.0% | 2.6M |
+| $653B | 8.7% | Legal, science, social service, arts | 8.6% | 7.5M |
+| **$7,522B** | **100%** | **Total white-collar** | **100%** | **87.1M** |
 
-> Software developers: 1,687,890 jobs × $148,100 mean = **$250B**, 3.3% of white-collar pay, 2.3% of all measured wages, 0.81% of GDP. With QA testers (186,740 × $111,490) it is $271B, 0.88% of GDP. Loaded with employer taxes and benefits it is ~$346B, the payroll pool used in the AI developer replacement memo.
+> Software developers: 1,687,890 jobs × $148,100 mean = **$250B**, 3.3% of white-collar pay, 2.3% of all measured wages, 0.81% of GDP, and 1% of the labor force. With QA testers (186,740 × $111,490) it is $271B, 0.88% of GDP. Loaded with employer taxes and benefits it is ~$346B, the payroll pool used in the AI developer replacement memo.
 
-## Exhibit 3 — How many people are in each group
-
-By headcount the picture is less lopsided than by pay: white-collar workers are 51% of the labor force but take 69% of measured wages; blue and pink-collar workers are 40% of the labor force and take 31%.
-
-| Labor force slice | People | % of labor force |
-|---|---:|---:|
-| White-collar | 87.1M | 51.1% |
-| Blue-collar | 35.2M | 20.6% |
-| Pink-collar & service | 33.2M | 19.4% |
-| Other employed (self-employed, farm, household) | 8.1M | 4.8% |
-| Unemployed | 7.1M | 4.1% |
-| **Total labor force** | **170.7M** | **100%** |
-
-**White-collar jobs by group**
-
-| Group | Jobs | % of white-collar |
-|---|---:|---:|
-| Office & admin support | 17.8M | 20.4% |
-| Sales | 13.4M | 15.4% |
-| Management | 11.1M | 12.8% |
-| Business & financial | 10.5M | 12.1% |
-| Healthcare practitioners | 9.8M | 11.3% |
-| Education & library | 9.1M | 10.4% |
-| **Software developers** | **1.7M** | **1.9%** |
-| Other computer & math | 3.6M | 4.1% |
-| Architecture & engineering | 2.6M | 3.0% |
-| Legal, science, social service, arts | 7.5M | 8.6% |
-| **Total** | **87.1M** | **100%** |
-
-*Collar headcounts are BLS OES jobs (May 2025, 155.5M). "Other employed" is the gap to the household survey's 163.6M employed (October 2026). Unemployed 7.1M and labor force 170.7M are October 2026; the surveys are 17 months apart, so the split is approximate. Software developers are 1% of the labor force.*
-
-## Exhibit 4 — What unemployment rate means recession, depression or collapse
+## Exhibit 3 — What unemployment rate means recession, depression or collapse
 
 Today: **4.1%** (October 2026; 7.07M unemployed, 170.68M labor force).
 
@@ -111,7 +79,7 @@ Today: **4.1%** (October 2026; 7.07M unemployed, 170.68M labor force).
 
 > The theoretical danger is the feedback loop: lost pay cuts spending, which cuts more jobs (Keynesian demand spiral); long unemployment destroys skills (hysteresis); loan and mortgage defaults then hit banks.
 
-## Exhibit 5 — Two scenarios
+## Exhibit 4 — Two scenarios
 
 Assumptions: displaced workers stay in the labor force (170.7M); no re-employment in year one. Unemployment = (7.07M + displaced) ÷ 170.68M. Lost pay = collar share of OES wages applied to BEA compensation. Knock-on (one round): unemployment insurance, savings and severance cover 35% of lost wages in year one; households spend 90% of the rest; consumer spending = 68% of GDP; remaining jobs shrink by (spending drop ÷ PCE) × 0.68.
 
