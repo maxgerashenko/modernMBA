@@ -318,24 +318,35 @@ The capacity math that actually governs this:
 
 ---
 
-## Section 08 — Comparative insight: this memo vs. the independent memo, and what the source chat got wrong
+## Section 08 — Comparative insight: 2 GB200 racks vs. the same money in 16× H100 machines
 
-**The analytical question:** Where does an independent analysis of the same question agree, and which claims from the source chat should be dropped?
+**The analytical question:** With about the same capital, how do two GB200 NVL72 racks compare with 16× H100 machines on unit economics?
 
-**Exhibit 16 — Two memos, one question**
+**Exhibit 16 — Unit economics, ~$6.4–6.8M of hardware, priced at salary (L1–L3 mix)**
 
-| Question | This memo | Independent memo ("The Reviewer Is the Bill") |
-|---|---|---|
-| Cost of compute per L1 | $13,274 pure cost (own racks, 1M context) | $4,450 (API, ~120K context) |
-| Who reviews the work | Agents (Max's assumption) | A human senior: $23,600 per L1, 79% of the bundle |
-| How agents scale with level | Doubling, 1 → 64 | Failure-based cliff: flat to L3, 2.6 at L4, ~100 at L5, unreachable above |
-| Levels that pay | All at pure cost; L1–L4 realistically | L1–L2 (L3 marginal) |
-| Hardware | Own GB200 racks | Rent tokens; owning saves ~2% |
-| Verdict | Conditional: replace L1–L4, price below salary | Do not build the seven-level business |
+| Line | **2 GB200 NVL72 racks (main)** | 10× 16-H100 machines, 1M context | 10× 16-H100, ~600K context | 10× 16-H100, 100K context |
+|---|---|---|---|---|
+| Hardware cost | $6.8M | $6.4M | $6.4M | $6.4M |
+| GPUs | 144 | 160 | 160 | 160 |
+| Agents running 24/7 | **60** | 0 (one 1M context doesn't fit) | 5 (1 agent per 2 machines) | 40 (4 per machine) |
+| Speed per agent | **~80 tok/s** | — | ~26 tok/s real (44 ideal) | ~25 tok/s real |
+| Engineer-years of agent work | **253** | 0 | 21 | 168 |
+| Annual pure cost (write-off, power, space, ops, sandbox, support) | $3.35M | $3.33M | $3.37M | $3.59M |
+| **Pure cost per agent-hour** | **$6.38** | — | $76.84 | $10.25 |
+| **Pure cost per engineer-year** | **$13,274** | — | $159,829 | $21,321 |
+| Revenue at salary ($70,942 per engineer-year) | **$17.9M** | $0 | $1.5M | $12.0M |
+| Gross margin | **$14.6M (81%)** | ($3.3M) | ($1.9M) | $8.4M (70%) |
+| Economic profit (after $2.37M overhead, owner, 10% capital charge) | **$11.2M** | ($6.6M) | ($5.2M) | $5.0M |
+| Power draw (with 1.3 overhead) | ~343 kW | ~265 kW | ~265 kW | ~265 kW |
 
-*Both find compute cheap and senior work out of reach today. They split on one judgment: whether a human must stay in the loop.*
+*H100 machine: $640K (16 × $40K), 3-year write-off, $120K a year for power, space and operations. A 1.2 TB model fills 1.2 of a machine's 1.28 TB, leaving 80 GB for agent contexts at ~10 GB per 100K tokens. The 100K-context column breaks Max's 1M-context requirement and assumes 2X compute halves the 8 contexts that fit.*
 
-**What the source chat got wrong** (kept short; earlier versions of this memo hold the full log): the "+75% margin" was a 75% markup (42.9% margin); one machine does not serve one agent; the machine-hour left out power, space and staff; a 16× H100 machine cannot hold a 1M-token agent at all; Claude Opus cannot be self-hosted; the level split ($387B) and job-loss figures were unsourced; and "agents per level = salary ÷ price" was circular.
+What the comparison shows:
+
+- **At the required 1M-token context, H100s can't run the business at all.** The memory left after the model is smaller than one context, so ten machines earn nothing and lose ~$6.6M a year.
+- **Squeezing one agent onto two machines works but costs 12× more per engineer-year** ($159,829 vs. $13,274), more than an L1's salary.
+- **Cutting the context to 100K makes H100s viable**, at 61% higher pure cost than GB200. But each agent runs at ~25 tokens/s instead of 80, so it gets through about a third as much work per hour. Adjusted for speed (80 ÷ 25), the pure cost of an engineer-year of work is ~$68,000, about 5× GB200.
+- **Why GB200 wins:** one fast link across 72 GPUs puts 13.4 TB of memory and 576 TB/s of bandwidth behind one copy of the model. An H100 machine links only 8 GPUs at full speed and spends almost all its memory on the model.
 
 ---
 
@@ -390,4 +401,4 @@ Four findings converge:
 
 **ANALYTICAL BASIS** — Figures are directional estimates for running AI coding agents at pure cost and selling them to US employers, built for structural analysis rather than as an audited forecast. Pure cost means infrastructure and its support only: rack write-off over 3 years, power at $0.10/kWh with 1.3 overhead, colocation, rack operations staff, sandbox/CI at $0.30 per agent-hour, and one platform support engineer ($230K loaded) per two racks; it excludes sales, overhead, owner pay and any margin. Developer counts are from the US Bureau of Labor Statistics (May 2025); loaded cost and the share at each level are assumptions set to reconcile to BLS-based payroll (~$346B). Max's review set the inputs: a 1.2 TB model, a 1M-token context, 80 tokens/s per agent, 2X compute for a future model, 24/7 use, agents doing their own review, and agents per level doubling from 1 to 64. The failure-based agent counts come from the independent memo in this repo, built on METR time-horizon data. GPU and rack specs are NVIDIA's published figures; rack prices (~$3.4M GB200, ~$3.9M GB300) are press-reported estimates. Rack supply: Morgan Stanley via Wallstreetcn (27,300 GB200/300 racks in 2025; 70,000–80,000 forecast for 2026) and TrendForce (August 2026: NVL72 output above $710B in 2027). Grid: BNEF (July 2026: ~10 GW the most connected in one year; 118 GW by 2030). Tokens: Google I/O (May 2026: 3.2 quadrillion tokens a month), with this memo counting ~120 turns an hour, ~1.5K output and ~5K new input tokens per turn. API references use Claude Fable 5.1 ($10 / $50 per million tokens; cached reads assumed $0.50) and Opus 5.5 ($4 / $20 / $0.20).
 
-**FRAMEWORKS APPLIED** — Hypothesis-first framing with explicit tests · Pure-cost build-up per agent-hour · Per-level substitution table under three multiplier rules · Supply-side feasibility (racks, power, tokens) · Market sizing from payroll by level (ceiling → technically replaceable → vendor pool → SOM) · Porter's Five Forces · Value chain and margin pool · Two-variable sensitivities (price share × level; agents per rack × compute factor) · Adverse-case scenario · Comparative insight against an independent memo · Risk register · Economic profit adjustment for owner labor and capital.
+**FRAMEWORKS APPLIED** — Hypothesis-first framing with explicit tests · Pure-cost build-up per agent-hour · Per-level substitution table under three multiplier rules · Supply-side feasibility (racks, power, tokens) · Market sizing from payroll by level (ceiling → technically replaceable → vendor pool → SOM) · Porter's Five Forces · Value chain and margin pool · Two-variable sensitivities (price share × level; agents per rack × compute factor) · Adverse-case scenario · Hardware comparison (GB200 NVL72 vs. 16× H100) · Risk register · Economic profit adjustment for owner labor and capital.
