@@ -64,32 +64,33 @@
 
 > Software developers: 1,687,890 jobs × $148,100 mean = **$250B**, 3.3% of white-collar pay, 2.3% of all measured wages, 0.81% of GDP, and 1% of the labor force. With QA testers (186,740 × $111,490) it is $271B, 0.88% of GDP. Loaded with employer taxes and benefits it is ~$346B, the payroll pool used in the AI developer replacement memo.
 
-## Exhibit 3 — Which white-collar jobs AI will hit in the next 3 years (projection to late 2029)
+## Exhibit 3 — Which white-collar jobs AI will hit in the next 3 years (projection to late 2029, built on Goldman Sachs and ILO)
 
-Assumes AI stays at today's level and adoption continues at today's pace. Base case: **~2.7M white-collar jobs (3.1%) cut or not refilled** by late 2029, about **$208B** of annual pay; range 1.3M–5.5M. Far more jobs change without disappearing: in ~35M jobs (40%), AI does a third or more of the tasks.
+Goldman Sachs now expects AI to displace **over 9% of US workers (~15M) over a 10-year adoption period** (June 2026). Taking the first 3 years at an even pace and spreading it by each group's exposure gives **~3.2M white-collar jobs (3.7%) cut or not refilled** by late 2029, about **$269B** of annual pay. Range: 0.7M (today's measured substitution pace continues) to 5.0M (top of Goldman's 3–14% range).
 
-| 2025 jobs | Group | Cut by 2029 (base) | Range | AI does ≥⅓ of tasks | 2029 jobs |
+| 2025 jobs | Group | Work AI can automate (GS 2023) | Cut by 2029 (base) | Range | 2029 jobs |
 |---:|:---:|---:|---:|---:|---:|
-| 17.8M | Office & admin support | −1.1M · 6.0% | 3–12% | 8.9M · 50% | 16.7M |
-| 13.4M | Sales | −403K · 3.0% | 1.5–6% | 4.0M · 30% | 13.0M |
-| 11.1M | Management | −167K · 1.5% | 0.5–3% | 3.9M · 35% | 11.0M |
-| 10.5M | Business & financial | −422K · 4.0% | 2–8% | 5.8M · 55% | 10.1M |
-| 9.8M | Healthcare practitioners | −49K · 0.5% | 0–1% | 2.0M · 20% | 9.8M |
-| 9.1M | Education & library | −91K · 1.0% | 0.5–2.5% | 2.7M · 30% | 9.0M |
-| **1.7M** | **Software developers** | **−85K · 5.0%** | **2–12%** | **1.4M · 85%** | **1.6M** |
-| 3.6M | Other computer & math | −143K · 4.0% | 2–8% | 2.1M · 60% | 3.4M |
-| 2.6M | Architecture & engineering | −39K · 1.5% | 0.5–3% | 0.9M · 35% | 2.6M |
-| 7.5M | Legal, science, social service, arts | −263K · 3.5% | 1.5–7% | 3.4M · 45% | 7.2M |
-| **87.1M** | **Total white-collar** | **−2.7M · 3.1%** | **1.3M–5.5M** | **35.2M · 40%** | **84.4M** |
+| 17.8M | Office & admin support | 46% | −882K · 5.0% | 1.1–7.7% | 16.9M |
+| 13.4M | Sales | 31% | −449K · 3.3% | 0.7–5.2% | 13.0M |
+| 11.1M | Management | 32% | −385K · 3.5% | 0.7–5.4% | 10.7M |
+| 10.5M | Business & financial | 35% | −398K · 3.8% | 0.8–5.9% | 10.1M |
+| 9.8M | Healthcare practitioners | 28% | −297K · 3.0% | 0.6–4.7% | 9.5M |
+| 9.1M | Education & library | 27% | −265K · 2.9% | 0.6–4.5% | 8.8M |
+| **1.7M** | **Software developers** | **29%** | **−53K · 3.1%** | **0.7–4.9%** | **1.6M** |
+| 3.6M | Other computer & math | 29% | −112K · 3.1% | 0.7–4.9% | 3.5M |
+| 2.6M | Architecture & engineering | 37% | −105K · 4.0% | 0.9–6.2% | 2.5M |
+| 7.5M | Legal, science, social service, arts | 34% | −272K · 3.6% | 0.8–5.6% | 7.2M |
+| **87.1M** | **Total white-collar** | **34%** | **−3.2M · 3.7%** | **0.7M–5.0M** | **83.9M** |
 
-> Unemployment by 2029 from this alone: 4.9% if half of these workers find new jobs, 5.7% if none do (range case: 4.5–7.4%). Either way the Sahm recession signal fires.
+> Unemployment by 2029: Goldman's own model adds 0.5 to under 1 point because most displaced workers find new jobs within a year (4.6–5.1%). If none of the 3.2M do, it reaches 6.0%.
 
-**What today's data shows**
-- Layoffs blamed on AI are rising but still small: 121,401 AI-cited announced cuts in Jan–Oct 2026, more than double all of 2025 (54,836), ~20% of all announced cuts (Challenger, Gray & Christmas). Peak in May (38,579); October 1,265.
-- Most of the effect is jobs that never get posted (hiring freezes, roles not refilled), which announcements miss. Labor-market data doesn't yet show mass replacement.
-- BLS 2024–34 projections already show AI-driven declines: customer service reps −5.5% (−153,700), claims adjusters −5.1%, legal secretaries −5.8%, procurement clerks −8.7%. BLS still projects software developers to grow 15.8%.
+**What the sources say**
+- **Goldman Sachs (2023):** two-thirds of US jobs exposed; a quarter of work tasks automatable. White-collar groups most exposed (office/admin 46%, legal 44%, engineering 37%, business/finance 35%) vs. 1–9% for most blue-collar groups. 7% of workers fully displaced, 63% complemented, 30% unaffected.
+- **Goldman Sachs, "An AI Job Apocalypse?" (June 2026):** displacement estimate raised from 6–7% (range 3–14%) to over 9% over 10 years. AI substitution already cuts ~25K jobs a month from payroll growth and added 0.16 pt to unemployment in the past year (0.1 net). Customer service and back-office roles (8–9M workers) are first in line. College-graduate unemployment 2.7% vs. 2.1% in 2019.
+- **ILO (2025):** 34% of jobs in high-income countries exposed to generative AI. The highest-exposure gradient (closest to automation risk) is mostly clerical. Few jobs are fully automatable today; most will change rather than disappear.
+- **Challenger, Gray & Christmas:** 121,401 AI-cited announced cuts Jan–Oct 2026, double all of 2025; most displacement shows up as roles not refilled, which these counts miss.
 
-*Method: each group's 3-year rate is a judgment-based estimate starting from BLS 2024–34 AI-affected projections, Challenger AI-cited cuts, task-exposure research (Eloundou et al., 2023) and the L1–L4 replaceable finding in the AI developer replacement memo, scaled to today's capability and adoption pace. Normal job growth is left out to isolate the AI effect. Directional, not a forecast.*
+*Method: 3-year economy-wide displacement = Goldman's 10-year share × 3/10 (base 9% → 2.7%; high 14% → 4.2%). Low = today's measured pace (~25K/month × 36 ≈ 0.9M economy-wide). Group rate = economy-wide rate × (group exposure ÷ 25% all-industry exposure), using Goldman's 2023 US exposure by occupation group; developers use the computer & math rate; the legal/science/social/arts row is a job-weighted 34%. Normal job growth is left out to isolate the AI effect. An even pace is an assumption; adoption often starts slow and speeds up. Directional, not a forecast.*
 
 ## Exhibit 4 — What unemployment rate means recession, depression or collapse
 
@@ -146,6 +147,6 @@ Assumptions: displaced workers stay in the labor force (170.7M); no re-employmen
 
 ---
 
-**ANALYTICAL BASIS** — GDP and GDI components: BEA NIPA via FRED, 2025 annual (GDPA $30,861B; compensation = wages and salaries $12,999B + supplements $2,720B; corporate profits with IVA/CCAdj $4,025B; proprietors' income $2,017B; rental income $1,140B; GDI $30,908B and consumption of fixed capital $5,055B are averages of 2025 quarterly SAAR values; the remaining $2,952B is the residual). Occupations and wages: BLS Occupational Employment and Wages, May 2025 (released May 15, 2026; 155,495,730 jobs, mean $69,770). Labor force: BLS Employment Situation, October 2026. Historical rates: BLS; Lebergott (US 1933); ELSTAT (Greece); INE (Spain); German Reich statistics (1932). Sahm rule: Claudia Sahm (2019). Natural rate: CBO. Figures are directional estimates for structural analysis, not forecasts; the collar boundaries are a judgment call and each group is shown so it can be reassigned.
+**ANALYTICAL BASIS** — GDP and GDI components: BEA NIPA via FRED, 2025 annual (GDPA $30,861B; compensation = wages and salaries $12,999B + supplements $2,720B; corporate profits with IVA/CCAdj $4,025B; proprietors' income $2,017B; rental income $1,140B; GDI $30,908B and consumption of fixed capital $5,055B are averages of 2025 quarterly SAAR values; the remaining $2,952B is the residual). Occupations and wages: BLS Occupational Employment and Wages, May 2025 (released May 15, 2026; 155,495,730 jobs, mean $69,770). Labor force: BLS Employment Situation, October 2026. Historical rates: BLS; Lebergott (US 1933); ELSTAT (Greece); INE (Spain); German Reich statistics (1932). Sahm rule: Claudia Sahm (2019). AI projection: Goldman Sachs, "The Potentially Large Effects of Artificial Intelligence on Economic Growth" (2023, https://candid.technology/wp-content/uploads/2023/03/Goldman-Sachs-300-million-jobs-automation-report.pdf) and "Generative AI Could Raise Global GDP by 7%" (https://www.goldmansachs.com/insights/articles/generative-ai-could-raise-global-gdp-by-7-percent); Goldman Sachs, "An AI Job Apocalypse?" (2026, https://www.goldmansachs.com/pdfs/insights/goldman-sachs-research/an-ai-job-apocalypse/report.pdf); ILO, "Generative AI and Jobs: A Refined Global Index of Occupational Exposure" (2025, https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure). Natural rate: CBO. Figures are directional estimates for structural analysis, not forecasts; the collar boundaries are a judgment call and each group is shown so it can be reassigned.
 
 **FRAMEWORKS APPLIED** — Income-side GDP (GDI) decomposition · Occupational wage-bill sizing (employment × mean wage) · Collar segmentation · Historical unemployment benchmarking · Sahm rule · Okun's law · Keynesian demand multiplier (one round) · Hysteresis · Labor share of income.
