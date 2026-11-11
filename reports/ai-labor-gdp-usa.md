@@ -64,7 +64,34 @@
 
 > Software developers: 1,687,890 jobs × $148,100 mean = **$250B**, 3.3% of white-collar pay, 2.3% of all measured wages, 0.81% of GDP, and 1% of the labor force. With QA testers (186,740 × $111,490) it is $271B, 0.88% of GDP. Loaded with employer taxes and benefits it is ~$346B, the payroll pool used in the AI developer replacement memo.
 
-## Exhibit 3 — What unemployment rate means recession, depression or collapse
+## Exhibit 3 — Which white-collar jobs AI will hit in the next 3 years (projection to late 2029)
+
+Assumes AI stays at today's level and adoption continues at today's pace. Base case: **~2.7M white-collar jobs (3.1%) cut or not refilled** by late 2029, about **$208B** of annual pay; range 1.3M–5.5M. Far more jobs change without disappearing: in ~35M jobs (40%), AI does a third or more of the tasks.
+
+| 2025 jobs | Group | Cut by 2029 (base) | Range | AI does ≥⅓ of tasks | 2029 jobs |
+|---:|:---:|---:|---:|---:|---:|
+| 17.8M | Office & admin support | −1.1M · 6.0% | 3–12% | 8.9M · 50% | 16.7M |
+| 13.4M | Sales | −403K · 3.0% | 1.5–6% | 4.0M · 30% | 13.0M |
+| 11.1M | Management | −167K · 1.5% | 0.5–3% | 3.9M · 35% | 11.0M |
+| 10.5M | Business & financial | −422K · 4.0% | 2–8% | 5.8M · 55% | 10.1M |
+| 9.8M | Healthcare practitioners | −49K · 0.5% | 0–1% | 2.0M · 20% | 9.8M |
+| 9.1M | Education & library | −91K · 1.0% | 0.5–2.5% | 2.7M · 30% | 9.0M |
+| **1.7M** | **Software developers** | **−85K · 5.0%** | **2–12%** | **1.4M · 85%** | **1.6M** |
+| 3.6M | Other computer & math | −143K · 4.0% | 2–8% | 2.1M · 60% | 3.4M |
+| 2.6M | Architecture & engineering | −39K · 1.5% | 0.5–3% | 0.9M · 35% | 2.6M |
+| 7.5M | Legal, science, social service, arts | −263K · 3.5% | 1.5–7% | 3.4M · 45% | 7.2M |
+| **87.1M** | **Total white-collar** | **−2.7M · 3.1%** | **1.3M–5.5M** | **35.2M · 40%** | **84.4M** |
+
+> Unemployment by 2029 from this alone: 4.9% if half of these workers find new jobs, 5.7% if none do (range case: 4.5–7.4%). Either way the Sahm recession signal fires.
+
+**What today's data shows**
+- Layoffs blamed on AI are rising but still small: 121,401 AI-cited announced cuts in Jan–Oct 2026, more than double all of 2025 (54,836), ~20% of all announced cuts (Challenger, Gray & Christmas). Peak in May (38,579); October 1,265.
+- Most of the effect is jobs that never get posted (hiring freezes, roles not refilled), which announcements miss. Labor-market data doesn't yet show mass replacement.
+- BLS 2024–34 projections already show AI-driven declines: customer service reps −5.5% (−153,700), claims adjusters −5.1%, legal secretaries −5.8%, procurement clerks −8.7%. BLS still projects software developers to grow 15.8%.
+
+*Method: each group's 3-year rate is a judgment-based estimate starting from BLS 2024–34 AI-affected projections, Challenger AI-cited cuts, task-exposure research (Eloundou et al., 2023) and the L1–L4 replaceable finding in the AI developer replacement memo, scaled to today's capability and adoption pace. Normal job growth is left out to isolate the AI effect. Directional, not a forecast.*
+
+## Exhibit 4 — What unemployment rate means recession, depression or collapse
 
 Today: **4.1%** (October 2026; 7.07M unemployed, 170.68M labor force).
 
@@ -79,7 +106,7 @@ Today: **4.1%** (October 2026; 7.07M unemployed, 170.68M labor force).
 
 > The theoretical danger is the feedback loop: lost pay cuts spending, which cuts more jobs (Keynesian demand spiral); long unemployment destroys skills (hysteresis); loan and mortgage defaults then hit banks.
 
-## Exhibit 4 — Two scenarios
+## Exhibit 5 — Two scenarios
 
 Assumptions: displaced workers stay in the labor force (170.7M); no re-employment in year one. Unemployment = (7.07M + displaced) ÷ 170.68M. Lost pay = collar share of OES wages applied to BEA compensation. Knock-on (one round): unemployment insurance, savings and severance cover 35% of lost wages in year one; households spend 90% of the rest; consumer spending = 68% of GDP; remaining jobs shrink by (spending drop ÷ PCE) × 0.68.
 
