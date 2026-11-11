@@ -1,6 +1,7 @@
 # If AI replaces office workers, who still gets paid from GDP?
 
 **Artifact:** https://claude.ai/artifact/4yNsP3SkphqqC6PKTUPsKB
+**Notion:** https://app.notion.com/p/415ba21e32d481e58f93f786cb20976e
 **Related memos:** [AI developer replacement (USA)](../research/ai-developer-replacement-usa.md) · [AI developer agents, independent view](../research/ai-developer-agents-independent-usa.md)
 
 *Macro note, not a business teardown memo. It lives in `reports/` so it stays out of `research/compare.md`. US data for 2025; labor force as of October 2026.*
